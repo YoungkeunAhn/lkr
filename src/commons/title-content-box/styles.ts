@@ -13,7 +13,7 @@ const useStyles = makeStyles((theme: Theme) =>
       display: 'flex',
       flexDirection: 'column',
       alignItems: 'center',
-      fontFamily: `"Segoe UI", "Open Sans", serif;`,
+
       '&::after': {
         content: '""',
         padding: theme.spacing(0.5, 4.5),
@@ -23,7 +23,6 @@ const useStyles = makeStyles((theme: Theme) =>
     },
     title: {
       fontWeight: 600,
-      fontFamily: `"Segoe UI", "Open Sans", serif;`,
       marginTop: theme.spacing(2),
       marginBottom: theme.spacing(10),
     },

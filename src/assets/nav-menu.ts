@@ -3,7 +3,7 @@ type NavMenuType = {
   url: string
 }
 
-export const navMenu = [
+export const navMenu: NavMenuType[] = [
   { title: 'home', url: '' },
   { title: 'About us', url: '' },
   { title: 'Software Development', url: '' },

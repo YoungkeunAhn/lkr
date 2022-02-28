@@ -6,8 +6,11 @@ export const themes = createTheme({
       xs: 0,
       sm: 600,
       md: 960,
-      lg: 1280,
-      xl: 1600,
+      lg: 1100,
+      xl: 1700,
     },
+  },
+  typography: {
+    fontFamily: `"Segoe UI"`,
   },
 })
