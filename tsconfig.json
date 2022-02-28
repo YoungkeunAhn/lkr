@@ -15,16 +15,10 @@
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "react-jsx",
-    "baseUrl": ".",
+    "baseUrl": "src",
     "paths": {
-      "@/*": ["src/*"],
-      "@layouts/*": ["src/layouts/*"],
-      "@components": ["src/components/*"],
-      "@pages": ["pages/*"],
-      "@types/*": ["src/types/*"],
-      "@commons/*": ["src/commons/*"],
-      "@domain": ["src/domain/*"]
+      "@/*": ["src/*"]
     }
   },
-  "include": ["**/*.ts", "**/*.tsx", "src/**/*", "env-config.js", "**/*.d.ts"]
+  "include": ["src", "**/*.ts", "**/*.tsx", "src/**/*", "**/*.d.ts"]
 }
