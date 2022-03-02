@@ -6,7 +6,7 @@ type Props = {
   title: string
   children?: React.ReactNode
   mainText: string[]
-  subText: string[]
+  subText?: string[]
   background?: string
 }
 function TitleContentFrame(props: Props) {
@@ -30,16 +30,17 @@ function TitleContentFrame(props: Props) {
           ))}
         </Box>
         <Box className={classes.subTextBox}>
-          {subText.map((text, idx) => (
-            <Typography
-              key={idx}
-              variant="h5"
-              align="center"
-              style={{ lineHeight: subText.length === 1 ? '50px' : '' }}
-            >
-              {text}
-            </Typography>
-          ))}
+          {subText &&
+            subText.map((text, idx) => (
+              <Typography
+                key={idx}
+                variant="h5"
+                align="center"
+                style={{ lineHeight: subText.length === 1 ? '50px' : '' }}
+              >
+                {text}
+              </Typography>
+            ))}
         </Box>
         <Box>{children}</Box>
       </Container>

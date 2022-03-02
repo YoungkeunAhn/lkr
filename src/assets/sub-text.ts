@@ -41,4 +41,6 @@ export const recruitmentSubText = [
   '배움의 열정을 가진, 삶과 자기실현의 밸런스를 맞출 수 있는 수평적 인재를 기다리고 있습니다. 많은 지원 바랍니다.',
 ]
 
-export const newsroomSubText = `공지사항, 보도자료, 기타 소식을 빠르게 알려드립니다.`
+export const newsroomSubText = [
+  `공지사항, 보도자료, 기타 소식을 빠르게 알려드립니다.`,
+]
