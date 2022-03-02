@@ -5,7 +5,7 @@ import useStyles from './styles'
 type Props = {
   seq: number
   title: string
-  text: string
+  text: string[]
 }
 
 function ProcessItemBox(props: Props) {
@@ -13,17 +13,23 @@ function ProcessItemBox(props: Props) {
   const { seq, title, text } = props
 
   return (
-    <Box>
-      <Box>
+    <Box className={classes.root}>
+      <Box className={classes.titleBox}>
         <Typography>STEP 0{seq}</Typography>
-        <Typography variant="h6">{title}</Typography>
-        <Box>
-          <span className={classes.arrowSquare}></span>
-          <span className={classes.arrowTriangle}></span>
-        </Box>
+        <Typography variant="h6" className={classes.title}>
+          {title}
+        </Typography>
+        {seq !== 6 && (
+          <Box className={classes.arrowBox}>
+            <span className={classes.arrowSquare}></span>
+            <span className={classes.arrowTriangle}></span>
+          </Box>
+        )}
       </Box>
-      <Box>
-        <Typography>{text}</Typography>
+      <Box className={classes.textBox}>
+        {text.map((x, idx) => (
+          <Typography key={idx}>{x}</Typography>
+        ))}
       </Box>
     </Box>
   )
