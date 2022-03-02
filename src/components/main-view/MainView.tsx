@@ -1,5 +1,6 @@
 import { Box, Container, Typography } from '@material-ui/core'
-import { mainSubText } from 'assets/sub-text-assets'
+import { mainSubText } from 'assets/sub-text'
+import BackgroundCover from 'commons/background-cover/BackgroundCover'
 import React from 'react'
 import useStyles from './styles'
 
@@ -8,7 +9,7 @@ function MainView() {
 
   return (
     <Box className={classes.root}>
-      <div className={classes.bgCover}>
+      <BackgroundCover>
         <Container maxWidth="xl">
           <Box className={classes.logoBox}>
             <img src="logo.png" alt="logo" />
@@ -22,7 +23,7 @@ function MainView() {
             ))}
           </Box>
         </Container>
-      </div>
+      </BackgroundCover>
     </Box>
   )
 }

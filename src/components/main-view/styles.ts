@@ -1,5 +1,4 @@
 import { createStyles, makeStyles, Theme } from '@material-ui/core'
-import { themes } from 'theme/themes'
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -20,16 +19,9 @@ const useStyles = makeStyles((theme: Theme) =>
         marginTop: theme.spacing(2),
       },
     },
-    bgCover: {
-      width: '100%',
-      height: '100%',
-      boxSizing: 'border-box',
-      paddingTop: theme.spacing(6.5),
-      paddingBottom: theme.spacing(6.5),
-      background: 'rgba(0,0,0,0.5)',
-    },
+
     textBox: {
-      marginTop: theme.spacing(30),
+      marginTop: theme.spacing(50),
     },
     logoBox: {
       display: 'flex',

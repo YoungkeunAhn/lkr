@@ -3,9 +3,10 @@ import { createStyles, makeStyles, Theme } from '@material-ui/core'
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     root: {
+      zIndex: 10,
       position: 'fixed',
-      top: '20%',
-      right: 50,
+      top: '40%',
+      right: 38,
       '& li+li': {
         marginTop: theme.spacing(1),
       },
@@ -15,12 +16,12 @@ const useStyles = makeStyles((theme: Theme) =>
       alignItems: 'center',
       justifyContent: 'flex-end',
       boxSizing: 'border-box',
-      '& p': {
-        fontWeight: 300,
+      '& .MuiTypography-root': {
+        fontWeight: 500,
         letterSpacing: 0.5,
         transition: '.5s',
       },
-      '&:hover p': {
+      '&:hover .MuiTypography-root': {
         transform: 'translateX(-5px)',
       },
     },
@@ -38,7 +39,7 @@ const useStyles = makeStyles((theme: Theme) =>
       marginLeft: theme.spacing(1),
     },
     currentMenu: {
-      '& p:first-letter': {
+      '& .MuiTypography-root:first-letter': {
         fontSize: '1.3rem',
         color: '#B9EB0F',
         textTransform: 'uppercase',
@@ -47,6 +48,15 @@ const useStyles = makeStyles((theme: Theme) =>
         height: 30,
         background: '#B9EB0F',
       },
+    },
+    triangle: {
+      width: 0,
+      height: 0,
+      borderBottom: '13px solid #f03e3e',
+      borderTop: '0px solid transparent',
+      borderLeft: '8px solid transparent',
+      borderRight: '8px solid transparent',
+      marginLeft: theme.spacing(1),
     },
   })
 )

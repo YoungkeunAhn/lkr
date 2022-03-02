@@ -13,6 +13,10 @@ function NavBar(props: Props) {
   const classes = useStyles()
   const { currentMenu, onClick } = props
 
+  const onClickTop = () => {
+    window.scrollTo({ behavior: 'smooth', top: 0 })
+  }
+
   return (
     <ul className={classes.root}>
       {navMenu.map((menu, idx) => (
@@ -30,6 +34,12 @@ function NavBar(props: Props) {
           </ButtonBase>
         </li>
       ))}
+      <li className={clsx(classes.menuBox, classes.white)}>
+        <ButtonBase onClick={onClickTop}>
+          <Typography variant="h6">TOP</Typography>
+          <span className={classes.triangle}></span>
+        </ButtonBase>
+      </li>
     </ul>
   )
 }

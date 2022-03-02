@@ -5,12 +5,12 @@ type NavMenuType = {
 
 export const navMenu: NavMenuType[] = [
   { title: 'home', url: '' },
-  { title: 'About us', url: '' },
-  { title: 'Software Development', url: '' },
-  { title: 'Process', url: '' },
-  { title: 'Coupang Solution Service', url: '' },
-  { title: 'Vietnam Solution Service', url: '' },
-  { title: 'Recruiment', url: '' },
-  { title: 'Newsroom', url: '' },
-  { title: 'Location', url: '' },
+  { title: 'about us', url: '' },
+  { title: 'software Development', url: '' },
+  { title: 'process', url: '' },
+  { title: 'coupang Solution Service', url: '' },
+  { title: 'vietnam Solution Service', url: '' },
+  { title: 'recruiment', url: '' },
+  { title: 'newsroom', url: '' },
+  { title: 'location', url: '' },
 ]

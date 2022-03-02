@@ -1,8 +1,8 @@
-import React, { useState } from 'react'
-import { Box, Typography } from '@material-ui/core'
-import TitleContentFrame from './commons/title-content-box/TitleContentFrame'
+import AboutUsView from 'components/about-us-view/AboutUsView'
 import MainView from 'components/main-view/MainView'
 import NavBar from 'components/nav-bar/NavBar'
+import SoftwareDevelopmentView from 'components/software-development-view/SoftwareDevelopmentView'
+import React, { useState } from 'react'
 
 function App() {
   const [currentMenu, setCurrentMenu] = useState<string>('home')
@@ -13,13 +13,10 @@ function App() {
 
   return (
     <div>
-      <NavBar currentMenu={currentMenu} onClick={onClickMenu} />
       <MainView />
-      <TitleContentFrame title="about us">
-        <Box style={{ border: '1px solid black' }}>
-          <Typography variant="h3">ㅎㅎㅎㅎㅎ</Typography>
-        </Box>
-      </TitleContentFrame>
+      <AboutUsView />
+      <SoftwareDevelopmentView />
+      <NavBar currentMenu={currentMenu} onClick={onClickMenu} />
     </div>
   )
 }
