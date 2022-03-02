@@ -8,6 +8,7 @@ import {
   useTheme,
 } from '@material-ui/core'
 import { processItemList } from 'assets/process-items'
+import ClickPointerBtn from 'commons/click-pointer-btn/ClickPointerBtn'
 import React from 'react'
 import ProcessItemBox from './item-box/ProcessItemBox'
 import useStyles from './styles'
@@ -16,6 +17,8 @@ function ProcessSubContent() {
   const classes = useStyles()
   const theme = useTheme()
   const lgDown = useMediaQuery(theme.breakpoints.down('lg'))
+
+  const onClickBtn = () => {}
 
   return (
     <Container maxWidth="xl" className={classes.root}>
@@ -36,14 +39,7 @@ function ProcessSubContent() {
           </Grid>
         ))}
       </Grid>
-      <Box display="flex" justifyContent="flex-end">
-        <Box className={classes.btnPointerImgBox}>
-          <img src="process_btn_pointer.png" alt="button click pointer" />
-        </Box>
-        <Button className={classes.btn} variant="contained">
-          견적문의하기
-        </Button>
-      </Box>
+      <ClickPointerBtn title="견적문의하기" onClick={onClickBtn} />
     </Container>
   )
 }
