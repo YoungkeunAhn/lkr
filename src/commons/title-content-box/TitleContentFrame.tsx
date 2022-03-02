@@ -1,5 +1,4 @@
 import { Box, Container, Typography } from '@material-ui/core'
-import clsx from 'clsx'
 import React from 'react'
 import useStyles from './styles'
 
@@ -8,14 +7,14 @@ type Props = {
   children?: React.ReactNode
   mainText: string[]
   subText: string[]
-  // background?: string
+  background?: string
 }
 function TitleContentFrame(props: Props) {
-  const { title, children, mainText, subText } = props
+  const { title, children, mainText, subText, background } = props
   const classes = useStyles()
 
   return (
-    <Box className={classes.root}>
+    <Box className={classes.root} style={{ background }}>
       <Container maxWidth="xl">
         <Typography variant="body1" className={classes.lkrLogo} align="center">
           LKR
@@ -42,6 +41,7 @@ function TitleContentFrame(props: Props) {
             </Typography>
           ))}
         </Box>
+        <Box>{children}</Box>
       </Container>
     </Box>
   )

@@ -1,4 +1,3 @@
-import { Box, Button } from '@material-ui/core'
 import { processMainText } from 'assets/main-text'
 import { processSubText } from 'assets/sub-text'
 import TitleContentFrame from 'commons/title-content-box/TitleContentFrame'
