@@ -12,12 +12,22 @@ const useStyles = makeStyles((theme: Theme) =>
       MozUserSelect: 'none',
       msUserSelect: 'none',
       userSelect: 'none',
+      position: 'relative',
     },
     bgText: {
       color: 'rgba(167,167,167,0.2)',
+      position: 'relative',
+      top: '-10px',
       '& .MuiTypography-root': {
-        font: 'normal normal bold 160px/300px Segoe UI;',
+        font: 'normal normal bold 170px/350px Segoe UI;',
       },
+      '& .MuiTypography-root+.MuiTypography-root': {
+        marginTop: theme.spacing(20),
+      },
+    },
+    itemListBox: {
+      position: 'absolute',
+      top: '25vh',
     },
   })
 )

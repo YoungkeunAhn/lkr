@@ -1,4 +1,4 @@
-type SdItemType = {
+export type SdItemType = {
   icon: string
   title: string
   items: string[]
