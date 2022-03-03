@@ -26,7 +26,7 @@ function SoftwareDevelopmentSubContent() {
           <Box className={classes.itemListBox}>
             <Grid container justifyContent="space-between" spacing={10}>
               {sdItemList.map((item, idx) => (
-                <Grid item xs={6} sm={6} lg={3} xl={3}>
+                <Grid key={idx} item xs={6} sm={6} lg={3} xl={3}>
                   <SoftwareDevelopmentItemBox key={idx} sdItem={item} />
                 </Grid>
               ))}
