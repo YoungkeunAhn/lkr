@@ -4,6 +4,7 @@ import { recruitmentSubText } from 'assets/sub-text'
 import TitleContentFrame from 'commons/title-content-box/TitleContentFrame'
 import React from 'react'
 import useStyles from './stlyes'
+import RecruitmentSubContent from './sub-content/RecruitmentSubContent'
 
 function RecruitmentView() {
   const classes = useStyles()
@@ -26,6 +27,7 @@ function RecruitmentView() {
           </Box>
         </Container>
       </TitleContentFrame>
+      <RecruitmentSubContent />
     </Box>
   )
 }

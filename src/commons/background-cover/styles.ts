@@ -5,6 +5,7 @@ const useStyles = makeStyles((theme: Theme) =>
     root: {
       width: '100%',
       height: '100%',
+      flex: 1,
       boxSizing: 'border-box',
       paddingTop: theme.spacing(6.5),
       paddingBottom: theme.spacing(6.5),

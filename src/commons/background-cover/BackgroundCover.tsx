@@ -2,7 +2,7 @@ import React from 'react'
 import useStyles from './styles'
 
 type Props = {
-  children: React.ReactNode
+  children?: React.ReactNode
 }
 
 function BackgroundCover(props: Props) {
