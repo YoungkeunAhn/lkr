@@ -1,8 +1,10 @@
-import { Box, Container, Typography } from '@material-ui/core'
+import { Box, Container } from '@material-ui/core'
 import { recruitmentMainText2 } from 'assets/main-text'
-import { recruitmentNoticeText } from 'assets/recruitment-notice-text'
+import clsx from 'clsx'
 import TitleContentFrame from 'commons/title-content-box/TitleContentFrame'
 import React from 'react'
+import RecruitmentSubContentNoticePart from './notice-part/RecruitmentSubContentNoticePart'
+import RecruitmentSubContentProcessPart from './process-part/RecruitmentSubContentProcessPart'
 import useStyles from './styles'
 
 function RecruitmentSubContent() {
@@ -10,30 +12,24 @@ function RecruitmentSubContent() {
 
   return (
     <Box>
-      <Box className={classes.bgPart}>
+      <Box className={clsx(classes.bgPart, classes.topBg)}>
         <div className={classes.bgCover}></div>
       </Box>
+
       <Container maxWidth="xl">
         <TitleContentFrame
           title="신입 및 경력사원 공개채용"
           mainText={recruitmentMainText2}
         />
-        <Box className={classes.noticeBox}>
-          <Typography variant="h4">채용안내</Typography>
-          <Box>
-            {recruitmentNoticeText.map((item, idx) => (
-              <Box key={idx} display="flex">
-                <Typography>{item.title}</Typography>
-                <Box>
-                  {item.text.split('/').map((line, idx) => (
-                    <Typography key={idx}>{line}</Typography>
-                  ))}
-                </Box>
-              </Box>
-            ))}
-          </Box>
-        </Box>
+        <Container maxWidth="lg">
+          <RecruitmentSubContentNoticePart />
+          <RecruitmentSubContentProcessPart />
+        </Container>
       </Container>
+
+      <Box className={clsx(classes.bgPart, classes.bottomBg)}>
+        <div className={classes.bgCover}></div>
+      </Box>
     </Box>
   )
 }

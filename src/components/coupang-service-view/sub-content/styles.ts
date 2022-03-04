@@ -16,6 +16,7 @@ const useStyles = makeStyles((theme: Theme) =>
       width: 280,
       padding: theme.spacing(2, 4),
       borderRadius: 100,
+      background: '#fff',
       border: '1px solid #96B6D0',
       display: 'flex',
       justifyContent: 'flex-start',
