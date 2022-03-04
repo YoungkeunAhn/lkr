@@ -3,7 +3,7 @@ import { createStyles, makeStyles, Theme } from '@material-ui/core'
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     root: {
-      backgroundImage: `url('/main_view_bg.jpg')`,
+      backgroundImage: `url('main_view_bg.jpg')`,
       backgroundSize: 'cover',
       backgroundRepeat: 'no-repeat',
       backgroundAttachment: 'fixed',

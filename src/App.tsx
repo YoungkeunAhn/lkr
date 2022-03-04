@@ -1,5 +1,6 @@
 import AboutUsView from 'components/about-us-view/AboutUsView'
 import CoupangServiceView from 'components/coupang-service-view/CoupangServiceView'
+import Footer from 'components/footer/Footer'
 import LocationView from 'components/location-view/LocationView'
 import MainView from 'components/main-view/MainView'
 import NavBar from 'components/nav-bar/NavBar'
@@ -28,6 +29,7 @@ function App() {
       <RecruitmentView />
       <NewsroomView />
       <LocationView />
+      <Footer />
       <NavBar currentMenu={currentMenu} onClick={onClickMenu} />
     </div>
   )
