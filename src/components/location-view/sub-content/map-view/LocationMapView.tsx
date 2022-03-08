@@ -2,7 +2,11 @@ import React, { useEffect } from 'react'
 
 function LocationMapView() {
   useEffect(() => {
-    let map = new naver.maps.Map('map')
+    const mapOptions = {
+      center: new naver.maps.LatLng(37.3595704, 127.105399),
+      zoom: 15,
+    }
+    let map = new naver.maps.Map('map', mapOptions)
 
     map = new naver.maps.Map(document.createElement('div'))
     map.setMapTypeId(naver.maps.MapTypeId.HYBRID)
