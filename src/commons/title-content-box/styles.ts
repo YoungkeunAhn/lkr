@@ -44,7 +44,6 @@ const useStyles = makeStyles((theme: Theme) =>
     },
     subTextBox: {
       padding: theme.spacing(4, 21),
-
       '& .MuiTypography-root:first-child': {
         lineHeight: 'inherit',
       },
@@ -53,6 +52,9 @@ const useStyles = makeStyles((theme: Theme) =>
       },
       '& .MuiTypography-root+.MuiTypography-root': {
         marginTop: theme.spacing(2),
+      },
+      [theme.breakpoints.down('sm')]: {
+        padding: theme.spacing(1),
       },
     },
   })

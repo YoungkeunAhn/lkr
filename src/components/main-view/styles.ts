@@ -21,7 +21,10 @@ const useStyles = makeStyles((theme: Theme) =>
     },
 
     textBox: {
-      marginTop: theme.spacing(50),
+      marginTop: theme.spacing(45),
+      [theme.breakpoints.down('sm')]: {
+        marginTop: theme.spacing(10),
+      },
     },
     logoBox: {
       display: 'flex',
@@ -29,6 +32,10 @@ const useStyles = makeStyles((theme: Theme) =>
       '& p': {
         marginLeft: theme.spacing(2),
       },
+    },
+    menuIcon: {
+      color: '#fff',
+      fontSize: '3rem',
     },
   })
 )

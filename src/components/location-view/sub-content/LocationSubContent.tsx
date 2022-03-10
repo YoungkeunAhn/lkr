@@ -20,7 +20,6 @@ function LocationSubContent() {
   return (
     <Container maxWidth="xl">
       <Box className={classes.root}>
-        {/* <LocationMapView /> */}
         <Box className={classes.mapBox}>
           <iframe
             title="google map"

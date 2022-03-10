@@ -7,6 +7,7 @@ const useStyles = makeStyles((theme: Theme) =>
       justifyContent: 'space-evenly',
       [theme.breakpoints.down('sm')]: {
         flexDirection: 'column',
+        alignItems: 'center',
       },
     },
     mapBox: {
@@ -24,6 +25,9 @@ const useStyles = makeStyles((theme: Theme) =>
     btnBox: {
       [theme.breakpoints.down('sm')]: {
         marginTop: theme.spacing(5),
+        display: 'flex',
+        justifyContent: 'space-between',
+        width: '100%',
       },
     },
     naverBtn: {

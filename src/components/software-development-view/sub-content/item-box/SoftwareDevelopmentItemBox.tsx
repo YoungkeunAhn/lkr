@@ -15,13 +15,13 @@ function SoftwareDevelopmentItemBox(props: Props) {
   return (
     <Box className={classes.root}>
       <Box className={classes.itemCircle}>
-        <img src={icon} alt="service development intro icon" />
+        <img src={icon} alt='service development intro icon' />
       </Box>
       <Typography>{title}</Typography>
       <ul className={classes.itemList}>
         {items.map((text, idx) => (
-          <li>
-            <Typography key={idx}>{text}</Typography>
+          <li key={idx}>
+            <Typography>{text}</Typography>
           </li>
         ))}
       </ul>

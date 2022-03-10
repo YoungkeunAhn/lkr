@@ -22,13 +22,17 @@ const useStyles = makeStyles((theme: Theme) =>
       marginBottom: theme.spacing(2),
       position: 'relative',
       '& img': {
-        width: 250,
-        height: 150,
+        width: '100%',
+        heigth: '100%',
         objectFit: 'contain',
         position: 'absolute',
         top: '50%',
         left: '50%',
         transform: 'translate(-50%, -50%)',
+      },
+      [theme.breakpoints.down('sm')]: {
+        width: 100,
+        height: 100,
       },
     },
     itemList: {

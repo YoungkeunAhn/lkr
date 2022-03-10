@@ -1,6 +1,5 @@
 import {
   Box,
-  Button,
   Container,
   Grid,
   Typography,
@@ -21,8 +20,8 @@ function ProcessSubContent() {
   const onClickBtn = () => {}
 
   return (
-    <Container maxWidth="xl" className={classes.root}>
-      <Typography align="center" className={classes.bgText}>
+    <Container maxWidth='xl' className={classes.root}>
+      <Typography align='center' className={classes.bgText}>
         PROCESS
       </Typography>
       <Grid
@@ -33,13 +32,13 @@ function ProcessSubContent() {
       >
         {processItemList.map((item, idx) => (
           <Grid item xs={12} sm={6} lg={6} xl={4}>
-            <Box display="flex" justifyContent="center">
+            <Box display='flex' justifyContent='center'>
               <ProcessItemBox seq={idx + 1} {...item}></ProcessItemBox>
             </Box>
           </Grid>
         ))}
       </Grid>
-      <ClickPointerBtn title="견적문의하기" onClick={onClickBtn} />
+      <ClickPointerBtn title='견적문의하기' onClick={onClickBtn} />
     </Container>
   )
 }

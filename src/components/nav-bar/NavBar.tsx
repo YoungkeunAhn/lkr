@@ -1,17 +1,18 @@
 import { ButtonBase, Typography } from '@material-ui/core'
 import { navMenu } from 'assets/nav-menu'
 import clsx from 'clsx'
-import React from 'react'
+import React, { useState } from 'react'
 import useStyles from './styles'
 
 type Props = {
   currentMenu: string
-  onClick: (menu: string) => void
+  onClick: (menu: string, offsetY: number) => void
+  isBgWhite: boolean
 }
 
 function NavBar(props: Props) {
   const classes = useStyles()
-  const { currentMenu, onClick } = props
+  const { currentMenu, onClick, isBgWhite } = props
 
   const onClickTop = () => {
     window.scrollTo({ behavior: 'smooth', top: 0 })
@@ -24,19 +25,24 @@ function NavBar(props: Props) {
           key={idx}
           className={clsx(
             classes.menuBox,
-            classes.white,
+            !isBgWhite && classes.white,
             currentMenu === menu.title && classes.currentMenu
           )}
         >
-          <ButtonBase onClick={() => onClick(menu.title)}>
-            <Typography variant="h6">{menu.title}</Typography>
+          <ButtonBase onClick={() => onClick(menu.title, menu.offsetY)}>
+            <Typography variant='h6'>{menu.title}</Typography>
             <span className={classes.circle}></span>
           </ButtonBase>
         </li>
       ))}
       <li className={clsx(classes.menuBox, classes.white)}>
         <ButtonBase onClick={onClickTop}>
-          <Typography variant="h6">TOP</Typography>
+          <Typography
+            variant='h6'
+            style={{ color: isBgWhite ? '#000' : '#fff' }}
+          >
+            TOP
+          </Typography>
           <span className={classes.triangle}></span>
         </ButtonBase>
       </li>
