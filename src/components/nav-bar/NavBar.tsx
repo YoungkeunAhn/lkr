@@ -30,7 +30,7 @@ function NavBar(props: Props) {
           )}
         >
           <ButtonBase onClick={() => onClick(menu.title, menu.offsetY)}>
-            <Typography variant='h6'>{menu.title}</Typography>
+            <Typography variant='body1'>{menu.title}</Typography>
             <span className={classes.circle}></span>
           </ButtonBase>
         </li>
@@ -38,7 +38,7 @@ function NavBar(props: Props) {
       <li className={clsx(classes.menuBox, classes.white)}>
         <ButtonBase onClick={onClickTop}>
           <Typography
-            variant='h6'
+            variant='body1'
             style={{ color: isBgWhite ? '#000' : '#fff' }}
           >
             TOP

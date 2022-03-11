@@ -11,31 +11,35 @@ function CoupangSubContent() {
 
   return (
     <Box pb={15}>
-      <Container maxWidth="xl">
+      <Container maxWidth='lg'>
         <Box className={classes.root}>
           <Box className={classes.itemListBox}>
             {leftCoupangItems.map((item, idx) => (
               <Box className={classes.itemBox} key={idx}>
-                <img src={item.icon} alt="coupang service icon" />
-                <Typography variant="h5">{item.title}</Typography>
+                <Box className={classes.itemImgBox}>
+                  <img src={item.icon} alt='coupang service icon' />
+                </Box>
+                <Typography variant='h6'>{item.title}</Typography>
               </Box>
             ))}
           </Box>
           <Box className={classes.mainImgBox}>
-            <img src="coupang_sub_img.png" alt="coupang mockup" />
+            <img src='coupang_sub_img.png' alt='coupang mockup' />
           </Box>
 
           <Box className={classes.itemListBox}>
             {rightCoupangItems.map((item, idx) => (
               <Box className={classes.itemBox} key={idx}>
-                <img src={item.icon} alt="coupang service icon" />
-                <Typography variant="h5">{item.title}</Typography>
+                <Box className={classes.itemImgBox}>
+                  <img src={item.icon} alt='coupang service icon' />
+                </Box>
+                <Typography variant='h6'>{item.title}</Typography>
               </Box>
             ))}
           </Box>
         </Box>
         <ClickPointerBtn
-          title="더 자세히 보기"
+          title='더 자세히 보기'
           onClick={onClickBtn}
           paddingRight={10}
         />

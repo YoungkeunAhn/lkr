@@ -15,14 +15,14 @@ function AboutUsSubContent() {
   return (
     <Box className={classes.root}>
       <BackgroundCover>
-        <Container maxWidth="xl">
+        <Container maxWidth='lg'>
           <Box className={classes.textBox}>
-            <Typography variant="h3" className={classes.title}>
+            <Typography variant='h3' className={classes.title}>
               우리는,
             </Typography>
             <Box className={classes.contentBox}>
               {textList.map((text, idx) => (
-                <Typography variant="h6" key={idx}>
+                <Typography variant='h6' key={idx}>
                   {text}
                 </Typography>
               ))}

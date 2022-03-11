@@ -16,6 +16,7 @@ const useStyles = makeStyles((theme: Theme) =>
       },
     },
     dotBorderBox: {
+      width: '65%',
       border: '5px dotted #777',
       borderRadius: 10,
       display: 'flex',
@@ -36,20 +37,22 @@ const useStyles = makeStyles((theme: Theme) =>
     },
     mockupImageBox: {
       marginRight: theme.spacing(10),
+      height: '70%',
       '& img': {
-        height: '70%',
+        width: '100%',
+        height: '100%',
       },
     },
     dotBorderCircle: {
       border: '3px dotted #777',
       borderRadius: '100%',
-      width: 500,
-      height: 500,
+      width: 400,
+      height: 400,
       position: 'relative',
       display: 'flex',
       justifyContent: 'center',
       alignItems: 'center',
-      top: '-10vh',
+      top: '-5vh',
       '& > *': {
         position: 'absolute',
       },
@@ -59,7 +62,7 @@ const useStyles = makeStyles((theme: Theme) =>
     },
     bgColorTextBox: {
       display: 'flex',
-      transform: 'translateX(-80%)',
+      transform: 'translateX(-30%)',
       '& .MuiTypography-root': {
         color: '#fff',
         background: '#3E3E3E',
@@ -76,7 +79,7 @@ const useStyles = makeStyles((theme: Theme) =>
       borderBottom: '0px solid transparent',
       borderLeft: '10px solid transparent',
       borderRight: '10px solid transparent',
-      transform: 'translateX(1260%)',
+      transform: 'translateX(1010%)',
     },
     bottomTriangle: {
       width: 0,
@@ -85,7 +88,7 @@ const useStyles = makeStyles((theme: Theme) =>
       borderBottom: '10px solid transparent',
       borderLeft: '0px solid transparent',
       borderRight: '10px solid #000',
-      transform: 'translateY(1260%)',
+      transform: 'translateY(1010%)',
     },
     leftTriangle: {
       width: 0,
@@ -94,7 +97,7 @@ const useStyles = makeStyles((theme: Theme) =>
       borderBottom: '10px solid #000',
       borderLeft: '10px solid transparent',
       borderRight: '10px solid transparent',
-      transform: 'translateX(-1260%)',
+      transform: 'translateX(-1010%)',
     },
     topTriangle: {
       width: 0,
@@ -103,7 +106,7 @@ const useStyles = makeStyles((theme: Theme) =>
       borderBottom: '10px solid transparent',
       borderLeft: '10px solid #000',
       borderRight: '0px solid transparent',
-      transform: 'translateY(-1260%)',
+      transform: 'translateY(-1010%)',
     },
     iconTextBox: {
       display: 'flex',
@@ -114,25 +117,31 @@ const useStyles = makeStyles((theme: Theme) =>
       },
     },
     hospital: {
-      transform: 'translate(130%, -140%)',
+      transform: 'translate(120%, -130%)',
+      width: 130,
       '& img': {
-        width: 140,
+        width: '80%',
+        heigth: '80%',
+        objectFit: 'contain',
       },
     },
     server: {
-      transform: 'translate(130%, 140%)',
+      transform: 'translate(120%, 130%)',
+      width: 120,
       '& img': {
-        width: 140,
+        width: '100%',
+        heigth: '100%',
+        objectFit: 'contain',
       },
     },
     circleTopLeftText: {
-      transform: 'translate(-110%, -350%)',
+      transform: 'translate(-100%, -230%)',
     },
     circleBottomLeftText: {
-      transform: 'translate(-110%, 350%)',
+      transform: 'translate(-100%, 230%)',
     },
     circleRightText: {
-      transform: 'translate(120%, -100%)',
+      transform: 'translate(100%, -100%)',
     },
 
     rightBox: {

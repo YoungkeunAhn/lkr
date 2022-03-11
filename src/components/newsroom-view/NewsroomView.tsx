@@ -12,11 +12,11 @@ function NewsroomView() {
   return (
     <div>
       <TitleContentFrame
-        title="newsroom"
+        title='newsroom'
         mainText={[`<span>2021년 12월</span> 엘케이알 뉴스`]}
         subText={newsroomSubText}
       />
-      <Container maxWidth="xl">
+      <Container maxWidth='lg'>
         <Grid container spacing={4}>
           {newsItem.map((item, idx) => (
             <Grid item key={idx} xs={12} sm={6} lg={3} xl={3}>
@@ -24,7 +24,7 @@ function NewsroomView() {
             </Grid>
           ))}
         </Grid>
-        <Button variant="contained" className={classes.btn}>
+        <Button variant='contained' className={classes.btn}>
           LRK 소식 모아보기
         </Button>
       </Container>

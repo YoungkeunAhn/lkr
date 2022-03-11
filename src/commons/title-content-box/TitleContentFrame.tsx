@@ -23,7 +23,7 @@ function TitleContentFrame(props: Props) {
 
   return (
     <Box className={classes.root} style={{ background }}>
-      <Container maxWidth='xl'>
+      <Container maxWidth='lg'>
         <Typography variant='body1' className={classes.lkrLogo} align='center'>
           LKR
         </Typography>
@@ -42,9 +42,9 @@ function TitleContentFrame(props: Props) {
             subText.map((text, idx) => (
               <Typography
                 key={idx}
-                variant={smDown ? 'body1' : 'h5'}
+                variant={smDown ? 'body1' : 'body1'}
                 align='center'
-                style={{ lineHeight: subText.length === 1 ? '50px' : '' }}
+                style={{ lineHeight: subText.length === 1 ? '40px' : '' }}
               >
                 {text}
               </Typography>

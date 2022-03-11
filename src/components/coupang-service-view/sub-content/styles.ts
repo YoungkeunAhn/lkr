@@ -5,6 +5,7 @@ const useStyles = makeStyles((theme: Theme) =>
     root: {
       display: 'flex',
       justifyContent: 'space-around',
+      alignItems: 'center',
     },
     itemListBox: {
       display: 'flex',
@@ -14,21 +15,41 @@ const useStyles = makeStyles((theme: Theme) =>
     },
     itemBox: {
       width: 280,
-      padding: theme.spacing(2, 4),
+      boxSizing: 'border-box',
+      padding: theme.spacing(2, 3),
       borderRadius: 100,
       background: '#fff',
       border: '1px solid #96B6D0',
       display: 'flex',
-      justifyContent: 'flex-start',
+      justifyContent: 'center',
       alignItems: 'center',
+      '& .MuiTypography-root': {
+        fontWeight: 600,
+      },
       '&+&': {
         marginTop: theme.spacing(2),
       },
+    },
+    itemImgBox: {
+      width: '15%',
+      marginRight: theme.spacing(2),
       '& img': {
-        marginRight: theme.spacing(2),
+        width: '100%',
+        height: '100%',
+        objectFit: 'contain',
       },
     },
-    mainImgBox: {},
+    mainImgBox: {
+      width: '30%',
+      display: 'flex',
+      justifyContent: 'center',
+      alignItems: 'center',
+      '& img': {
+        width: '100%',
+        height: '100%',
+        objectFit: 'contain',
+      },
+    },
   })
 )
 

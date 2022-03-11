@@ -20,7 +20,7 @@ function ProcessSubContent() {
   const onClickBtn = () => {}
 
   return (
-    <Container maxWidth='xl' className={classes.root}>
+    <Container maxWidth='lg' className={classes.root}>
       <Typography align='center' className={classes.bgText}>
         PROCESS
       </Typography>

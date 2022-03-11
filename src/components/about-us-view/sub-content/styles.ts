@@ -15,8 +15,8 @@ const useStyles = makeStyles((theme: Theme) =>
     },
     textBox: {
       maxWidth: 700,
-      marginTop: theme.spacing(10),
-      marginBottom: theme.spacing(10),
+      marginTop: theme.spacing(2),
+      marginBottom: theme.spacing(2),
       '& .MuiTypography-root': {
         color: '#fff',
       },

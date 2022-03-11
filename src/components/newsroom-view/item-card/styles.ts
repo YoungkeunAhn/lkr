@@ -61,7 +61,7 @@ const useStyles = makeStyles((theme: Theme) =>
     },
     thumbnail: {
       flex: 1,
-      maxHeight: 250,
+      maxHeight: 170,
       padding: 0,
       '& img': {
         width: '100%',

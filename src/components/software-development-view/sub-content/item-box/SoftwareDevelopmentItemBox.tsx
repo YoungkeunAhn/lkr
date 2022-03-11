@@ -5,17 +5,23 @@ import useStyles from './styles'
 
 type Props = {
   sdItem: SdItemType
+  idx: number
 }
 
 function SoftwareDevelopmentItemBox(props: Props) {
-  const { sdItem } = props
+  const { sdItem, idx } = props
   const { icon, title, items } = sdItem
   const classes = useStyles()
 
   return (
     <Box className={classes.root}>
       <Box className={classes.itemCircle}>
-        <img src={icon} alt='service development intro icon' />
+        <img
+          src={icon}
+          alt='service development intro icon'
+          width={idx === 0 ? '90%' : '70%'}
+          height={idx === 0 ? '90%' : '70%'}
+        />
       </Box>
       <Typography>{title}</Typography>
       <ul className={classes.itemList}>

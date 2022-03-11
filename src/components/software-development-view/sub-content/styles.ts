@@ -14,12 +14,17 @@ const useStyles = makeStyles((theme: Theme) =>
       userSelect: 'none',
       position: 'relative',
     },
+    container: {
+      display: 'flex',
+      justifyContent: 'center',
+      alignItems: 'center',
+    },
     bgText: {
       color: 'rgba(167,167,167,0.2)',
       position: 'relative',
       top: '-10px',
       '& .MuiTypography-root': {
-        font: 'normal normal bold 170px/350px Segoe UI;',
+        font: 'normal normal bold 100px/150px Segoe UI;',
       },
       '& .MuiTypography-root+.MuiTypography-root': {
         marginTop: theme.spacing(20),
@@ -27,7 +32,6 @@ const useStyles = makeStyles((theme: Theme) =>
     },
     itemListBox: {
       position: 'absolute',
-      top: '25vh',
     },
   })
 )

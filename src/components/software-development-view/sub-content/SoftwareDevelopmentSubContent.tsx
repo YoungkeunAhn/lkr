@@ -23,7 +23,7 @@ function SoftwareDevelopmentSubContent() {
   return (
     <Box className={classes.root}>
       <BackgroundCover>
-        <Container maxWidth='xl'>
+        <Container maxWidth='lg' className={classes.container}>
           <Box className={classes.bgText}>
             <Typography variant='h1' align='center'>
               {bgText1}
@@ -36,11 +36,11 @@ function SoftwareDevelopmentSubContent() {
             <Grid
               container
               justifyContent='space-between'
-              spacing={smDown ? 2 : 10}
+              spacing={smDown ? 2 : 4}
             >
               {sdItemList.map((item, idx) => (
                 <Grid key={idx} item xs={6} sm={6} lg={3} xl={3}>
-                  <SoftwareDevelopmentItemBox sdItem={item} />
+                  <SoftwareDevelopmentItemBox idx={idx} sdItem={item} />
                 </Grid>
               ))}
             </Grid>

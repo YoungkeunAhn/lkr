@@ -24,7 +24,7 @@ const useStyles = makeStyles((theme: Theme) =>
     title: {
       fontWeight: 600,
       marginTop: theme.spacing(2),
-      marginBottom: theme.spacing(8),
+      marginBottom: theme.spacing(4),
     },
     mainTextBox: {
       display: 'flex',
@@ -32,26 +32,24 @@ const useStyles = makeStyles((theme: Theme) =>
       alignItems: 'center',
       marginBottom: theme.spacing(4),
       fontWeight: 500,
-      '& h2': {
-        fontSize: '4.5rem',
-      },
-      '& h2+h2': {
-        marginTop: theme.spacing(4),
+      '& .MuiTypography-root+.MuiTypography-root': {
+        marginTop: theme.spacing(2),
       },
       '& span': {
         fontWeight: 600,
       },
     },
     subTextBox: {
-      padding: theme.spacing(4, 21),
+      paddingTop: theme.spacing(4),
       '& .MuiTypography-root:first-child': {
-        lineHeight: 'inherit',
+        lineHeight: '40px',
       },
       '& .MuiTypography-root': {
-        lineHeight: '50px',
+        lineHeight: '40px',
+        fontSize: '1.2rem',
       },
       '& .MuiTypography-root+.MuiTypography-root': {
-        marginTop: theme.spacing(2),
+        marginTop: theme.spacing(1),
       },
       [theme.breakpoints.down('sm')]: {
         padding: theme.spacing(1),

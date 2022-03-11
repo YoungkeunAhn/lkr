@@ -20,29 +20,29 @@ function NewsroomItemCard(props: Props) {
         <Box className={classes.topBox}>
           <Box className={classes.leftBox}>
             <Box className={classes.talkIcon}>
-              <img src="talk_icon.png" alt="newsroom talk icon" />
+              <img src='talk_icon.png' alt='newsroom talk icon' />
             </Box>
             <Typography
-              variant="body2"
+              variant='body2'
               className={classes.category}
-              align="center"
+              align='center'
             >
               {category}
             </Typography>
           </Box>
-          <IconButton size="small">
-            <MoreVertIcon fontSize="small" />
+          <IconButton size='small'>
+            <MoreVertIcon fontSize='small' />
           </IconButton>
         </Box>
-        <Typography variant="h6" className={classes.title}>
+        <Typography variant='body1' className={classes.title}>
           {title}
         </Typography>
-        <Typography variant="caption" className={classes.tag}>
+        <Typography variant='caption' className={classes.tag}>
           {tags}
         </Typography>
       </Box>
       <Box className={classes.thumbnail}>
-        <img src={image} alt="thumbnail" />
+        <img src={image} alt='thumbnail' />
       </Box>
     </Box>
   )
