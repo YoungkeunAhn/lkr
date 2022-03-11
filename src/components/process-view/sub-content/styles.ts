@@ -37,7 +37,7 @@ const useStyles = makeStyles((theme: Theme) =>
     bgText: {
       font: 'normal normal bold 162px/147px Segoe UI;',
       position: 'absolute',
-      top: '40%',
+      top: '38%',
       left: '50%',
       transform: 'translate(-50%,-50%)',
       color: '#8B8B8B',
@@ -46,6 +46,10 @@ const useStyles = makeStyles((theme: Theme) =>
       MozUserSelect: 'none',
       msUserSelect: 'none',
       userSelect: 'none',
+    },
+    moveTopBox: {
+      position: 'relative',
+      top: '-5vh',
     },
   })
 )

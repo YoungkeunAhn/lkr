@@ -24,13 +24,11 @@ function SoftwareDevelopmentItemBox(props: Props) {
         />
       </Box>
       <Typography>{title}</Typography>
-      <ul className={classes.itemList}>
+      <Box mt={2}>
         {items.map((text, idx) => (
-          <li key={idx}>
-            <Typography>{text}</Typography>
-          </li>
+          <Typography variant='body2'>-{text}</Typography>
         ))}
-      </ul>
+      </Box>
     </Box>
   )
 }

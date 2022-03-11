@@ -9,19 +9,21 @@ function RecruitmentSubContentProcessPart() {
 
   return (
     <Box>
-      <Typography variant='h4' className={classes.subTitle}>
+      <Typography variant='h5' className={classes.subTitle}>
         전형 프로세스
       </Typography>
       <Box className={classes.processListBox}>
         {recruitmentProcess.map((item, idx) => (
-          <Box key={idx} display='flex'>
-            <RecruitmentProcessIconBox {...item} />
+          <>
+            <Box key={idx} display='flex' alignItems='center'>
+              <RecruitmentProcessIconBox {...item} />
+            </Box>
             {idx !== recruitmentProcess.length - 1 && (
               <Typography className={classes.gt} variant='h2'>
                 &gt;
               </Typography>
             )}
-          </Box>
+          </>
         ))}
       </Box>
     </Box>

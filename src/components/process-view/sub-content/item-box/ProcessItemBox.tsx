@@ -16,7 +16,7 @@ function ProcessItemBox(props: Props) {
     <Box className={classes.root}>
       <Box className={classes.titleBox}>
         <Typography>STEP 0{seq}</Typography>
-        <Typography variant="h6" className={classes.title}>
+        <Typography variant='h6' className={classes.title}>
           {title}
         </Typography>
         {seq !== 6 && (
@@ -28,7 +28,9 @@ function ProcessItemBox(props: Props) {
       </Box>
       <Box className={classes.textBox}>
         {text.map((x, idx) => (
-          <Typography key={idx}>{x}</Typography>
+          <Typography variant='caption' key={idx}>
+            {x}
+          </Typography>
         ))}
       </Box>
     </Box>

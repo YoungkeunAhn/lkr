@@ -7,6 +7,7 @@ const useStyles = makeStyles((theme: Theme) =>
       border: '1px solid #B2B2B2',
       width: 500,
       zIndex: 10,
+      margin: theme.spacing(3, 0),
     },
     titleBox: {
       position: 'relative',
@@ -16,13 +17,14 @@ const useStyles = makeStyles((theme: Theme) =>
       borderTopRightRadius: 10,
       '& .MuiTypography-root': {
         fontWeight: 600,
+        letterSpacing: -1.3,
       },
     },
     title: {
       marginTop: theme.spacing(2),
     },
     textBox: {
-      minHeight: 120,
+      minHeight: 80,
       display: 'flex',
       flexDirection: 'column',
       alignItems: 'flex-start',

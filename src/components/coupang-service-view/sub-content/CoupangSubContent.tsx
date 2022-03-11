@@ -38,11 +38,7 @@ function CoupangSubContent() {
             ))}
           </Box>
         </Box>
-        <ClickPointerBtn
-          title='더 자세히 보기'
-          onClick={onClickBtn}
-          paddingRight={10}
-        />
+        <ClickPointerBtn title='더 자세히 보기' onClick={onClickBtn} />
       </Container>
     </Box>
   )

@@ -24,7 +24,8 @@ function App() {
 
   const handleScroll = () => {
     window.addEventListener('scroll', function (e) {
-      console.log(this.window.scrollY)
+      // console.log(this.window.scrollY)
+      console.log(this.window.screenY)
 
       if (this.window.scrollY > 0 && this.window.scrollY < 349) {
         setIsBgWhite(false) //메인
@@ -57,12 +58,6 @@ function App() {
   useEffect(() => {
     handleScroll()
   }, [isBgWhite])
-
-  useEffect(() => {
-    if (aboutUsRef.current) {
-      console.log(aboutUsRef.current)
-    }
-  })
 
   return (
     <div>

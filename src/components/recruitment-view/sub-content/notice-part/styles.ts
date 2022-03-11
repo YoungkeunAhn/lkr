@@ -10,6 +10,7 @@ const useStyles = makeStyles((theme: Theme) =>
     },
     subTitle: {
       marginBottom: theme.spacing(3),
+      fontWeight: 600,
     },
     textPart: {
       paddingTop: theme.spacing(6),

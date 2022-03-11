@@ -3,12 +3,13 @@ import { createStyles, makeStyles, Theme } from '@material-ui/core'
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     root: {
+      width: '13.75vw',
       display: 'flex',
       flexDirection: 'column',
       alignItems: 'center',
       background: '#606060',
       borderRadius: 10,
-      padding: theme.spacing(5),
+      padding: theme.spacing(3),
       height: '100%',
       boxSizing: 'border-box',
       '& .MuiTypography-root': {
@@ -43,8 +44,12 @@ const useStyles = makeStyles((theme: Theme) =>
       margin: 0,
       padding: 0,
       marginTop: theme.spacing(2),
+      '& ul': {
+        width: '100%',
+      },
       '& li': {
         display: 'flex',
+        width: '100%',
       },
       '& li:before': {
         content: '"-"',

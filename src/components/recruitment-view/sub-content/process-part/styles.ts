@@ -4,6 +4,7 @@ const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     subTitle: {
       marginBottom: theme.spacing(3),
+      fontWeight: 600,
     },
 
     processListBox: {
@@ -14,8 +15,9 @@ const useStyles = makeStyles((theme: Theme) =>
     gt: {
       color: '#888',
       fontWeight: 500,
-      margin: theme.spacing(0, 2),
-      lineHeight: '+',
+      margin: theme.spacing(0, 1),
+      position: 'relative',
+      top: '-4vh',
     },
   })
 )

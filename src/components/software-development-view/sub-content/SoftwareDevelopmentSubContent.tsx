@@ -33,11 +33,7 @@ function SoftwareDevelopmentSubContent() {
             </Typography>
           </Box>
           <Box className={classes.itemListBox}>
-            <Grid
-              container
-              justifyContent='space-between'
-              spacing={smDown ? 2 : 4}
-            >
+            <Grid container justifyContent='space-between' spacing={4}>
               {sdItemList.map((item, idx) => (
                 <Grid key={idx} item xs={6} sm={6} lg={3} xl={3}>
                   <SoftwareDevelopmentItemBox idx={idx} sdItem={item} />

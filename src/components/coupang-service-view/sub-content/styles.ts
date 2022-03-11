@@ -4,7 +4,7 @@ const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     root: {
       display: 'flex',
-      justifyContent: 'space-around',
+      justifyContent: 'space-between',
       alignItems: 'center',
     },
     itemListBox: {
@@ -40,7 +40,7 @@ const useStyles = makeStyles((theme: Theme) =>
       },
     },
     mainImgBox: {
-      width: '30%',
+      width: '35%',
       display: 'flex',
       justifyContent: 'center',
       alignItems: 'center',
