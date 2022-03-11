@@ -39,8 +39,8 @@ function ProcessSubContent() {
             </Grid>
           ))}
         </Grid>
+        <ClickPointerBtn title='견적문의하기' onClick={onClickBtn} />
       </Box>
-      <ClickPointerBtn title='견적문의하기' onClick={onClickBtn} />
     </Container>
   )
 }

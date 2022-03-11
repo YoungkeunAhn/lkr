@@ -3,7 +3,7 @@ import { createStyles, makeStyles, Theme } from '@material-ui/core'
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     root: {
-      paddingBottom: theme.spacing(15),
+      paddingBottom: theme.spacing(9),
       position: 'relative',
     },
     btnPointerImgBox: {
@@ -37,7 +37,7 @@ const useStyles = makeStyles((theme: Theme) =>
     bgText: {
       font: 'normal normal bold 162px/147px Segoe UI;',
       position: 'absolute',
-      top: '38%',
+      top: '32.5%',
       left: '50%',
       transform: 'translate(-50%,-50%)',
       color: '#8B8B8B',
