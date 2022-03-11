@@ -27,7 +27,7 @@ function ProcessSubContent() {
       <Grid
         container
         justifyContent={lgDown ? 'center' : 'space-between'}
-        spacing={10}
+        spacing={6}
         style={{ zIndex: 200 }}
       >
         {processItemList.map((item, idx) => (

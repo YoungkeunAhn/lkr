@@ -9,12 +9,13 @@ const useStyles = makeStyles((theme: Theme) =>
     processListBox: {
       display: 'flex',
       justifyContent: 'center',
-      alignItems: 'flex-start',
+      alignItems: 'center',
     },
     gt: {
       color: '#888',
-      fontWeight: 600,
+      fontWeight: 500,
       margin: theme.spacing(0, 2),
+      lineHeight: '+',
     },
   })
 )

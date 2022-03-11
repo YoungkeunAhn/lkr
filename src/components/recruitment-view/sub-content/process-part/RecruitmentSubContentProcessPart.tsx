@@ -17,7 +17,7 @@ function RecruitmentSubContentProcessPart() {
           <Box key={idx} display='flex'>
             <RecruitmentProcessIconBox {...item} />
             {idx !== recruitmentProcess.length - 1 && (
-              <Typography className={classes.gt} variant='h1'>
+              <Typography className={classes.gt} variant='h2'>
                 &gt;
               </Typography>
             )}

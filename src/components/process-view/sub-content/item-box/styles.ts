@@ -28,7 +28,7 @@ const useStyles = makeStyles((theme: Theme) =>
       alignItems: 'flex-start',
       justifyContent: 'flex-start',
       background: '#f6f6f6',
-      padding: theme.spacing(4, 2),
+      padding: theme.spacing(2),
       borderBottomLeftRadius: 10,
       borderBottomRightRadius: 10,
     },

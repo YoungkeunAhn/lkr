@@ -8,6 +8,8 @@ const useStyles = makeStyles((theme: Theme) =>
       backgroundRepeat: 'no-repeat',
       backgroundSize: 'cover',
       backgroundAttachment: 'fixed',
+      boxSizing: 'border-box',
+      height: '60vh',
     },
     title: {
       fontWeight: 600,
@@ -22,13 +24,13 @@ const useStyles = makeStyles((theme: Theme) =>
       },
     },
     contentBox: {
-      marginTop: theme.spacing(10),
+      marginTop: theme.spacing(4),
       '& .MuiTypography-root': {
         fontWeight: 300,
         lineHeight: '35px',
       },
       '& .MuiTypography-root+.MuiTypography-root': {
-        marginTop: theme.spacing(6),
+        marginTop: theme.spacing(4),
       },
     },
   })

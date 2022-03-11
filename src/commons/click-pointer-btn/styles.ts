@@ -4,11 +4,11 @@ const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     root: {},
     btnPointerImgBox: {
-      width: 50,
-      height: 50,
+      width: 90,
+      height: 90,
       position: 'relative',
       top: 60,
-      right: -200,
+      right: -220,
       zIndex: 100,
       transition: '0.3s',
       '& img': {

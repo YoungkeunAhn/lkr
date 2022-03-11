@@ -1,5 +1,4 @@
 import { Box, Typography } from '@material-ui/core'
-import { CSSProperties } from '@material-ui/core/styles/withStyles'
 import React from 'react'
 import useStyles from './styles'
 
@@ -14,10 +13,10 @@ function RecruitmentProcessIconBox(props: Props) {
 
   return (
     <Box className={classes.root}>
-      <Box className={classes.circle}>
-        <img src={icon} alt="recruitment process icon" />
+      <Box className={classes.imgBox}>
+        <img src={icon} alt='recruitment process icon' />
       </Box>
-      <Typography variant="h6" align="center" className={classes.title}>
+      <Typography align='center' className={classes.title}>
         {title}
       </Typography>
     </Box>

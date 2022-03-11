@@ -11,7 +11,8 @@ const useStyles = makeStyles((theme: Theme) =>
       backgroundAttachment: 'fixed',
       backgroundPosition: 'top',
       backgroundSize: 'cover',
-      minHeight: 500,
+      height: '60vh',
+      boxSizing: 'border-box',
     },
     topBg: {
       backgroundImage: `url('recruitment_bg1.jpg')`,

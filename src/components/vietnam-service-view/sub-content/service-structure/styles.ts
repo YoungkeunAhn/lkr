@@ -37,7 +37,7 @@ const useStyles = makeStyles((theme: Theme) =>
     },
     mockupImageBox: {
       marginRight: theme.spacing(10),
-      height: '70%',
+      height: '100%',
       '& img': {
         width: '100%',
         height: '100%',
@@ -46,13 +46,13 @@ const useStyles = makeStyles((theme: Theme) =>
     dotBorderCircle: {
       border: '3px dotted #777',
       borderRadius: '100%',
-      width: 400,
-      height: 400,
+      width: 300,
+      height: 300,
       position: 'relative',
       display: 'flex',
       justifyContent: 'center',
       alignItems: 'center',
-      top: '-5vh',
+      top: '-15vh',
       '& > *': {
         position: 'absolute',
       },
@@ -79,7 +79,7 @@ const useStyles = makeStyles((theme: Theme) =>
       borderBottom: '0px solid transparent',
       borderLeft: '10px solid transparent',
       borderRight: '10px solid transparent',
-      transform: 'translateX(1010%)',
+      transform: 'translateX(760%)',
     },
     bottomTriangle: {
       width: 0,
@@ -88,7 +88,7 @@ const useStyles = makeStyles((theme: Theme) =>
       borderBottom: '10px solid transparent',
       borderLeft: '0px solid transparent',
       borderRight: '10px solid #000',
-      transform: 'translateY(1010%)',
+      transform: 'translateY(760%)',
     },
     leftTriangle: {
       width: 0,
@@ -97,7 +97,7 @@ const useStyles = makeStyles((theme: Theme) =>
       borderBottom: '10px solid #000',
       borderLeft: '10px solid transparent',
       borderRight: '10px solid transparent',
-      transform: 'translateX(-1010%)',
+      transform: 'translateX(-760%)',
     },
     topTriangle: {
       width: 0,
@@ -106,7 +106,7 @@ const useStyles = makeStyles((theme: Theme) =>
       borderBottom: '10px solid transparent',
       borderLeft: '10px solid #000',
       borderRight: '0px solid transparent',
-      transform: 'translateY(-1010%)',
+      transform: 'translateY(-760%)',
     },
     iconTextBox: {
       display: 'flex',
@@ -117,7 +117,7 @@ const useStyles = makeStyles((theme: Theme) =>
       },
     },
     hospital: {
-      transform: 'translate(120%, -130%)',
+      transform: 'translate(100%, -140%)',
       width: 130,
       '& img': {
         width: '80%',
@@ -126,7 +126,7 @@ const useStyles = makeStyles((theme: Theme) =>
       },
     },
     server: {
-      transform: 'translate(120%, 130%)',
+      transform: 'translate(100%, 140%)',
       width: 120,
       '& img': {
         width: '100%',
@@ -135,13 +135,13 @@ const useStyles = makeStyles((theme: Theme) =>
       },
     },
     circleTopLeftText: {
-      transform: 'translate(-100%, -230%)',
+      transform: 'translate(-70%, -230%)',
     },
     circleBottomLeftText: {
-      transform: 'translate(-100%, 230%)',
+      transform: 'translate(-70%, 230%)',
     },
     circleRightText: {
-      transform: 'translate(100%, -100%)',
+      transform: 'translate(70%, -100%)',
     },
 
     rightBox: {

@@ -4,8 +4,8 @@ const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     root: {
       backgroundImage: `url('sonogram_steps_bg.jpg')`,
-      backgroundPosition: 'center',
-      backgroundSize: 'cover',
+      backgroundPosition: 'bottom 0px right 50%',
+      backgroundSize: '100%',
       backgroundRepeat: 'no-repeat',
     },
     bgCover: {

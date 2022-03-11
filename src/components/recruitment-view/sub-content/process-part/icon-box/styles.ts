@@ -8,26 +8,17 @@ const useStyles = makeStyles((theme: Theme) =>
       justifyContent: 'center',
       alignItems: 'center',
     },
-    circle: {
-      padding: theme.spacing(2),
-      marginBottom: theme.spacing(3),
-      display: 'flex',
-      justifyContent: 'center',
-      alignItems: 'center',
-      background: '#fff',
-      border: '1px solid #aaa',
-      borderRadius: '100%',
-      width: 100,
-      height: 100,
+    imgBox: {
       '& img': {
-        width: '70%',
-        height: '70%',
+        width: '100%',
+        height: '100%',
         objectFit: 'contain',
-        opacity: 0.6,
       },
     },
     title: {
+      marginTop: theme.spacing(3),
       whiteSpace: 'nowrap',
+      fontSize: '1.2rem',
     },
   })
 )

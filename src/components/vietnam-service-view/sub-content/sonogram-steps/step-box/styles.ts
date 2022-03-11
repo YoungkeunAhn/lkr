@@ -3,7 +3,7 @@ import { createStyles, makeStyles, Theme } from '@material-ui/core'
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     root: {
-      width: '100%',
+      width: '15vw',
       display: 'flex',
       flexDirection: 'column',
       alignItems: 'center',
@@ -34,12 +34,12 @@ const useStyles = makeStyles((theme: Theme) =>
     circleBottom: {
       background: `url('sonogram_step_circle_bg.png')`,
       height: '65%',
-      padding: theme.spacing(0, 3),
       display: 'flex',
       justifyContent: 'center',
-      alignItems: 'center',
+      alignItems: 'flex-start',
       borderBottomLeftRadius: 200,
       borderBottomRightRadius: 200,
+      paddingTop: theme.spacing(3),
       '& .MuiTypography-root': {
         fontWeight: 600,
         wordBreak: 'keep-all',
@@ -48,6 +48,11 @@ const useStyles = makeStyles((theme: Theme) =>
     text: {
       color: '#fff',
       marginTop: theme.spacing(5),
+    },
+    title: {
+      fontSize: '1.5rem',
+      textAlign: 'center',
+      fontWeight: 600,
     },
   })
 )
