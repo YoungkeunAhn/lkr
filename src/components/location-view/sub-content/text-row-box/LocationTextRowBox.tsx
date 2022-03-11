@@ -14,7 +14,6 @@ function LocationTextRowBox(props: Props) {
   return (
     <Box className={classes.root}>
       <Box className={classes.titleBox}>
-        <div></div>
         <Typography className={classes.title}>{title.toUpperCase()}</Typography>
       </Box>
       <Typography className={classes.text}>{text}</Typography>

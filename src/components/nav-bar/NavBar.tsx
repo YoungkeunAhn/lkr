@@ -1,7 +1,7 @@
 import { ButtonBase, Typography } from '@material-ui/core'
 import { navMenu } from 'assets/nav-menu'
 import clsx from 'clsx'
-import React, { useState } from 'react'
+import React from 'react'
 import useStyles from './styles'
 
 type Props = {

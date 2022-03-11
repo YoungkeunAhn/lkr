@@ -7,11 +7,11 @@ import {
   useMediaQuery,
   useTheme,
 } from '@material-ui/core'
+import MenuRoundedIcon from '@material-ui/icons/MenuRounded'
 import { mainSubText } from 'assets/sub-text'
 import BackgroundCover from 'commons/background-cover/BackgroundCover'
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
 import useStyles from './styles'
-import MenuRoundedIcon from '@material-ui/icons/MenuRounded'
 
 function MainView() {
   const classes = useStyles()

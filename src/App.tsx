@@ -10,11 +10,12 @@ import ProcessView from 'components/process-view/ProcessView'
 import RecruitmentView from 'components/recruitment-view/RecruitmentView'
 import SoftwareDevelopmentView from 'components/software-development-view/SoftwareDevelopmentView'
 import VietnamServiceView from 'components/vietnam-service-view/VietnamServiceView'
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 
 function App() {
   const [currentMenu, setCurrentMenu] = useState<string>('home')
   const [isBgWhite, setIsBgWhite] = useState<boolean>(false)
+  const aboutUsRef = useRef(null)
 
   const onClickMenu = (menu: string, offsetY: number) => {
     setCurrentMenu(menu)
@@ -57,9 +58,16 @@ function App() {
     handleScroll()
   }, [isBgWhite])
 
+  useEffect(() => {
+    if (aboutUsRef.current) {
+      console.log(aboutUsRef.current)
+    }
+  })
+
   return (
     <div>
       <MainView />
+      <div ref={aboutUsRef}></div>
       <AboutUsView />
       <SoftwareDevelopmentView />
       <ProcessView />

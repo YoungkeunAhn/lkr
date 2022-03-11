@@ -16,11 +16,13 @@ const useStyles = makeStyles((theme: Theme) =>
       },
     },
     right: {
+      maxWidth: 460,
+      wordBreak: 'keep-all',
       padding: theme.spacing(3),
       display: 'flex',
       flexDirection: 'column',
       justifyContent: 'space-between',
-      alignItems: 'flex-start',
+      alignItems: 'flex-end',
     },
     btnBox: {
       [theme.breakpoints.down('sm')]: {

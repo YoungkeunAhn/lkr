@@ -24,7 +24,7 @@ const useStyles = makeStyles((theme: Theme) =>
     title: {
       fontWeight: 600,
       marginTop: theme.spacing(2),
-      marginBottom: theme.spacing(4),
+      marginBottom: theme.spacing(10),
     },
     mainTextBox: {
       display: 'flex',

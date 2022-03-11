@@ -3,6 +3,7 @@ export const locationText = [
   { title: 'tel', text: '070-5067-2298' },
   {
     title: 'subway / bus',
-    text: '3호선 삼송역 6번출구 → 053, 033, 790 버스 고양',
+    text: `3호선 삼송역 6번출구 → 053, 033, 790 버스 고양
+    현대아파트 하차`,
   },
 ]

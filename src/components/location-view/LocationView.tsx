@@ -7,7 +7,7 @@ import LocationSubContent from './sub-content/LocationSubContent'
 function LocationView() {
   return (
     <Box mb={10}>
-      <TitleContentFrame title="location" mainText={locationMainText} />
+      <TitleContentFrame title='location' mainText={locationMainText} />
       <LocationSubContent />
     </Box>
   )
