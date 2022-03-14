@@ -13,10 +13,15 @@ import BackgroundCover from 'commons/background-cover/BackgroundCover'
 import React from 'react'
 import useStyles from './styles'
 
-function MainView() {
+type Props = {
+  openDialog: () => void
+}
+
+function MainView(props: Props) {
   const classes = useStyles()
   const theme = useTheme()
   const smDown = useMediaQuery(theme.breakpoints.down('sm'))
+  const { openDialog } = props
 
   return (
     <div id='blackBg1'>
@@ -29,7 +34,7 @@ function MainView() {
                 <Typography variant='body1'>LKR corpration</Typography>
               </Box>
               <Hidden mdUp>
-                <IconButton>
+                <IconButton onClick={openDialog}>
                   <MenuRoundedIcon className={classes.menuIcon} />
                 </IconButton>
               </Hidden>

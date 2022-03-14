@@ -1,4 +1,11 @@
-import { Box, Container, Grid, Typography } from '@material-ui/core'
+import {
+  Box,
+  Container,
+  Grid,
+  Typography,
+  useMediaQuery,
+  useTheme,
+} from '@material-ui/core'
 import { sdItemList } from 'assets/sd-sub-items'
 import BackgroundCover from 'commons/background-cover/BackgroundCover'
 import React from 'react'
@@ -10,8 +17,8 @@ const bgText2 = 'AND PASSIONATE'
 
 function SoftwareDevelopmentSubContent() {
   const classes = useStyles()
-  // const theme = useTheme()
-  // const smDown = useMediaQuery(theme.breakpoints.down('sm'))
+  const theme = useTheme()
+  const smDown = useMediaQuery(theme.breakpoints.down('sm'))
 
   return (
     <Box className={classes.root}>
@@ -26,9 +33,14 @@ function SoftwareDevelopmentSubContent() {
             </Typography>
           </Box>
           <Box className={classes.itemListBox}>
-            <Grid container justifyContent='space-between' spacing={4}>
+            <Grid
+              container
+              justifyContent='space-between'
+              alignItems='stretch'
+              spacing={4}
+            >
               {sdItemList.map((item, idx) => (
-                <Grid key={idx} item xs={6} sm={6} lg={3} xl={3}>
+                <Grid key={idx} item xs={12} sm={6} lg={3} xl={3}>
                   <SoftwareDevelopmentItemBox idx={idx} sdItem={item} />
                 </Grid>
               ))}

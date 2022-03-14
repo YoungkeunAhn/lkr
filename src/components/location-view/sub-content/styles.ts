@@ -11,8 +11,9 @@ const useStyles = makeStyles((theme: Theme) =>
       },
     },
     mapBox: {
-      [theme.breakpoints.up('sm')]: {
-        width: '50%',
+      width: '70%',
+      [theme.breakpoints.down('sm')]: {
+        width: '100%',
       },
     },
     right: {

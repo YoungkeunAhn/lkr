@@ -12,26 +12,36 @@ const useStyles = makeStyles((theme: Theme) =>
       MozUserSelect: 'none',
       msUserSelect: 'none',
       userSelect: 'none',
-      position: 'relative',
+      height: '60vh',
+      [theme.breakpoints.down('md')]: {
+        height: '100%',
+        paddingBottom: theme.spacing(10),
+      },
     },
     container: {
       display: 'flex',
       justifyContent: 'center',
       alignItems: 'center',
+      position: 'relative',
     },
     bgText: {
       color: 'rgba(167,167,167,0.2)',
-      position: 'relative',
-      top: '-10px',
+      position: 'absolute',
+      top: '-5%',
       '& .MuiTypography-root': {
-        font: 'normal normal bold 100px/150px Segoe UI;',
+        font: 'normal normal bold 8rem/10rem Segoe UI;',
       },
       '& .MuiTypography-root+.MuiTypography-root': {
         marginTop: theme.spacing(20),
       },
     },
     itemListBox: {
-      position: 'absolute',
+      position: 'relative',
+      top: '7vh',
+      width: '100%',
+      // [theme.breakpoints.down('md')]: {
+      //   position: 'absolute',
+      // },
     },
   })
 )

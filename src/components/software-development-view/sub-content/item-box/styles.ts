@@ -3,13 +3,12 @@ import { createStyles, makeStyles, Theme } from '@material-ui/core'
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     root: {
-      width: '13.75vw',
       display: 'flex',
       flexDirection: 'column',
       alignItems: 'center',
       background: '#606060',
       borderRadius: 10,
-      padding: theme.spacing(3),
+      padding: theme.spacing(4, 0),
       height: '100%',
       boxSizing: 'border-box',
       '& .MuiTypography-root': {
@@ -37,24 +36,6 @@ const useStyles = makeStyles((theme: Theme) =>
       [theme.breakpoints.down('sm')]: {
         width: 100,
         height: 100,
-      },
-    },
-    itemList: {
-      listStyleType: 'none',
-      margin: 0,
-      padding: 0,
-      marginTop: theme.spacing(2),
-      '& ul': {
-        width: '100%',
-      },
-      '& li': {
-        display: 'flex',
-        width: '100%',
-      },
-      '& li:before': {
-        content: '"-"',
-        color: '#fff',
-        marginRight: theme.spacing(1),
       },
     },
   })

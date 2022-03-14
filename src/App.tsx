@@ -4,6 +4,7 @@ import CoupangServiceView from 'components/coupang-service-view/CoupangServiceVi
 import Footer from 'components/footer/Footer'
 import LocationView from 'components/location-view/LocationView'
 import MainView from 'components/main-view/MainView'
+import MenuDialog from 'components/menu-dialog/MenuDialog'
 import NavBar from 'components/nav-bar/NavBar'
 import NewsroomView from 'components/newsroom-view/NewsroomView'
 import ProcessView from 'components/process-view/ProcessView'
@@ -14,10 +15,19 @@ import React, { useEffect, useState } from 'react'
 
 function App() {
   const [isBgBlack, setIsBgBlack] = useState<boolean>(true)
+  const [open, setOpen] = useState<boolean>(false)
 
   const onClickMenu = (sectionId: string) => {
     const currentSection = document.getElementById(sectionId)
     window.scrollTo({ behavior: 'smooth', top: currentSection?.offsetTop })
+  }
+
+  const openDialog = () => {
+    setOpen(true)
+  }
+
+  const onClose = () => {
+    setOpen(false)
   }
 
   useEffect(() => {
@@ -46,8 +56,6 @@ function App() {
         })
       }
     }
-
-    console.log(offsetValue)
 
     window.addEventListener('scroll', function (e) {
       if (
@@ -89,7 +97,7 @@ function App() {
   return (
     <div>
       <section id='main'>
-        <MainView />
+        <MainView openDialog={openDialog} />
       </section>
       <section id='aboutUs'>
         <AboutUsView />
@@ -116,9 +124,10 @@ function App() {
         <LocationView />
       </section>
       <Footer />
-      <Hidden smDown>
+      <Hidden mdDown>
         <NavBar onClick={onClickMenu} isBgBlack={isBgBlack} />
       </Hidden>
+      <MenuDialog open={open} onClose={onClose} />
     </div>
   )
 }

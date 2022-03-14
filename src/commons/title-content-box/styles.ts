@@ -5,6 +5,10 @@ const useStyles = makeStyles((theme: Theme) =>
     root: {
       paddingTop: theme.spacing(13),
       paddingBottom: theme.spacing(13),
+      [theme.breakpoints.down('sm')]: {
+        paddingTop: theme.spacing(10),
+        paddingBottom: theme.spacing(10),
+      },
     },
     lkrLogo: {
       color: '#818181',
@@ -25,6 +29,9 @@ const useStyles = makeStyles((theme: Theme) =>
       fontWeight: 600,
       marginTop: theme.spacing(2),
       marginBottom: theme.spacing(10),
+      [theme.breakpoints.down('sm')]: {
+        marginBottom: theme.spacing(5),
+      },
     },
     mainTextBox: {
       display: 'flex',
