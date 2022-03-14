@@ -44,7 +44,7 @@ function NewsroomItemCard(props: Props) {
         </Typography>
       </Box>
       <Box className={clsx(classes.thumbnail, isRight && classes.right)}>
-        <img src={image} alt='thumbnail' />
+        <img src={image || 'noImage.png'} alt='thumbnail' />
       </Box>
     </Box>
   )

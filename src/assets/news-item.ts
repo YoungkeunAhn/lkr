@@ -17,7 +17,7 @@ export const newsItem: NewsItemType[] = [
     category: '공지사항',
     title: '2022년 대형 호스팅서비스 갖출예정...',
     tags: '#호스팅 #국내호스팅 #해외호스',
-    image: 'main_view_bg.jpg',
+    image: '',
   },
   {
     category: '공지사항',
