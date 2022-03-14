@@ -12,9 +12,13 @@ const useStyles = makeStyles((theme: Theme) =>
       flexDirection: 'column',
       justifyContent: 'space-between',
       alignItems: 'center',
+      [theme.breakpoints.down('sm')]: {
+        width: '50%',
+        height: 300,
+      },
     },
     itemBox: {
-      width: 280,
+      // width: 280,
       boxSizing: 'border-box',
       padding: theme.spacing(2, 3),
       borderRadius: 100,
@@ -29,6 +33,11 @@ const useStyles = makeStyles((theme: Theme) =>
       '&+&': {
         marginTop: theme.spacing(2),
       },
+      [theme.breakpoints.down('sm')]: {
+        padding: theme.spacing(1),
+        width: '90%',
+        height: '100%',
+      },
     },
     itemImgBox: {
       width: '15%',
@@ -37,6 +46,9 @@ const useStyles = makeStyles((theme: Theme) =>
         width: '100%',
         height: '100%',
         objectFit: 'contain',
+      },
+      [theme.breakpoints.down('sm')]: {
+        width: '10%',
       },
     },
     mainImgBox: {

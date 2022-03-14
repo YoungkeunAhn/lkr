@@ -27,7 +27,7 @@ function NewsroomView() {
       <Container maxWidth='lg'>
         <Grid container spacing={4} alignItems='stretch'>
           <Grid item xs={12} sm={12} lg={6} xl={6}>
-            <NewsroomItemCard {...newsItem[1]} isRight={false} />
+            {!smDown && <NewsroomItemCard {...newsItem[1]} isRight={false} />}
           </Grid>
           <Grid item xs={12} sm={12} lg={6} xl={6}>
             <Grid
@@ -36,13 +36,18 @@ function NewsroomView() {
               alignItems='center'
               justifyContent='space-between'
             >
-              {newsItem.map(
-                (item, idx) =>
+              {newsItem.map((item, idx) =>
+                smDown ? (
+                  <Grid item key={idx} xs={12} sm={12} lg={6} xl={6}>
+                    <NewsroomItemCard {...item} isRight={true} />
+                  </Grid>
+                ) : (
                   idx !== 0 && (
                     <Grid item key={idx} xs={12} sm={12} lg={6} xl={6}>
                       <NewsroomItemCard {...item} isRight={true} />
                     </Grid>
                   )
+                )
               )}
             </Grid>
           </Grid>

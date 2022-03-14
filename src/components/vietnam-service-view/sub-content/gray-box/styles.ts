@@ -9,11 +9,15 @@ const useStyles = makeStyles((theme: Theme) =>
       [theme.breakpoints.down('sm')]: {
         flexDirection: 'column',
         alignItems: 'center',
+        width: '100%',
       },
     },
     left: {
       display: 'flex',
       position: 'relative',
+      [theme.breakpoints.down('sm')]: {
+        width: '100%',
+      },
     },
     leftInnerBox: {
       display: 'flex',
@@ -25,6 +29,9 @@ const useStyles = makeStyles((theme: Theme) =>
       },
       '& > div+div': {
         marginTop: theme.spacing(2),
+      },
+      [theme.breakpoints.down('sm')]: {
+        width: '100%',
       },
     },
     right: {
@@ -64,6 +71,10 @@ const useStyles = makeStyles((theme: Theme) =>
       '& > img': {
         maxWidth: 130,
       },
+      [theme.breakpoints.down('sm')]: {
+        width: '100%',
+        height: '70%',
+      },
     },
     circle: {
       display: 'flex',
@@ -83,6 +94,10 @@ const useStyles = makeStyles((theme: Theme) =>
       '& img': {
         maxHeight: 150,
       },
+      [theme.breakpoints.down('sm')]: {
+        width: 100,
+        height: 100,
+      },
     },
 
     hospital1: {
@@ -90,11 +105,25 @@ const useStyles = makeStyles((theme: Theme) =>
       '& img': {
         maxHeight: 120,
       },
+      [theme.breakpoints.down('sm')]: {
+        transform: 'translate(-20%, -20%)',
+        '& img': {
+          width: '60%',
+          height: '60%',
+        },
+      },
     },
     hospital2: {
       transform: 'translate(30%, -30%)',
       '& img': {
         maxHeight: 120,
+      },
+      [theme.breakpoints.down('sm')]: {
+        transform: 'translate(20%, -20%)',
+        '& img': {
+          width: '60%',
+          height: '60%',
+        },
       },
     },
     hospital3: {
@@ -102,11 +131,25 @@ const useStyles = makeStyles((theme: Theme) =>
       '& img': {
         maxHeight: 120,
       },
+      [theme.breakpoints.down('sm')]: {
+        transform: 'translate2-30%,20%)',
+        '& img': {
+          width: '60%',
+          height: '60%',
+        },
+      },
     },
     hospital4: {
       transform: 'translate(30%,30%)',
       '& img': {
         maxHeight: 120,
+      },
+      [theme.breakpoints.down('sm')]: {
+        transform: 'translat2(30%,20%)',
+        '& img': {
+          width: '60%',
+          height: '60%',
+        },
       },
     },
     triangle: {
@@ -150,15 +193,27 @@ const useStyles = makeStyles((theme: Theme) =>
     },
     leftTopArrow: {
       transform: 'rotate(45deg) translate(10%,10%)',
+      [theme.breakpoints.down('sm')]: {
+        width: '30%',
+      },
     },
     rightTopArrow: {
       transform: 'rotate(-220deg) translate(90%, 130%)',
+      [theme.breakpoints.down('sm')]: {
+        width: '30%',
+      },
     },
     leftBottomArrow: {
       transform: 'rotate(-45deg) translate(50%, -100%)',
+      [theme.breakpoints.down('sm')]: {
+        width: '30%',
+      },
     },
     rightBottomArrow: {
       transform: 'rotate(-130deg) translate(110%, -50%)',
+      [theme.breakpoints.down('sm')]: {
+        width: '30%',
+      },
     },
   })
 )

@@ -1,4 +1,11 @@
-import { Box, Container, Typography } from '@material-ui/core'
+import {
+  Box,
+  Container,
+  Hidden,
+  Typography,
+  useMediaQuery,
+  useTheme,
+} from '@material-ui/core'
 import { leftCoupangItems, rightCoupangItems } from 'assets/coupang-item'
 import ClickPointerBtn from 'commons/click-pointer-btn/ClickPointerBtn'
 import React from 'react'
@@ -6,6 +13,8 @@ import useStyles from './styles'
 
 function CoupangSubContent() {
   const classes = useStyles()
+  const theme = useTheme()
+  const smDown = useMediaQuery(theme.breakpoints.down('sm'))
 
   const onClickBtn = () => {}
 
@@ -19,13 +28,18 @@ function CoupangSubContent() {
                 <Box className={classes.itemImgBox}>
                   <img src={item.icon} alt='coupang service icon' />
                 </Box>
-                <Typography variant='h6'>{item.title}</Typography>
+                <Typography variant={smDown ? 'body1' : 'h6'}>
+                  {item.title}
+                </Typography>
               </Box>
             ))}
           </Box>
-          <Box className={classes.mainImgBox}>
-            <img src='coupang_sub_img.png' alt='coupang mockup' />
-          </Box>
+
+          <Hidden smDown>
+            <Box className={classes.mainImgBox}>
+              <img src='coupang_sub_img.png' alt='coupang mockup' />
+            </Box>
+          </Hidden>
 
           <Box className={classes.itemListBox}>
             {rightCoupangItems.map((item, idx) => (
@@ -33,7 +47,9 @@ function CoupangSubContent() {
                 <Box className={classes.itemImgBox}>
                   <img src={item.icon} alt='coupang service icon' />
                 </Box>
-                <Typography variant='h6'>{item.title}</Typography>
+                <Typography variant={smDown ? 'body1' : 'h6'}>
+                  {item.title}
+                </Typography>
               </Box>
             ))}
           </Box>
