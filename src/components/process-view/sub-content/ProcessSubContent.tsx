@@ -28,24 +28,16 @@ function ProcessSubContent() {
         <Grid
           container
           justifyContent={lgDown ? 'center' : 'space-between'}
-          spacing={8}
+          spacing={4}
           style={{ zIndex: 200 }}
         >
-          {processItemList.map((item, idx) =>
-            idx === 0 ? (
-              <Grid item xs={12} sm={12} lg={6} xl={6}>
-                <Box display='flex' justifyContent='center'>
-                  <ProcessItemBox seq={idx + 1} {...item}></ProcessItemBox>
-                </Box>
-              </Grid>
-            ) : (
-              <Grid item xs={12} sm={6} lg={6} xl={4}>
-                <Box display='flex' justifyContent='center'>
-                  <ProcessItemBox seq={idx + 1} {...item}></ProcessItemBox>
-                </Box>
-              </Grid>
-            )
-          )}
+          {processItemList.map((item, idx) => (
+            <Grid item xs={12} sm={6} lg={6} xl={4}>
+              <Box display='flex' justifyContent='center'>
+                <ProcessItemBox seq={idx + 1} {...item}></ProcessItemBox>
+              </Box>
+            </Grid>
+          ))}
         </Grid>
         <ClickPointerBtn title='견적문의하기' onClick={onClickBtn} />
       </Box>
