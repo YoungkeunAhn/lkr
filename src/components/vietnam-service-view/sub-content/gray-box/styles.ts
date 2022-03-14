@@ -106,7 +106,7 @@ const useStyles = makeStyles((theme: Theme) =>
         maxHeight: 120,
       },
       [theme.breakpoints.down('sm')]: {
-        transform: 'translate(-20%, -20%)',
+        transform: 'translate(-10%, -10%)',
         '& img': {
           width: '60%',
           height: '60%',
@@ -119,7 +119,7 @@ const useStyles = makeStyles((theme: Theme) =>
         maxHeight: 120,
       },
       [theme.breakpoints.down('sm')]: {
-        transform: 'translate(20%, -20%)',
+        transform: 'translate(10%, -10%)',
         '& img': {
           width: '60%',
           height: '60%',
@@ -132,7 +132,7 @@ const useStyles = makeStyles((theme: Theme) =>
         maxHeight: 120,
       },
       [theme.breakpoints.down('sm')]: {
-        transform: 'translate2-30%,20%)',
+        transform: 'translate(-10%,10%)',
         '& img': {
           width: '60%',
           height: '60%',
@@ -145,7 +145,7 @@ const useStyles = makeStyles((theme: Theme) =>
         maxHeight: 120,
       },
       [theme.breakpoints.down('sm')]: {
-        transform: 'translat2(30%,20%)',
+        transform: 'translat(10%,10%)',
         '& img': {
           width: '60%',
           height: '60%',
