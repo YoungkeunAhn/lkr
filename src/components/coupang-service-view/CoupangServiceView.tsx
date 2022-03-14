@@ -8,7 +8,7 @@ function CoupangServiceView() {
   return (
     <div style={{ background: '#F6F6F6' }}>
       <TitleContentFrame
-        title="coupang solution service"
+        title='coupang solution service'
         mainText={coupangServiceMainText}
         subText={coupangServiceSubText}
       />

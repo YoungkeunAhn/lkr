@@ -1,4 +1,4 @@
-import { Box, IconButton, Paper, Typography } from '@material-ui/core'
+import { Box, IconButton, Typography } from '@material-ui/core'
 import MoreVertIcon from '@material-ui/icons/MoreVert'
 import clsx from 'clsx'
 import React from 'react'

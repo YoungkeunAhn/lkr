@@ -10,66 +10,71 @@ import ProcessView from 'components/process-view/ProcessView'
 import RecruitmentView from 'components/recruitment-view/RecruitmentView'
 import SoftwareDevelopmentView from 'components/software-development-view/SoftwareDevelopmentView'
 import VietnamServiceView from 'components/vietnam-service-view/VietnamServiceView'
-import React, { useState } from 'react'
-
-const menuList = [
-  'main',
-  'aboutUs',
-  'software',
-  'process',
-  'coupang',
-  'vietnam',
-  'recruitment',
-  'newsroom',
-  'location',
-]
+import React, { useEffect, useState } from 'react'
 
 function App() {
-  const [currentMenu, setCurrentMenu] = useState<string>('home')
-  const [isBgWhite, setIsBgWhite] = useState<boolean>(false)
+  const [isBgBlack, setIsBgBlack] = useState<boolean>(true)
 
-  const onClickMenu = (menu: string) => {
-    setCurrentMenu(menu)
-    const currentSection = document.getElementById(menu)
+  const onClickMenu = (sectionId: string) => {
+    const currentSection = document.getElementById(sectionId)
     window.scrollTo({ behavior: 'smooth', top: currentSection?.offsetTop })
   }
 
-  // const handleScroll = () => {
-  //   window.addEventListener('scroll', function (e) {
-  //     // console.log(this.window.scrollY)
-  //     console.log(this.window.screenY)
+  useEffect(() => {
+    const offsetValue: Array<{
+      dom: HTMLElement
+      top: number
+      bottom: number
+    }> = []
+    for (let i = 1; i < 7; i++) {
+      const blackBgDom = document.getElementById(`blackBg${i}`)
+      if (blackBgDom) {
+        offsetValue.push({
+          dom: blackBgDom,
+          top: i !== 1 ? blackBgDom.offsetTop - 400 : blackBgDom.offsetTop,
+          bottom: blackBgDom.offsetTop + blackBgDom.offsetHeight - 400,
+        })
+      }
+    }
 
-  //     if (this.window.scrollY > 0 && this.window.scrollY < 349) {
-  //       setIsBgWhite(false) //메인
-  //     } else if (this.window.scrollY > 350 && this.window.scrollY < 1199) {
-  //       setIsBgWhite(true) //about us
-  //     } else if (this.window.scrollY > 1200 && this.window.scrollY < 1999) {
-  //       setIsBgWhite(false) //우리는
-  //     } else if (this.window.scrollY > 2000 && this.window.scrollY < 2799) {
-  //       setIsBgWhite(true) //소프트웨어개발
-  //     } else if (this.window.scrollY > 2800 && this.window.scrollY < 3499) {
-  //       setIsBgWhite(false) //소프트웨어개발 서브
-  //     } else if (this.window.scrollY > 3500 && this.window.scrollY < 9199) {
-  //       setIsBgWhite(true) //프로세스
-  //     } else if (this.window.scrollY > 9200 && this.window.scrollY < 9899) {
-  //       setIsBgWhite(false) //초음파
-  //     } else if (this.window.scrollY > 9900 && this.window.scrollY < 10599) {
-  //       setIsBgWhite(true) //채용메인
-  //     } else if (this.window.scrollY > 10600 && this.window.scrollY < 11399) {
-  //       setIsBgWhite(false) //이미지배경
-  //     } else if (this.window.scrollY > 11400 && this.window.scrollY < 12899) {
-  //       setIsBgWhite(true) //채용서브
-  //     } else if (this.window.scrollY > 12900 && this.window.scrollY < 13399) {
-  //       setIsBgWhite(false) //이미지배경
-  //     } else if (this.window.scrollY > 13400) {
-  //       setIsBgWhite(true)
-  //     }
-  //   })
-  // }
+    console.log(offsetValue)
 
-  // useEffect(() => {
-  //   handleScroll()
-  // }, [isBgWhite])
+    window.addEventListener('scroll', function (e) {
+      if (
+        this.window.scrollY > offsetValue[0].top &&
+        this.window.scrollY < offsetValue[0].bottom
+      ) {
+        setIsBgBlack(true)
+      } else if (
+        this.window.scrollY > offsetValue[1].top &&
+        this.window.scrollY < offsetValue[1].bottom
+      ) {
+        setIsBgBlack(true)
+      } else if (
+        this.window.scrollY > offsetValue[2].top &&
+        this.window.scrollY < offsetValue[2].bottom
+      ) {
+        setIsBgBlack(true)
+      } else if (
+        this.window.scrollY > offsetValue[3].top &&
+        this.window.scrollY < offsetValue[3].bottom
+      ) {
+        setIsBgBlack(true)
+      } else if (
+        this.window.scrollY > offsetValue[4].top &&
+        this.window.scrollY < offsetValue[4].bottom
+      ) {
+        setIsBgBlack(true)
+      } else if (
+        this.window.scrollY > offsetValue[5].top &&
+        this.window.scrollY < offsetValue[5].bottom
+      ) {
+        setIsBgBlack(true)
+      } else {
+        setIsBgBlack(false)
+      }
+    })
+  }, [])
 
   return (
     <div>
@@ -79,7 +84,7 @@ function App() {
       <section id='aboutUs'>
         <AboutUsView />
       </section>
-      <section id='softwore'>
+      <section id='software'>
         <SoftwareDevelopmentView />
       </section>
       <section id='process'>
@@ -100,14 +105,9 @@ function App() {
       <section id='location'>
         <LocationView />
       </section>
-
       <Footer />
       <Hidden smDown>
-        <NavBar
-          currentMenu={currentMenu}
-          onClick={onClickMenu}
-          isBgWhite={isBgWhite}
-        />
+        <NavBar onClick={onClickMenu} isBgBlack={isBgBlack} />
       </Hidden>
     </div>
   )

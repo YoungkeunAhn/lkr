@@ -29,6 +29,9 @@ const useStyles = makeStyles((theme: Theme) =>
       '& .MuiTypography-root': {
         color: '#fff',
       },
+      '& span': {
+        color: '#fff',
+      },
     },
     circle: {
       width: 10,

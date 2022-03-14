@@ -32,7 +32,7 @@ function ProcessSubContent() {
           style={{ zIndex: 200 }}
         >
           {processItemList.map((item, idx) => (
-            <Grid item xs={12} sm={6} lg={6} xl={4}>
+            <Grid item xs={12} sm={6} lg={6} xl={4} key={idx}>
               <Box display='flex' justifyContent='center'>
                 <ProcessItemBox seq={idx + 1} {...item}></ProcessItemBox>
               </Box>

@@ -8,12 +8,16 @@ import SoftwareDevelopmentSubContent from './sub-content/SoftwareDevelopmentSubC
 function SoftwareDevelopmentView() {
   return (
     <Box>
-      <TitleContentFrame
-        title="software development"
-        mainText={softwareDevelopmentMainText}
-        subText={softwareDevelopmentSubText}
-      />
-      <SoftwareDevelopmentSubContent />
+      <div>
+        <TitleContentFrame
+          title='software development'
+          mainText={softwareDevelopmentMainText}
+          subText={softwareDevelopmentSubText}
+        />
+      </div>
+      <div id='blackBg3'>
+        <SoftwareDevelopmentSubContent />
+      </div>
     </Box>
   )
 }

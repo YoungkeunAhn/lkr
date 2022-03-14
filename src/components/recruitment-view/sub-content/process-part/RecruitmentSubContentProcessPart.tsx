@@ -14,8 +14,8 @@ function RecruitmentSubContentProcessPart() {
       </Typography>
       <Box className={classes.processListBox}>
         {recruitmentProcess.map((item, idx) => (
-          <>
-            <Box key={idx} display='flex' alignItems='center'>
+          <div key={idx}>
+            <Box display='flex' alignItems='center'>
               <RecruitmentProcessIconBox {...item} />
             </Box>
             {idx !== recruitmentProcess.length - 1 && (
@@ -23,7 +23,7 @@ function RecruitmentSubContentProcessPart() {
                 &gt;
               </Typography>
             )}
-          </>
+          </div>
         ))}
       </Box>
     </Box>

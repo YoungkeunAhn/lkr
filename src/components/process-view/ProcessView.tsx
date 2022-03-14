@@ -8,7 +8,7 @@ function ProcessView() {
   return (
     <div>
       <TitleContentFrame
-        title="process"
+        title='process'
         mainText={processMainText}
         subText={processSubText}
       />

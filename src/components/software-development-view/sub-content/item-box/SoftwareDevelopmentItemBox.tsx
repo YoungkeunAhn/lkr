@@ -26,7 +26,9 @@ function SoftwareDevelopmentItemBox(props: Props) {
       <Typography>{title}</Typography>
       <Box mt={2}>
         {items.map((text, idx) => (
-          <Typography variant='body2'>-{text}</Typography>
+          <Typography variant='body2' key={idx}>
+            -{text}
+          </Typography>
         ))}
       </Box>
     </Box>

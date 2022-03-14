@@ -1,11 +1,4 @@
-import {
-  Box,
-  Container,
-  Grid,
-  Typography,
-  useMediaQuery,
-  useTheme,
-} from '@material-ui/core'
+import { Box, Container, Grid, Typography } from '@material-ui/core'
 import { sdItemList } from 'assets/sd-sub-items'
 import BackgroundCover from 'commons/background-cover/BackgroundCover'
 import React from 'react'
@@ -17,8 +10,8 @@ const bgText2 = 'AND PASSIONATE'
 
 function SoftwareDevelopmentSubContent() {
   const classes = useStyles()
-  const theme = useTheme()
-  const smDown = useMediaQuery(theme.breakpoints.down('sm'))
+  // const theme = useTheme()
+  // const smDown = useMediaQuery(theme.breakpoints.down('sm'))
 
   return (
     <Box className={classes.root}>

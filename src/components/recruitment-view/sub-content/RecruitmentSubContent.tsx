@@ -12,24 +12,29 @@ function RecruitmentSubContent() {
 
   return (
     <Box>
-      <Box className={clsx(classes.bgPart, classes.topBg)}>
-        <div className={classes.bgCover}></div>
-      </Box>
+      <div id='blackBg5'>
+        <Box className={clsx(classes.bgPart, classes.topBg)}>
+          <div className={classes.bgCover}></div>
+        </Box>
+      </div>
 
-      <Container maxWidth="xl">
-        <TitleContentFrame
-          title="신입 및 경력사원 공개채용"
-          mainText={recruitmentMainText2}
-        />
-        <Container maxWidth="lg">
-          <RecruitmentSubContentNoticePart />
-          <RecruitmentSubContentProcessPart />
+      <div>
+        <Container maxWidth='xl'>
+          <TitleContentFrame
+            title='신입 및 경력사원 공개채용'
+            mainText={recruitmentMainText2}
+          />
+          <Container maxWidth='lg'>
+            <RecruitmentSubContentNoticePart />
+            <RecruitmentSubContentProcessPart />
+          </Container>
         </Container>
-      </Container>
-
-      <Box className={clsx(classes.bgPart, classes.bottomBg)}>
-        <div className={classes.bgCover}></div>
-      </Box>
+      </div>
+      <div id='blackBg6'>
+        <Box className={clsx(classes.bgPart, classes.bottomBg)}>
+          <div className={classes.bgCover}></div>
+        </Box>
+      </div>
     </Box>
   )
 }

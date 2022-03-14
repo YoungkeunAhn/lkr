@@ -11,18 +11,18 @@ function RecruitmentView() {
 
   return (
     <Box>
-      <TitleContentFrame title="recruitment" mainText={recruitmentMainText}>
+      <TitleContentFrame title='recruitment' mainText={recruitmentMainText}>
         <Container>
           <Box className={classes.subTextWrapper}>
             <Box className={classes.subTextBox}>
               {recruitmentSubText.map((text, idx) => (
-                <Typography key={idx} variant="h6">
+                <Typography key={idx} variant='h6'>
                   {text}
                 </Typography>
               ))}
             </Box>
             <Box className={classes.imgBox}>
-              <img src="recruitment_image1.png" alt="recruitment lkr" />
+              <img src='recruitment_image1.png' alt='recruitment lkr' />
             </Box>
           </Box>
         </Container>

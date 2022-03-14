@@ -8,11 +8,13 @@ function AboutUsView() {
   return (
     <div>
       <TitleContentFrame
-        title="about us"
+        title='about us'
         mainText={aboutUsMainText}
         subText={aboutUsSubText}
       />
-      <AboutUsSubContent />
+      <div id='blackBg2'>
+        <AboutUsSubContent />
+      </div>
     </div>
   )
 }
