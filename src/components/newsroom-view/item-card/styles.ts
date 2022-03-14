@@ -12,11 +12,16 @@ const useStyles = makeStyles((theme: Theme) =>
       width: '100%',
       height: ' 100%',
       boxShadow: '5px 5px 15px #00000029',
+      transition: 'transform 0.3s',
+      '&:hover': {
+        cursor: 'pointer',
+        transform: 'translate(-1%,-1%)',
+      },
     },
     header: {
-      padding: theme.spacing(1, 1, 0, 1),
+      padding: theme.spacing(2, 2, 0, 2),
       display: 'flex',
-      height: 150,
+      height: 120,
       flexDirection: 'column',
       justifyContent: 'flex-start',
       position: 'relative',
@@ -41,9 +46,9 @@ const useStyles = makeStyles((theme: Theme) =>
       WebkitBoxOrient: 'vertical',
     },
     talkIcon: {
-      width: 40,
-      heigth: 40,
-      marginRight: theme.spacing(2),
+      width: 30,
+      heigth: 30,
+      marginRight: theme.spacing(1),
       '& img': {
         width: '100%',
         height: '100%',
@@ -53,7 +58,7 @@ const useStyles = makeStyles((theme: Theme) =>
       color: '#fff',
       background: '#555',
       borderRadius: 4,
-      padding: theme.spacing(1, 2),
+      padding: theme.spacing(0.2, 1),
     },
     tag: {
       position: 'absolute',

@@ -31,8 +31,18 @@ function App() {
       if (blackBgDom) {
         offsetValue.push({
           dom: blackBgDom,
-          top: i !== 1 ? blackBgDom.offsetTop - 400 : blackBgDom.offsetTop,
-          bottom: blackBgDom.offsetTop + blackBgDom.offsetHeight - 400,
+          top:
+            i === 5
+              ? blackBgDom.offsetTop - 200
+              : i === 6
+              ? blackBgDom.offsetTop
+              : blackBgDom.offsetTop - 350,
+          bottom:
+            i === 5
+              ? blackBgDom.offsetTop + blackBgDom.offsetHeight - 200
+              : i === 6
+              ? blackBgDom.offsetTop + blackBgDom.offsetHeight
+              : blackBgDom.offsetTop + blackBgDom.offsetHeight - 350,
         })
       }
     }

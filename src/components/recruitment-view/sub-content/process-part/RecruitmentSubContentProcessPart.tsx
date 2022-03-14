@@ -17,12 +17,12 @@ function RecruitmentSubContentProcessPart() {
           <div key={idx}>
             <Box display='flex' alignItems='center'>
               <RecruitmentProcessIconBox {...item} />
+              {idx !== recruitmentProcess.length - 1 && (
+                <Typography className={classes.gt} variant='h2'>
+                  &gt;
+                </Typography>
+              )}
             </Box>
-            {idx !== recruitmentProcess.length - 1 && (
-              <Typography className={classes.gt} variant='h2'>
-                &gt;
-              </Typography>
-            )}
           </div>
         ))}
       </Box>

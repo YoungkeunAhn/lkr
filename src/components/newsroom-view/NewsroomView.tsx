@@ -10,7 +10,7 @@ function NewsroomView() {
   const classes = useStyles()
 
   return (
-    <div>
+    <div className={classes.root}>
       <TitleContentFrame
         title='newsroom'
         mainText={[`<span>2021년 12월</span> 엘케이알 뉴스`]}

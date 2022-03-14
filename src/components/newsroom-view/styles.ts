@@ -2,7 +2,9 @@ import { createStyles, makeStyles, Theme } from '@material-ui/core'
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
-    root: {},
+    root: {
+      paddingBottom: theme.spacing(2),
+    },
     btn: {
       display: 'block',
       width: 200,
