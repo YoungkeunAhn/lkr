@@ -10,73 +10,104 @@ import ProcessView from 'components/process-view/ProcessView'
 import RecruitmentView from 'components/recruitment-view/RecruitmentView'
 import SoftwareDevelopmentView from 'components/software-development-view/SoftwareDevelopmentView'
 import VietnamServiceView from 'components/vietnam-service-view/VietnamServiceView'
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useState } from 'react'
+
+const menuList = [
+  'main',
+  'aboutUs',
+  'software',
+  'process',
+  'coupang',
+  'vietnam',
+  'recruitment',
+  'newsroom',
+  'location',
+]
 
 function App() {
   const [currentMenu, setCurrentMenu] = useState<string>('home')
   const [isBgWhite, setIsBgWhite] = useState<boolean>(false)
-  const aboutUsRef = useRef(null)
 
-  const onClickMenu = (menu: string, offsetY: number) => {
+  const onClickMenu = (menu: string) => {
     setCurrentMenu(menu)
-    window.scrollTo({ behavior: 'smooth', top: offsetY })
+    const currentSection = document.getElementById(menu)
+    window.scrollTo({ behavior: 'smooth', top: currentSection?.offsetTop })
   }
 
-  const handleScroll = () => {
-    window.addEventListener('scroll', function (e) {
-      // console.log(this.window.scrollY)
-      console.log(this.window.screenY)
+  // const handleScroll = () => {
+  //   window.addEventListener('scroll', function (e) {
+  //     // console.log(this.window.scrollY)
+  //     console.log(this.window.screenY)
 
-      if (this.window.scrollY > 0 && this.window.scrollY < 349) {
-        setIsBgWhite(false) //메인
-      } else if (this.window.scrollY > 350 && this.window.scrollY < 1199) {
-        setIsBgWhite(true) //about us
-      } else if (this.window.scrollY > 1200 && this.window.scrollY < 1999) {
-        setIsBgWhite(false) //우리는
-      } else if (this.window.scrollY > 2000 && this.window.scrollY < 2799) {
-        setIsBgWhite(true) //소프트웨어개발
-      } else if (this.window.scrollY > 2800 && this.window.scrollY < 3499) {
-        setIsBgWhite(false) //소프트웨어개발 서브
-      } else if (this.window.scrollY > 3500 && this.window.scrollY < 9199) {
-        setIsBgWhite(true) //프로세스
-      } else if (this.window.scrollY > 9200 && this.window.scrollY < 9899) {
-        setIsBgWhite(false) //초음파
-      } else if (this.window.scrollY > 9900 && this.window.scrollY < 10599) {
-        setIsBgWhite(true) //채용메인
-      } else if (this.window.scrollY > 10600 && this.window.scrollY < 11399) {
-        setIsBgWhite(false) //이미지배경
-      } else if (this.window.scrollY > 11400 && this.window.scrollY < 12899) {
-        setIsBgWhite(true) //채용서브
-      } else if (this.window.scrollY > 12900 && this.window.scrollY < 13399) {
-        setIsBgWhite(false) //이미지배경
-      } else if (this.window.scrollY > 13400) {
-        setIsBgWhite(true)
-      }
-    })
-  }
+  //     if (this.window.scrollY > 0 && this.window.scrollY < 349) {
+  //       setIsBgWhite(false) //메인
+  //     } else if (this.window.scrollY > 350 && this.window.scrollY < 1199) {
+  //       setIsBgWhite(true) //about us
+  //     } else if (this.window.scrollY > 1200 && this.window.scrollY < 1999) {
+  //       setIsBgWhite(false) //우리는
+  //     } else if (this.window.scrollY > 2000 && this.window.scrollY < 2799) {
+  //       setIsBgWhite(true) //소프트웨어개발
+  //     } else if (this.window.scrollY > 2800 && this.window.scrollY < 3499) {
+  //       setIsBgWhite(false) //소프트웨어개발 서브
+  //     } else if (this.window.scrollY > 3500 && this.window.scrollY < 9199) {
+  //       setIsBgWhite(true) //프로세스
+  //     } else if (this.window.scrollY > 9200 && this.window.scrollY < 9899) {
+  //       setIsBgWhite(false) //초음파
+  //     } else if (this.window.scrollY > 9900 && this.window.scrollY < 10599) {
+  //       setIsBgWhite(true) //채용메인
+  //     } else if (this.window.scrollY > 10600 && this.window.scrollY < 11399) {
+  //       setIsBgWhite(false) //이미지배경
+  //     } else if (this.window.scrollY > 11400 && this.window.scrollY < 12899) {
+  //       setIsBgWhite(true) //채용서브
+  //     } else if (this.window.scrollY > 12900 && this.window.scrollY < 13399) {
+  //       setIsBgWhite(false) //이미지배경
+  //     } else if (this.window.scrollY > 13400) {
+  //       setIsBgWhite(true)
+  //     }
+  //   })
+  // }
 
-  useEffect(() => {
-    handleScroll()
-  }, [isBgWhite])
+  // useEffect(() => {
+  //   handleScroll()
+  // }, [isBgWhite])
 
   return (
     <div>
-      <MainView />
-      <div ref={aboutUsRef}></div>
-      <AboutUsView />
-      <SoftwareDevelopmentView />
-      <ProcessView />
-      <CoupangServiceView />
-      <VietnamServiceView />
-      <RecruitmentView />
-      <NewsroomView />
-      <LocationView />
+      <section id='main'>
+        <MainView />
+      </section>
+      <section id='aboutUs'>
+        <AboutUsView />
+      </section>
+      <section id='softwore'>
+        <SoftwareDevelopmentView />
+      </section>
+      <section id='process'>
+        <ProcessView />
+      </section>
+      <section id='coupang'>
+        <CoupangServiceView />
+      </section>
+      <section id='vietnam'>
+        <VietnamServiceView />
+      </section>
+      <section id='recruitment'>
+        <RecruitmentView />
+      </section>
+      <section id='newsroom'>
+        <NewsroomView />
+      </section>
+      <section id='location'>
+        <LocationView />
+      </section>
+
       <Footer />
       <Hidden smDown>
         <NavBar
           currentMenu={currentMenu}
           onClick={onClickMenu}
           isBgWhite={isBgWhite}
+          menuList={menuList}
         />
       </Hidden>
     </div>

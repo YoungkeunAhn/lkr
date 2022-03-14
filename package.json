@@ -45,5 +45,8 @@
       "last 1 safari version"
     ]
   },
-  "homepage": "./"
+  "homepage": "./",
+  "devDependencies": {
+    "@types/react-scrollspy": "^3.3.5"
+  }
 }

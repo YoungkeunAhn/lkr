@@ -11,6 +11,7 @@ const useStyles = makeStyles((theme: Theme) =>
       borderRadius: 10,
       width: '100%',
       height: ' 100%',
+      boxShadow: '5px 5px 15px #00000029',
     },
     header: {
       padding: theme.spacing(1, 1, 0, 1),

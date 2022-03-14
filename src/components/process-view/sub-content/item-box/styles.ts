@@ -5,7 +5,7 @@ const useStyles = makeStyles((theme: Theme) =>
     root: {
       borderRadius: 10,
       border: '1px solid #B2B2B2',
-      width: 500,
+      width: '100%',
       zIndex: 10,
       margin: theme.spacing(3, 0),
     },
