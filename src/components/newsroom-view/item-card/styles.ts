@@ -75,7 +75,7 @@ const useStyles = makeStyles((theme: Theme) =>
     },
     right: {
       '& img': {
-        height: 180,
+        height: 170,
         transform: 'translateY(4px)',
       },
     },
