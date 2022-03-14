@@ -1,5 +1,6 @@
 import { Box, IconButton, Paper, Typography } from '@material-ui/core'
 import MoreVertIcon from '@material-ui/icons/MoreVert'
+import clsx from 'clsx'
 import React from 'react'
 import useStyles from './styles'
 
@@ -8,10 +9,11 @@ type Props = {
   title: string
   tags: string
   image: string
+  isRight: boolean
 }
 
 function NewsroomItemCard(props: Props) {
-  const { category, title, tags, image } = props
+  const { category, title, tags, image, isRight } = props
   const classes = useStyles()
 
   return (
@@ -41,7 +43,7 @@ function NewsroomItemCard(props: Props) {
           {tags}
         </Typography>
       </Box>
-      <Box className={classes.thumbnail}>
+      <Box className={clsx(classes.thumbnail, isRight && classes.right)}>
         <img src={image} alt='thumbnail' />
       </Box>
     </Box>

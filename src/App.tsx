@@ -107,7 +107,6 @@ function App() {
           currentMenu={currentMenu}
           onClick={onClickMenu}
           isBgWhite={isBgWhite}
-          menuList={menuList}
         />
       </Hidden>
     </div>

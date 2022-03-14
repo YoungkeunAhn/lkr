@@ -62,7 +62,7 @@ const useStyles = makeStyles((theme: Theme) =>
     },
     thumbnail: {
       flex: 1,
-      maxHeight: 170,
+      height: '80%',
       padding: 0,
       '& img': {
         width: '100%',
@@ -71,6 +71,12 @@ const useStyles = makeStyles((theme: Theme) =>
         borderBottom: '1px solid #ddd',
         borderBottomRightRadius: 10,
         borderBottomLeftRadius: 10,
+      },
+    },
+    right: {
+      '& img': {
+        height: 180,
+        transform: 'translateY(4px)',
       },
     },
   })
