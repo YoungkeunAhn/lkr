@@ -1,4 +1,10 @@
-import { Button, Container, Grid } from '@material-ui/core'
+import {
+  Button,
+  Container,
+  Grid,
+  useMediaQuery,
+  useTheme,
+} from '@material-ui/core'
 import { newsItem } from 'assets/news-item'
 import { newsroomSubText } from 'assets/sub-text'
 import TitleContentFrame from 'commons/title-content-box/TitleContentFrame'
@@ -8,6 +14,8 @@ import useStyles from './styles'
 
 function NewsroomView() {
   const classes = useStyles()
+  const theme = useTheme()
+  const smDown = useMediaQuery(theme.breakpoints.down('sm'))
 
   return (
     <div className={classes.root}>

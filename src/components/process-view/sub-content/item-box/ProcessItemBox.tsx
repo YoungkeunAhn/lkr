@@ -1,4 +1,5 @@
-import { Box, Typography } from '@material-ui/core'
+import { Box, Hidden, Typography, useTheme } from '@material-ui/core'
+import clsx from 'clsx'
 import React from 'react'
 import useStyles from './styles'
 
@@ -11,6 +12,8 @@ type Props = {
 function ProcessItemBox(props: Props) {
   const classes = useStyles()
   const { seq, title, text } = props
+  const theme = useTheme()
+  const smDown = theme.breakpoints.down('sm')
 
   return (
     <Box className={classes.root}>
@@ -19,12 +22,19 @@ function ProcessItemBox(props: Props) {
         <Typography variant='h6' className={classes.title}>
           {title}
         </Typography>
-        {seq !== 6 && (
-          <Box className={classes.arrowBox}>
-            <span className={classes.arrowSquare}></span>
-            <span className={classes.arrowTriangle}></span>
-          </Box>
-        )}
+        {smDown
+          ? seq !== 6 && (
+              <Box className={clsx(classes.arrowBox, classes.smDownArrowBox)}>
+                <span className={classes.arrowSquare}></span>
+                <span className={classes.arrowTriangle}></span>
+              </Box>
+            )
+          : seq !== 6 && (
+              <Box className={classes.arrowBox}>
+                <span className={classes.arrowSquare}></span>
+                <span className={classes.arrowTriangle}></span>
+              </Box>
+            )}
       </Box>
       <Box className={classes.textBox}>
         {text.map((x, idx) => (

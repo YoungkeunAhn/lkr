@@ -15,7 +15,7 @@ import useStyles from './styles'
 function ProcessSubContent() {
   const classes = useStyles()
   const theme = useTheme()
-  const lgDown = useMediaQuery(theme.breakpoints.down('lg'))
+  const smDown = useMediaQuery(theme.breakpoints.down('sm'))
 
   const onClickBtn = () => {}
 
@@ -27,8 +27,9 @@ function ProcessSubContent() {
       <Box className={classes.moveTopBox}>
         <Grid
           container
-          justifyContent={lgDown ? 'center' : 'space-between'}
-          spacing={4}
+          justifyContent={smDown ? 'center' : 'space-between'}
+          alignItems={smDown ? 'stretch' : 'center'}
+          spacing={smDown ? 0 : 4}
           style={{ zIndex: 200 }}
         >
           {processItemList.map((item, idx) => (

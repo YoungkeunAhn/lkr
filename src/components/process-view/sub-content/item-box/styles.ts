@@ -66,6 +66,11 @@ const useStyles = makeStyles((theme: Theme) =>
       borderBottomRightRadius: '100%',
       transform: 'translateX(2px)',
     },
+    smDownArrowBox: {
+      top: '21.75vh',
+      right: '50%',
+      transform: 'rotate(90deg)',
+    },
   })
 )
 
