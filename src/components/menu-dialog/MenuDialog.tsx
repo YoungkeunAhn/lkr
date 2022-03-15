@@ -3,7 +3,6 @@ import {
   ButtonBase,
   Dialog,
   DialogContent,
-  DialogTitle,
   IconButton,
   Typography,
 } from '@material-ui/core'

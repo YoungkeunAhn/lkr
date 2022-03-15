@@ -1,10 +1,19 @@
-import { Box, Container, Hidden, Typography } from '@material-ui/core'
+import {
+  Box,
+  Container,
+  Hidden,
+  Typography,
+  useMediaQuery,
+  useTheme,
+} from '@material-ui/core'
 import clsx from 'clsx'
 import React from 'react'
 import useStyles from './styles'
 
 function VietnamServiceStructure() {
   const classes = useStyles()
+  const theme = useTheme()
+  const mdDown = useMediaQuery(theme.breakpoints.down('md'))
 
   return (
     <Container maxWidth='lg'>
@@ -15,8 +24,13 @@ function VietnamServiceStructure() {
         <Box className={classes.contentBox}>
           <Box className={classes.dotBorderBox}>
             <Box className={clsx(classes.iconTextBox, classes.mockupImageBox)}>
-              <Typography>Platform User</Typography>
+              <Hidden smDown>
+                <Typography>Platform User</Typography>
+              </Hidden>
               <img src='vss_mockup.png' alt='' />
+              <Hidden mdUp>
+                <Typography variant='body2'>Platform User</Typography>
+              </Hidden>
             </Box>
             <Box>
               <div className={classes.dotBorderCircle}>
@@ -26,7 +40,10 @@ function VietnamServiceStructure() {
                     classes.circleTopLeftText
                   )}
                 >
-                  <Typography variant='body1' align='center'>
+                  <Typography
+                    variant={mdDown ? 'caption' : 'body1'}
+                    align='center'
+                  >
                     산모의 태아 초음파 촬영
                   </Typography>
                 </div>
@@ -36,7 +53,10 @@ function VietnamServiceStructure() {
                     classes.circleRightText
                   )}
                 >
-                  <Typography variant='body1' align='center'>
+                  <Typography
+                    variant={mdDown ? 'caption' : 'body1'}
+                    align='center'
+                  >
                     산모 및 초음파 정보 연동
                   </Typography>
                 </div>
@@ -46,7 +66,10 @@ function VietnamServiceStructure() {
                     classes.circleBottomLeftText
                   )}
                 >
-                  <Typography variant='body1' align='center'>
+                  <Typography
+                    variant={mdDown ? 'caption' : 'body1'}
+                    align='center'
+                  >
                     초음파 영상 서비스 제공
                   </Typography>
                 </div>
@@ -72,7 +95,7 @@ function VietnamServiceStructure() {
               </div>
             </Box>
           </Box>
-          <Hidden lgDown>
+          <Hidden mdDown>
             <Box className={classes.rightBox}>
               <div className={classes.rightText}>
                 <Typography variant='h6' align='center'>
