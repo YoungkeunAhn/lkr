@@ -8,11 +8,14 @@ const useStyles = makeStyles((theme: Theme) =>
     bgPart: {
       display: 'flex',
       backgroundRepeat: 'no-repeat',
-      backgroundAttachment: 'fixed',
+      // backgroundAttachment: 'fixed',
       backgroundPosition: 'top',
       backgroundSize: 'cover',
       height: '60vh',
       boxSizing: 'border-box',
+      [theme.breakpoints.down('sm')]: {
+        height: '20vh',
+      },
     },
     topBg: {
       backgroundImage: `url('recruitment_bg1.jpg')`,
@@ -24,6 +27,9 @@ const useStyles = makeStyles((theme: Theme) =>
     bgCover: {
       flex: 1,
       background: 'rgba(0,0,0,0.5)',
+      [theme.breakpoints.down('sm')]: {
+        background: 'none',
+      },
     },
   })
 )

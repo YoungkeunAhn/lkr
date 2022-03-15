@@ -1,13 +1,25 @@
-import { Box, Container, Typography } from '@material-ui/core'
+import {
+  Box,
+  Container,
+  Typography,
+  useMediaQuery,
+  useTheme,
+} from '@material-ui/core'
 import { recruitmentMainText } from 'assets/main-text'
-import { recruitmentSubText } from 'assets/sub-text'
+import { recruitmentSubText, recruitmentSubTextSmDown } from 'assets/sub-text'
 import TitleContentFrame from 'commons/title-content-box/TitleContentFrame'
 import React from 'react'
+import { A11y, Navigation } from 'swiper'
+import 'swiper/css'
+import 'swiper/css/navigation'
+import { Swiper, SwiperSlide } from 'swiper/react'
 import useStyles from './stlyes'
 import RecruitmentSubContent from './sub-content/RecruitmentSubContent'
 
 function RecruitmentView() {
   const classes = useStyles()
+  const theme = useTheme()
+  const smDown = useMediaQuery(theme.breakpoints.down('sm'))
 
   return (
     <Box>
@@ -15,11 +27,33 @@ function RecruitmentView() {
         <Container>
           <Box className={classes.subTextWrapper}>
             <Box className={classes.subTextBox}>
-              {recruitmentSubText.map((text, idx) => (
-                <Typography key={idx} variant='h6'>
-                  {text}
-                </Typography>
-              ))}
+              {smDown ? (
+                <Swiper
+                  modules={[Navigation, A11y]}
+                  slidesPerView={1}
+                  navigation
+                  scrollbar={{ draggable: true }}
+                  spaceBetween={50}
+                >
+                  {recruitmentSubTextSmDown.map((text, idx) => (
+                    <SwiperSlide>
+                      <Box width='100%' display='flex' justifyContent='center'>
+                        <div
+                          className={classes.sliderTextBox}
+                          key={idx}
+                          dangerouslySetInnerHTML={{ __html: text }}
+                        ></div>
+                      </Box>
+                    </SwiperSlide>
+                  ))}
+                </Swiper>
+              ) : (
+                recruitmentSubText.map((text, idx) => (
+                  <Typography key={idx} variant='h6'>
+                    {text}
+                  </Typography>
+                ))
+              )}
             </Box>
             <Box className={classes.imgBox}>
               <img src='recruitment_image1.png' alt='recruitment lkr' />

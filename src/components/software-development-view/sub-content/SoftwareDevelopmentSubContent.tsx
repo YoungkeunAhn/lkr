@@ -1,4 +1,4 @@
-import { Box, Container, Grid, Typography } from '@material-ui/core'
+import { Box, Container, Grid, Hidden, Typography } from '@material-ui/core'
 import { sdItemList } from 'assets/sd-sub-items'
 import BackgroundCover from 'commons/background-cover/BackgroundCover'
 import React from 'react'
@@ -15,14 +15,16 @@ function SoftwareDevelopmentSubContent() {
     <Box className={classes.root}>
       <BackgroundCover>
         <Container maxWidth='lg' className={classes.container}>
-          <Box className={classes.bgText}>
-            <Typography variant='h1' align='center'>
-              {bgText1}
-            </Typography>
-            <Typography variant='h1' align='center'>
-              {bgText2}
-            </Typography>
-          </Box>
+          <Hidden smDown>
+            <Box className={classes.bgText}>
+              <Typography variant='h1' align='center'>
+                {bgText1}
+              </Typography>
+              <Typography variant='h1' align='center'>
+                {bgText2}
+              </Typography>
+            </Box>
+          </Hidden>
           <Box className={classes.itemListBox}>
             <Grid
               container

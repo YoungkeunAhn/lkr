@@ -39,6 +39,11 @@ export const recruitmentSubText = [
   '배움의 열정을 가진, 삶과 자기실현의 밸런스를 맞출 수 있는 수평적 인재를 기다리고 있습니다. 많은 지원 바랍니다.',
 ]
 
+export const recruitmentSubTextSmDown = [
+  `"함께 일할 사람의 소중함을 너무도 잘 알고 있습니다. <span>하나의 목표와 같은 마음</span>을 가지고 어려움을 나눌 수 있는 동료가 <span>회사의 성장을 좌우</span>한다는 것을 잘 알고 있습니다."`,
+  `"그렇기에 좋은 인재를 뽑는다는 것이 항상 제일 어려운것 같습니다. <span>배움의 열정을 가진</span>, 삶과 자기실현의 밸런스를 맞출 수 있는 <span>수평적 인재</span>를 기다리고 있습니다.`,
+]
+
 export const newsroomSubText = [
   `공지사항, 보도자료, 기타 소식을 빠르게 알려드립니다.`,
 ]

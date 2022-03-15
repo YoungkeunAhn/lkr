@@ -1,5 +1,4 @@
 import { createStyles, makeStyles, Theme } from '@material-ui/core'
-import { themes } from 'theme/themes'
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -53,7 +52,7 @@ const useStyles = makeStyles((theme: Theme) =>
       background: '#3E3E3E',
       borderRadius: 10,
       position: 'relative',
-      padding: themes.spacing(3),
+      padding: theme.spacing(3),
       display: 'flex',
       justifyContent: 'center',
       alignItems: 'center',

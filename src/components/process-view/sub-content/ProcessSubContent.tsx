@@ -2,6 +2,7 @@ import {
   Box,
   Container,
   Grid,
+  Hidden,
   Typography,
   useMediaQuery,
   useTheme,
@@ -21,9 +22,11 @@ function ProcessSubContent() {
 
   return (
     <Container maxWidth='lg' className={classes.root}>
-      <Typography align='center' className={classes.bgText}>
-        PROCESS
-      </Typography>
+      <Hidden smDown>
+        <Typography align='center' className={classes.bgText}>
+          PROCESS
+        </Typography>
+      </Hidden>
       <Box className={classes.moveTopBox}>
         <Grid
           container
