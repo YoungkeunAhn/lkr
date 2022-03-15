@@ -24,6 +24,9 @@ const useStyles = makeStyles((theme: Theme) =>
         height: '100%',
         objectFit: 'contain',
       },
+      [theme.breakpoints.down('sm')]: {
+        width: '15vw',
+      },
     },
     copyright: {
       color: '#fff',
@@ -41,8 +44,10 @@ const useStyles = makeStyles((theme: Theme) =>
     },
     smDownScrollTopBtn: {
       position: 'absolute',
-      top: -10,
+      top: 0,
       right: -20,
+      width: '9vw',
+      height: '9vw',
     },
   })
 )

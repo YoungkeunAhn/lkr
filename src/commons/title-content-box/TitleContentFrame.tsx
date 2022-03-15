@@ -5,24 +5,39 @@ import {
   useMediaQuery,
   useTheme,
 } from '@material-ui/core'
+import clsx from 'clsx'
 import React from 'react'
 import useStyles from './styles'
 
 type Props = {
   title: string
-  children?: React.ReactNode
   mainText: string[]
   subText?: string[]
+  smDownMainText: string
+
   background?: string
+  children?: React.ReactNode
+  noBottomPadding?: true
 }
 function TitleContentFrame(props: Props) {
-  const { title, children, mainText, subText, background } = props
+  const {
+    title,
+    children,
+    mainText,
+    subText,
+    background,
+    smDownMainText,
+    noBottomPadding,
+  } = props
   const classes = useStyles()
   const theme = useTheme()
   const smDown = useMediaQuery(theme.breakpoints.down('sm'))
 
   return (
-    <Box className={classes.root} style={{ background }}>
+    <Box
+      className={classes.root}
+      style={{ background, paddingBottom: noBottomPadding && 0 }}
+    >
       <Container maxWidth='lg'>
         <Typography
           variant={smDown ? 'body2' : 'body1'}
@@ -39,11 +54,21 @@ function TitleContentFrame(props: Props) {
           {title.toUpperCase()}
         </Typography>
         <Box className={classes.mainTextBox}>
-          {mainText.map((text, idx) => (
-            <Typography key={idx} variant={smDown ? 'h5' : 'h2'} align='center'>
-              <div dangerouslySetInnerHTML={{ __html: text }}></div>
+          {smDown ? (
+            <Typography
+              variant='h6'
+              align='center'
+              className={classes.smDownMainText}
+            >
+              <div dangerouslySetInnerHTML={{ __html: smDownMainText }}></div>
             </Typography>
-          ))}
+          ) : (
+            mainText.map((text, idx) => (
+              <Typography key={idx} variant={'h2'} align='center'>
+                <div dangerouslySetInnerHTML={{ __html: text }}></div>
+              </Typography>
+            ))
+          )}
         </Box>
         <Box className={classes.subTextBox}>
           {subText && smDown ? (

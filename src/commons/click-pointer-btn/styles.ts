@@ -15,6 +15,13 @@ const useStyles = makeStyles((theme: Theme) =>
         width: '100%',
         height: '100%',
       },
+      [theme.breakpoints.down('sm')]: {
+        width: '17vw',
+        right: '-45vw',
+        '& img': {
+          objectFit: 'contain',
+        },
+      },
     },
     btn: {
       marginTop: theme.spacing(6),
@@ -29,6 +36,12 @@ const useStyles = makeStyles((theme: Theme) =>
       },
       '&:hover': {
         background: '#c4f21f',
+      },
+      [theme.breakpoints.down('sm')]: {
+        width: '40vw',
+        '& .MuiButton-label': {
+          fontSize: '1rem',
+        },
       },
     },
   })

@@ -5,7 +5,10 @@ import {
   useMediaQuery,
   useTheme,
 } from '@material-ui/core'
-import { recruitmentMainText } from 'assets/main-text'
+import {
+  recruitmentMainText,
+  smDownRecruitmentMainText,
+} from 'assets/main-text'
 import { recruitmentSubText, recruitmentSubTextSmDown } from 'assets/sub-text'
 import TitleContentFrame from 'commons/title-content-box/TitleContentFrame'
 import React from 'react'
@@ -23,7 +26,11 @@ function RecruitmentView() {
 
   return (
     <Box>
-      <TitleContentFrame title='recruitment' mainText={recruitmentMainText}>
+      <TitleContentFrame
+        title='recruitment'
+        mainText={recruitmentMainText}
+        smDownMainText={smDownRecruitmentMainText}
+      >
         <Container>
           <Box className={classes.subTextWrapper}>
             <Box className={classes.subTextBox}>

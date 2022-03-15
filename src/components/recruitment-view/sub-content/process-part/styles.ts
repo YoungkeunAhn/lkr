@@ -8,6 +8,9 @@ const useStyles = makeStyles((theme: Theme) =>
     subTitle: {
       marginBottom: theme.spacing(3),
       fontWeight: 600,
+      [theme.breakpoints.down('sm')]: {
+        marginBottom: theme.spacing(0),
+      },
     },
 
     processListBox: {
@@ -15,7 +18,6 @@ const useStyles = makeStyles((theme: Theme) =>
       display: 'flex',
       justifyContent: 'center',
       alignItems: 'center',
-      border: '3px solid red',
     },
     gt: {
       color: '#888',

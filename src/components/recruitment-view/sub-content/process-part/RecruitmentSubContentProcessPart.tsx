@@ -16,7 +16,11 @@ function RecruitmentSubContentProcessPart() {
 
   return (
     <Box className={classes.root}>
-      <Typography variant='h5' className={classes.subTitle}>
+      <Typography
+        variant='h5'
+        className={classes.subTitle}
+        align={smDown ? 'center' : 'left'}
+      >
         전형 프로세스
       </Typography>
       {smDown ? (

@@ -19,6 +19,7 @@ function Footer() {
             <Typography
               className={clsx(classes.scrollTopBtn, classes.smDownScrollTopBtn)}
               align='center'
+              variant='caption'
             >
               TOP ↑
             </Typography>
@@ -52,8 +53,12 @@ function Footer() {
       </Box>
       <Hidden smDown>
         <ButtonBase onClick={onClickTopBtn}>
-          <Typography className={classes.scrollTopBtn} align='center'>
-            TOP ↑
+          <Typography
+            variant='body1'
+            className={classes.scrollTopBtn}
+            align='center'
+          >
+            TOP↑
           </Typography>
         </ButtonBase>
       </Hidden>

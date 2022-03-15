@@ -1,5 +1,8 @@
 import { Box } from '@material-ui/core'
-import { softwareDevelopmentMainText } from 'assets/main-text'
+import {
+  smDownSoftwareDevelopmentMainText,
+  softwareDevelopmentMainText,
+} from 'assets/main-text'
 import { softwareDevelopmentSubText } from 'assets/sub-text'
 import TitleContentFrame from 'commons/title-content-box/TitleContentFrame'
 import React from 'react'
@@ -13,6 +16,7 @@ function SoftwareDevelopmentView() {
           title='software development'
           mainText={softwareDevelopmentMainText}
           subText={softwareDevelopmentSubText}
+          smDownMainText={smDownSoftwareDevelopmentMainText}
         />
       </div>
       <div id='blackBg3'>

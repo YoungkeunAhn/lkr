@@ -96,6 +96,12 @@ const useStyles = makeStyles((theme: Theme) =>
       [theme.breakpoints.down('sm')]: {
         width: 100,
         height: 100,
+        '& img': {
+          height: '60%',
+        },
+        '& .MuiTypography-root': {
+          fontWeight: 600,
+        },
       },
     },
 
@@ -105,10 +111,8 @@ const useStyles = makeStyles((theme: Theme) =>
         maxHeight: 120,
       },
       [theme.breakpoints.down('sm')]: {
-        transform: 'translate(-10%, -10%)',
         '& img': {
           width: '60%',
-          height: '60%',
         },
       },
     },
@@ -118,10 +122,8 @@ const useStyles = makeStyles((theme: Theme) =>
         maxHeight: 120,
       },
       [theme.breakpoints.down('sm')]: {
-        transform: 'translate(10%, -10%)',
         '& img': {
           width: '60%',
-          height: '60%',
         },
       },
     },
@@ -131,10 +133,8 @@ const useStyles = makeStyles((theme: Theme) =>
         maxHeight: 120,
       },
       [theme.breakpoints.down('sm')]: {
-        transform: 'translate(-10%,10%)',
         '& img': {
           width: '60%',
-          height: '60%',
         },
       },
     },
@@ -144,10 +144,8 @@ const useStyles = makeStyles((theme: Theme) =>
         maxHeight: 120,
       },
       [theme.breakpoints.down('sm')]: {
-        transform: 'translat(10%,10%)',
         '& img': {
           width: '60%',
-          height: '60%',
         },
       },
     },

@@ -3,11 +3,15 @@ import { createStyles, makeStyles, Theme } from '@material-ui/core'
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     root: {
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center',
+    },
+    wrapper: {
       borderRadius: 10,
       border: '1px solid #B2B2B2',
       width: '100%',
       zIndex: 10,
-      margin: theme.spacing(3, 0),
     },
     titleBox: {
       position: 'relative',
@@ -67,8 +71,10 @@ const useStyles = makeStyles((theme: Theme) =>
       transform: 'translateX(2px)',
     },
     smDownArrowBox: {
-      top: 0,
+      position: 'relative',
+      top: -20,
       right: 0,
+      zIndex: 10,
       transform: 'rotate(90deg)',
     },
   })

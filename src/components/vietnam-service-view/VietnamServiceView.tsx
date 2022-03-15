@@ -17,6 +17,7 @@ function VietnamServiceView() {
         title='vietnam hospital solution service'
         mainText={vietnamServiceMainText}
         subText={vietnamServiceSubText}
+        smDownMainText={vietnamServiceMainText[0]}
       />
       <VietnamServiceSubContent />
 

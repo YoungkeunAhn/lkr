@@ -23,6 +23,8 @@ function NewsroomView() {
         title='newsroom'
         mainText={[`<span>2021년 12월</span> 엘케이알 뉴스`]}
         subText={newsroomSubText}
+        smDownMainText={`<span>2021년 12월</span> 엘케이알 뉴스`}
+        noBottomPadding
       />
       <Container maxWidth='lg'>
         <Grid container spacing={4} alignItems='stretch'>

@@ -1,5 +1,8 @@
 import { Box, Container } from '@material-ui/core'
-import { recruitmentMainText2 } from 'assets/main-text'
+import {
+  recruitmentMainText2,
+  smDownRecruitmentMainText2,
+} from 'assets/main-text'
 import clsx from 'clsx'
 import TitleContentFrame from 'commons/title-content-box/TitleContentFrame'
 import React from 'react'
@@ -23,6 +26,7 @@ function RecruitmentSubContent() {
           <TitleContentFrame
             title='신입 및 경력사원 공개채용'
             mainText={recruitmentMainText2}
+            smDownMainText={smDownRecruitmentMainText2}
           />
           <Container maxWidth='lg'>
             <RecruitmentSubContentNoticePart />

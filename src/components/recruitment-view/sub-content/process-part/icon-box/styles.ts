@@ -7,8 +7,10 @@ const useStyles = makeStyles((theme: Theme) =>
       flexDirection: 'column',
       justifyContent: 'center',
       alignItems: 'center',
-      padding: theme.spacing(5),
       boxSizing: 'border-box',
+      [theme.breakpoints.down('sm')]: {
+        padding: theme.spacing(5),
+      },
     },
     imgBox: {
       width: '10vw',

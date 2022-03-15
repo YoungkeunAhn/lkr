@@ -1,4 +1,4 @@
-import { processMainText } from 'assets/main-text'
+import { processMainText, smDownProcessMainText } from 'assets/main-text'
 import { processSubText } from 'assets/sub-text'
 import TitleContentFrame from 'commons/title-content-box/TitleContentFrame'
 import React from 'react'
@@ -11,6 +11,7 @@ function ProcessView() {
         title='process'
         mainText={processMainText}
         subText={processSubText}
+        smDownMainText={smDownProcessMainText}
       />
       <ProcessSubContent />
     </div>

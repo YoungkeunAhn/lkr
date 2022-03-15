@@ -14,8 +14,8 @@ function ProcessItemBox(props: Props) {
   const { seq, title, text } = props
 
   return (
-    <Box>
-      <Box className={classes.root}>
+    <Box className={classes.root}>
+      <Box className={classes.wrapper}>
         <Box className={classes.titleBox}>
           <Typography>STEP 0{seq}</Typography>
           <Typography variant='h6' className={classes.title}>
@@ -29,19 +29,6 @@ function ProcessItemBox(props: Props) {
               </Box>
             )}
           </Hidden>
-          {/* {smDown
-          ? seq !== 6 && (
-              <Box className={clsx(classes.arrowBox, classes.smDownArrowBox)}>
-                <span className={classes.arrowSquare}></span>
-                <span className={classes.arrowTriangle}></span>
-              </Box>
-            )
-          : seq !== 6 && (
-              <Box className={classes.arrowBox}>
-                <span className={classes.arrowSquare}></span>
-                <span className={classes.arrowTriangle}></span>
-              </Box>
-            )} */}
         </Box>
         <Box className={classes.textBox}>
           {text.map((x, idx) => (

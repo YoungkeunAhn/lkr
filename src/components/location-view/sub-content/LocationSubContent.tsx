@@ -1,11 +1,21 @@
-import { Box, Button, Container } from '@material-ui/core'
+import {
+  Box,
+  Button,
+  Container,
+  IconButton,
+  useMediaQuery,
+  useTheme,
+} from '@material-ui/core'
 import { locationText } from 'assets/location-text'
 import React from 'react'
 import useStyles from './styles'
 import LocationTextRowBox from './text-row-box/LocationTextRowBox'
+import ChevronRightIcon from '@material-ui/icons/ChevronRight'
 
 function LocationSubContent() {
   const classes = useStyles()
+  const theme = useTheme()
+  const smDown = useMediaQuery(theme.breakpoints.down('sm'))
 
   const onClickNaverBtn = () => {
     window.open(
@@ -37,22 +47,36 @@ function LocationSubContent() {
             ))}
           </Box>
           <Box className={classes.btnBox}>
-            <Button
-              variant='contained'
-              size='large'
-              className={classes.naverBtn}
-              onClick={onClickNaverBtn}
-            >
-              NAVER 지도보기
-            </Button>
-            <Button
-              variant='contained'
-              size='large'
-              className={classes.kakaoBtn}
-              onClick={onClickKakaoBtn}
-            >
-              KAKAO 지도보기
-            </Button>
+            <Box>
+              <Button
+                variant='contained'
+                size='large'
+                className={classes.naverBtn}
+                onClick={onClickNaverBtn}
+              >
+                NAVER 지도보기
+              </Button>
+              {smDown && (
+                <IconButton size='small'>
+                  <ChevronRightIcon />
+                </IconButton>
+              )}
+            </Box>
+            <Box>
+              <Button
+                variant='contained'
+                size='large'
+                className={classes.kakaoBtn}
+                onClick={onClickKakaoBtn}
+              >
+                KAKAO 지도보기
+              </Button>
+              {smDown && (
+                <IconButton size='small'>
+                  <ChevronRightIcon />
+                </IconButton>
+              )}
+            </Box>
           </Box>
         </Box>
       </Box>

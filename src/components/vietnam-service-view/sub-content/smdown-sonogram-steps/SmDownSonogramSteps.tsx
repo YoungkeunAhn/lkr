@@ -10,7 +10,7 @@ function SmDownSonogramSteps() {
   return (
     <Container maxWidth='lg'>
       <Typography variant='h5' className={classes.title} align='center'>
-        <span>초음파 영상서비스</span>운영중
+        <span>초음파 영상서비스 </span>운영중
       </Typography>
       <Typography className={classes.mainText} align='center' variant='body1'>
         모바일 App환경에서 태아의 초음파영상을 제공! 제휴 병원을 이용한 산모들이

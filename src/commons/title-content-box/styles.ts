@@ -44,6 +44,7 @@ const useStyles = makeStyles((theme: Theme) =>
         fontWeight: 600,
       },
     },
+
     subTextBox: {
       paddingTop: theme.spacing(4),
       '& .MuiTypography-root:first-child': {
@@ -65,6 +66,9 @@ const useStyles = makeStyles((theme: Theme) =>
           lineHeight: 1.8,
         },
       },
+    },
+    smDownMainText: {
+      wordBreak: 'keep-all',
     },
   })
 )
