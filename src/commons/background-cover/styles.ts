@@ -10,6 +10,9 @@ const useStyles = makeStyles((theme: Theme) =>
       paddingTop: theme.spacing(6.5),
       paddingBottom: theme.spacing(6.5),
       background: 'rgba(0,0,0,0.5)',
+      [theme.breakpoints.down('sm')]: {
+        background: 'rgba(0,0,0,0.2)',
+      },
     },
   })
 )

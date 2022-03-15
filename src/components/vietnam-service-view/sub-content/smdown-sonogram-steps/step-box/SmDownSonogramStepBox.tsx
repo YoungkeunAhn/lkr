@@ -20,7 +20,7 @@ function SmDownSonogramStepBox(props: Props) {
             <Typography
               className={classes.stepText}
               align='center'
-              variant='h6'
+              variant='body1'
             >
               STEP 0{seq}
             </Typography>
@@ -32,7 +32,7 @@ function SmDownSonogramStepBox(props: Props) {
             />
           </Box>
         </div>
-        <Typography className={classes.text} variant='body1' align='center'>
+        <Typography className={classes.text} variant='body2' align='center'>
           {content}
         </Typography>
       </Box>

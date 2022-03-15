@@ -1,4 +1,4 @@
-import { Box, Typography, useTheme } from '@material-ui/core'
+import { Box, Hidden, Typography, useTheme } from '@material-ui/core'
 import clsx from 'clsx'
 import React from 'react'
 import useStyles from './styles'
@@ -12,17 +12,24 @@ type Props = {
 function ProcessItemBox(props: Props) {
   const classes = useStyles()
   const { seq, title, text } = props
-  const theme = useTheme()
-  const smDown = theme.breakpoints.down('sm')
 
   return (
-    <Box className={classes.root}>
-      <Box className={classes.titleBox}>
-        <Typography>STEP 0{seq}</Typography>
-        <Typography variant='h6' className={classes.title}>
-          {title}
-        </Typography>
-        {smDown
+    <Box>
+      <Box className={classes.root}>
+        <Box className={classes.titleBox}>
+          <Typography>STEP 0{seq}</Typography>
+          <Typography variant='h6' className={classes.title}>
+            {title}
+          </Typography>
+          <Hidden smDown>
+            {seq !== 6 && (
+              <Box className={classes.arrowBox}>
+                <span className={classes.arrowSquare}></span>
+                <span className={classes.arrowTriangle}></span>
+              </Box>
+            )}
+          </Hidden>
+          {/* {smDown
           ? seq !== 6 && (
               <Box className={clsx(classes.arrowBox, classes.smDownArrowBox)}>
                 <span className={classes.arrowSquare}></span>
@@ -34,15 +41,24 @@ function ProcessItemBox(props: Props) {
                 <span className={classes.arrowSquare}></span>
                 <span className={classes.arrowTriangle}></span>
               </Box>
-            )}
+            )} */}
+        </Box>
+        <Box className={classes.textBox}>
+          {text.map((x, idx) => (
+            <Typography variant='caption' key={idx}>
+              {x}
+            </Typography>
+          ))}
+        </Box>
       </Box>
-      <Box className={classes.textBox}>
-        {text.map((x, idx) => (
-          <Typography variant='caption' key={idx}>
-            {x}
-          </Typography>
-        ))}
-      </Box>
+      <Hidden mdUp>
+        {seq !== 6 && (
+          <Box className={clsx(classes.arrowBox, classes.smDownArrowBox)}>
+            <span className={classes.arrowSquare}></span>
+            <span className={classes.arrowTriangle}></span>
+          </Box>
+        )}
+      </Hidden>
     </Box>
   )
 }

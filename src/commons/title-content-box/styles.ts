@@ -6,18 +6,16 @@ const useStyles = makeStyles((theme: Theme) =>
       paddingTop: theme.spacing(13),
       paddingBottom: theme.spacing(13),
       [theme.breakpoints.down('sm')]: {
-        paddingTop: theme.spacing(10),
-        paddingBottom: theme.spacing(10),
+        paddingTop: theme.spacing(8),
+        paddingBottom: theme.spacing(8),
       },
     },
     lkrLogo: {
       color: '#818181',
-      fontSize: '1.2rem',
       margin: theme.spacing(0, 'auto'),
       display: 'flex',
       flexDirection: 'column',
       alignItems: 'center',
-
       '&::after': {
         content: '""',
         padding: theme.spacing(0.5, 4.5),
@@ -30,7 +28,7 @@ const useStyles = makeStyles((theme: Theme) =>
       marginTop: theme.spacing(2),
       marginBottom: theme.spacing(10),
       [theme.breakpoints.down('sm')]: {
-        marginBottom: theme.spacing(5),
+        marginBottom: theme.spacing(4),
       },
     },
     mainTextBox: {
@@ -53,13 +51,19 @@ const useStyles = makeStyles((theme: Theme) =>
       },
       '& .MuiTypography-root': {
         lineHeight: '40px',
-        fontSize: '1.2rem',
       },
       '& .MuiTypography-root+.MuiTypography-root': {
         marginTop: theme.spacing(1),
       },
       [theme.breakpoints.down('sm')]: {
         padding: theme.spacing(1),
+        wordBreak: 'keep-all',
+        '& .MuiTypography-root': {
+          lineHeight: 1.8,
+        },
+        '& .MuiTypography-root:first-child': {
+          lineHeight: 1.8,
+        },
       },
     },
   })

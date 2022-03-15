@@ -24,31 +24,45 @@ function TitleContentFrame(props: Props) {
   return (
     <Box className={classes.root} style={{ background }}>
       <Container maxWidth='lg'>
-        <Typography variant='body1' className={classes.lkrLogo} align='center'>
+        <Typography
+          variant={smDown ? 'body2' : 'body1'}
+          className={classes.lkrLogo}
+          align='center'
+        >
           LKR
         </Typography>
-        <Typography variant='h4' className={classes.title} align='center'>
+        <Typography
+          variant={smDown ? 'h6' : 'h4'}
+          className={classes.title}
+          align='center'
+        >
           {title.toUpperCase()}
         </Typography>
         <Box className={classes.mainTextBox}>
           {mainText.map((text, idx) => (
-            <Typography key={idx} variant={smDown ? 'h4' : 'h2'} align='center'>
+            <Typography key={idx} variant={smDown ? 'h5' : 'h2'} align='center'>
               <div dangerouslySetInnerHTML={{ __html: text }}></div>
             </Typography>
           ))}
         </Box>
         <Box className={classes.subTextBox}>
-          {subText &&
+          {subText && smDown ? (
+            <Typography variant='body1' align='center'>
+              {subText.map((text) => text)}
+            </Typography>
+          ) : (
+            subText &&
             subText.map((text, idx) => (
               <Typography
                 key={idx}
-                variant={smDown ? 'body1' : 'body1'}
+                variant={'h6'}
                 align='center'
                 style={{ lineHeight: subText.length === 1 ? '40px' : '' }}
               >
                 {text}
               </Typography>
-            ))}
+            ))
+          )}
         </Box>
         <Box>{children}</Box>
       </Container>

@@ -67,8 +67,8 @@ const useStyles = makeStyles((theme: Theme) =>
       transform: 'translateX(2px)',
     },
     smDownArrowBox: {
-      top: '21.75vh',
-      right: '50%',
+      top: 0,
+      right: 0,
       transform: 'rotate(90deg)',
     },
   })

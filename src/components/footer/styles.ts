@@ -4,10 +4,12 @@ const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     root: {
       background: '#000',
-      padding: theme.spacing(4, 0, 3, 0),
+      padding: theme.spacing(4, 2, 3, 2),
       display: 'flex',
       justifyContent: 'center',
       alignItems: 'flex-end',
+      boxSizing: 'border-box',
+      position: 'relative',
     },
     wrapper: {
       display: 'flex',
@@ -36,6 +38,11 @@ const useStyles = makeStyles((theme: Theme) =>
       alignItems: 'center',
       color: '#fff',
       transform: 'translateX(300%)',
+    },
+    smDownScrollTopBtn: {
+      position: 'absolute',
+      top: -10,
+      right: -20,
     },
   })
 )

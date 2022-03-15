@@ -16,6 +16,7 @@ const useStyles = makeStyles((theme: Theme) =>
       [theme.breakpoints.down('md')]: {
         height: '100%',
         paddingBottom: theme.spacing(10),
+        background: 'none',
       },
     },
     container: {
@@ -39,9 +40,10 @@ const useStyles = makeStyles((theme: Theme) =>
       position: 'relative',
       top: '7vh',
       width: '100%',
-      // [theme.breakpoints.down('md')]: {
-      //   position: 'absolute',
-      // },
+      [theme.breakpoints.down('md')]: {
+        // position: 'absolute',
+        top: 0,
+      },
     },
   })
 )

@@ -42,6 +42,7 @@ const useStyles = makeStyles((theme: Theme) =>
     },
     stepText: {
       color: '#B1DC1F',
+      fontWeight: 600,
     },
     circleBottom: {
       background: `url('sonogram_step_circle_bg.png')`,
@@ -56,13 +57,17 @@ const useStyles = makeStyles((theme: Theme) =>
         fontWeight: 600,
         wordBreak: 'keep-all',
       },
+      [theme.breakpoints.down('sm')]: {
+        paddingTop: theme.spacing(1),
+        fontWeight: 600,
+      },
     },
     text: {
       color: '#fff',
       width: '51vw',
     },
     title: {
-      fontSize: '1.2rem',
+      // fontSize: '1.2rem',
       textAlign: 'center',
       fontWeight: 600,
     },

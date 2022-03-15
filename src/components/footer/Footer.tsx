@@ -1,4 +1,5 @@
-import { Box, ButtonBase, Typography } from '@material-ui/core'
+import { Box, ButtonBase, Hidden, Typography } from '@material-ui/core'
+import clsx from 'clsx'
 import React from 'react'
 import useStyles from './styles'
 import FooterTextForm from './text-form/FooterTextForm'
@@ -13,6 +14,16 @@ function Footer() {
   return (
     <Box className={classes.root}>
       <Box className={classes.wrapper}>
+        <Hidden mdUp>
+          <ButtonBase onClick={onClickTopBtn}>
+            <Typography
+              className={clsx(classes.scrollTopBtn, classes.smDownScrollTopBtn)}
+              align='center'
+            >
+              TOP ↑
+            </Typography>
+          </ButtonBase>
+        </Hidden>
         <Box className={classes.logo}>
           <img src='logo.png' alt='logo' />
         </Box>
@@ -39,11 +50,13 @@ function Footer() {
           Copyright© 2021 LKR All Rights Reserved.
         </Typography>
       </Box>
-      <ButtonBase onClick={onClickTopBtn}>
-        <Typography className={classes.scrollTopBtn} align='center'>
-          TOP ↑
-        </Typography>
-      </ButtonBase>
+      <Hidden smDown>
+        <ButtonBase onClick={onClickTopBtn}>
+          <Typography className={classes.scrollTopBtn} align='center'>
+            TOP ↑
+          </Typography>
+        </ButtonBase>
+      </Hidden>
     </Box>
   )
 }
