@@ -4,13 +4,17 @@ const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     root: {
       position: 'fixed',
-      top: '90vh',
-      right: 0,
+      bottom: '5vh',
+      right: '2vw',
       display: 'flex',
-      justifyContent: 'flex-end',
-      paddingRight: theme.spacing(2),
-      paddingTop: theme.spacing(2),
+      justifyContent: 'center',
+      alignItems: 'center',
       zIndex: 9999,
+      background: '#032030',
+      padding: theme.spacing(1, 2),
+
+      borderRadius: 10,
+
       color: '#fff',
     },
     btn: {},

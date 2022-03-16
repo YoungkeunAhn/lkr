@@ -12,7 +12,9 @@ function SmDownScrollTop() {
   return (
     <Box className={classes.root}>
       <ButtonBase className={classes.btn} onClick={onClick}>
-        <Typography align='center'>TOP ↑</Typography>
+        <Typography variant='caption' align='center'>
+          TOP ↑
+        </Typography>
       </ButtonBase>
     </Box>
   )
