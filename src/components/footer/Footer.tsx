@@ -19,7 +19,6 @@ function Footer() {
             <Typography
               className={clsx(classes.scrollTopBtn, classes.smDownScrollTopBtn)}
               align='center'
-              variant='caption'
             >
               TOP ↑
             </Typography>

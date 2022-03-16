@@ -32,10 +32,26 @@ const useStyles = makeStyles((theme: Theme) =>
       '& p': {
         marginLeft: theme.spacing(2),
       },
+      [theme.breakpoints.down('sm')]: {
+        paddingBottom: theme.spacing(1),
+        '& img': {
+          width: '40%',
+        },
+      },
     },
     menuIcon: {
       color: '#fff',
       fontSize: '3rem',
+    },
+    top: {
+      display: 'flex',
+      justifyContent: 'space-between',
+      [theme.breakpoints.down('sm')]: {
+        position: 'fixed',
+        top: '3vh',
+        left: '7vw',
+        zIndex: 1000,
+      },
     },
   })
 )

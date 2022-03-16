@@ -17,6 +17,7 @@ const useStyles = makeStyles((theme: Theme) =>
       },
       [theme.breakpoints.down('sm')]: {
         width: '17vw',
+        top: 45,
         right: '-45vw',
         '& img': {
           objectFit: 'contain',
@@ -39,8 +40,9 @@ const useStyles = makeStyles((theme: Theme) =>
       },
       [theme.breakpoints.down('sm')]: {
         width: '40vw',
+        height: 35,
         '& .MuiButton-label': {
-          fontSize: '1rem',
+          fontSize: '0.9rem',
         },
       },
     },

@@ -3,7 +3,7 @@ export const aboutUsMainText = [
   `<span>쉼없이 달려가는 중</span>입니다.`,
 ]
 export const smDownAboutUsMainText =
-  aboutUsMainText[0] + ' ' + aboutUsMainText[1]
+  aboutUsMainText[0] + '<br /> ' + aboutUsMainText[1]
 
 export const softwareDevelopmentMainText = [
   `<span>마케팅플랜</span> 제안에서부터`,
@@ -17,7 +17,7 @@ export const processMainText = [
   `end 기타 <span>수정사항</span>까지의 진행순서`,
 ]
 export const smDownProcessMainText =
-  processMainText[0] + ' ' + processMainText[1]
+  processMainText[0] + '<br /> ' + processMainText[1]
 
 export const coupangServiceMainText = [
   `<span>국내최초!</span> 쿠팡판매자에 특화된`,

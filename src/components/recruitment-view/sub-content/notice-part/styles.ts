@@ -20,7 +20,7 @@ const useStyles = makeStyles((theme: Theme) =>
     textPart: {
       paddingTop: theme.spacing(6),
       [theme.breakpoints.down('sm')]: {
-        paddingTop: theme.spacing(3),
+        paddingTop: theme.spacing(0),
       },
     },
     itemTitle: {
@@ -46,11 +46,12 @@ const useStyles = makeStyles((theme: Theme) =>
       },
     },
     smDownMainImgBox: {
-      width: '100%',
-      heigth: '100%',
+      width: '80%',
+      height: '100%',
+      transform: 'translate(4%, -15%)',
       '& img': {
         width: '100%',
-        heigth: '100%',
+        height: '100%',
         objectFit: 'contain',
       },
     },

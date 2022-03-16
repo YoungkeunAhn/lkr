@@ -70,6 +70,10 @@ const useStyles = makeStyles((theme: Theme) =>
     smDownMainText: {
       wordBreak: 'keep-all',
     },
+    smDownSubText: {
+      // wordBreak: 'keep-all',
+      // lineHeight: 1.5,
+    },
   })
 )
 

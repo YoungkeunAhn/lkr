@@ -48,6 +48,8 @@ const useStyles = makeStyles((theme: Theme) =>
       right: -20,
       width: '9vw',
       height: '9vw',
+      whiteSpace: 'nowrap',
+      fontSize: '0.6rem',
     },
   })
 )

@@ -5,7 +5,6 @@ import {
   useMediaQuery,
   useTheme,
 } from '@material-ui/core'
-import clsx from 'clsx'
 import React from 'react'
 import useStyles from './styles'
 
@@ -14,6 +13,7 @@ type Props = {
   mainText: string[]
   subText?: string[]
   smDownMainText: string
+  smDownSubText?: string
 
   background?: string
   children?: React.ReactNode
@@ -28,6 +28,7 @@ function TitleContentFrame(props: Props) {
     background,
     smDownMainText,
     noBottomPadding,
+    smDownSubText,
   } = props
   const classes = useStyles()
   const theme = useTheme()
@@ -72,8 +73,12 @@ function TitleContentFrame(props: Props) {
         </Box>
         <Box className={classes.subTextBox}>
           {subText && smDown ? (
-            <Typography variant='body1' align='center'>
-              {subText.map((text) => text)}
+            <Typography
+              variant='body2'
+              align='center'
+              className={classes.smDownSubText}
+            >
+              {smDownSubText ?? subText.map((text) => text)}
             </Typography>
           ) : (
             subText &&

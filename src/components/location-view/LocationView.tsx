@@ -15,6 +15,7 @@ function LocationView() {
         mainText={locationMainText}
         smDownMainText={locationMainText[0]}
         noBottomPadding
+        background={smDown ? '#f6f6f6' : '#fff'}
       />
       <LocationSubContent />
     </Box>

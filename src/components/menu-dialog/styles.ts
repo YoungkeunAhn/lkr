@@ -43,7 +43,6 @@ const useStyles = makeStyles((theme: Theme) =>
       },
     },
     content: {
-      padding: theme.spacing(10),
       background: 'rgba(0,0,0,0.5)',
       color: '#fff',
       textAlign: 'center',

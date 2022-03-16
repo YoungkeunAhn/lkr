@@ -28,17 +28,16 @@ function MainView(props: Props) {
       <Box className={classes.root}>
         <BackgroundCover>
           <Container maxWidth='xl'>
-            <Box display='flex' justifyContent='space-between'>
-              <Box className={classes.logoBox}>
-                <img src='logo.png' alt='logo' />
-                <Typography variant='body1'>LKR corpration</Typography>
+            <Hidden smDown>
+              <Box className={classes.top}>
+                <Box className={classes.logoBox}>
+                  <img src='logo.png' alt='logo' />
+                  <Typography variant={smDown ? 'body2' : 'body1'}>
+                    LKR corpration
+                  </Typography>
+                </Box>
               </Box>
-              <Hidden mdUp>
-                <IconButton onClick={openDialog}>
-                  <MenuRoundedIcon className={classes.menuIcon} />
-                </IconButton>
-              </Hidden>
-            </Box>
+            </Hidden>
             <Box className={classes.textBox}>
               {mainSubText.map((text, idx) => (
                 <Typography key={idx} variant={smDown ? 'h4' : 'h2'}>
