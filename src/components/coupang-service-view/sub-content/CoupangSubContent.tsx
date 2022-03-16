@@ -24,7 +24,7 @@ function CoupangSubContent() {
       <Hidden mdUp>
         <CoupangSmDownContent />
       </Hidden>
-      <Box pb={15}>
+      <Box pb={smDown ? 6 : 15}>
         <Container maxWidth='lg'>
           <Box className={classes.root}>
             <Box className={classes.itemListBox}>

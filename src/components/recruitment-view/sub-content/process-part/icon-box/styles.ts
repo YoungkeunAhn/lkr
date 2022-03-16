@@ -20,7 +20,7 @@ const useStyles = makeStyles((theme: Theme) =>
         objectFit: 'contain',
       },
       [theme.breakpoints.down('sm')]: {
-        width: '20vw',
+        width: '27vw',
       },
     },
     title: {

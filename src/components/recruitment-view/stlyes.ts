@@ -2,6 +2,11 @@ import { createStyles, makeStyles, Theme } from '@material-ui/core'
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
+    root: {
+      [theme.breakpoints.down('sm')]: {
+        background: '#f6f6f6',
+      },
+    },
     subTextWrapper: {
       display: 'flex',
       justifyContent: 'center',

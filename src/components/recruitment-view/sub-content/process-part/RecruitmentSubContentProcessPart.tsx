@@ -29,7 +29,7 @@ function RecruitmentSubContentProcessPart() {
           slidesPerView={3}
           pagination={{ clickable: true }}
           scrollbar={{ draggable: true }}
-          spaceBetween={50}
+          spaceBetween={20}
         >
           {recruitmentProcess.map((item, idx) => (
             <SwiperSlide key={idx}>

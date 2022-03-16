@@ -9,6 +9,7 @@ const useStyles = makeStyles((theme: Theme) =>
         flexDirection: 'column',
         alignItems: 'center',
         width: '100%',
+        marginTop: theme.spacing(2),
       },
     },
     left: {
@@ -97,7 +98,7 @@ const useStyles = makeStyles((theme: Theme) =>
         width: 100,
         height: 100,
         '& img': {
-          height: '60%',
+          height: '90%',
         },
         '& .MuiTypography-root': {
           fontWeight: 600,

@@ -20,7 +20,7 @@ function SoftwareDevelopmentView() {
           mainText={softwareDevelopmentMainText}
           subText={softwareDevelopmentSubText}
           smDownMainText={smDownSoftwareDevelopmentMainText}
-          background={smDown ? '#f5f5f5' : '#fff'}
+          background={smDown ? '#f6f6f6' : '#fff'}
         />
       </div>
       <div id='blackBg3'>

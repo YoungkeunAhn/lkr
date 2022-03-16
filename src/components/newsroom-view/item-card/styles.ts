@@ -21,10 +21,13 @@ const useStyles = makeStyles((theme: Theme) =>
     header: {
       padding: theme.spacing(2, 2, 0, 2),
       display: 'flex',
-      height: 120,
+      height: 200,
       flexDirection: 'column',
       justifyContent: 'flex-start',
       position: 'relative',
+      [theme.breakpoints.down('sm')]: {
+        height: 150,
+      },
     },
     topBox: {
       display: 'flex',
@@ -85,7 +88,7 @@ const useStyles = makeStyles((theme: Theme) =>
       },
       [theme.breakpoints.down('sm')]: {
         '& img': {
-          height: '65vw',
+          height: '70vw',
           transform: 'translateY(4px)',
         },
       },

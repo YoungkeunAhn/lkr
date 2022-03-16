@@ -25,7 +25,7 @@ function RecruitmentView() {
   const smDown = useMediaQuery(theme.breakpoints.down('sm'))
 
   return (
-    <Box>
+    <Box className={classes.root}>
       <TitleContentFrame
         title='recruitment'
         mainText={recruitmentMainText}

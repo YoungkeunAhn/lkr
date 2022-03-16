@@ -10,7 +10,7 @@ const useStyles = makeStyles((theme: Theme) =>
       [theme.breakpoints.down('sm')]: {
         flexDirection: 'column',
         alignItems: 'center',
-        marginBottom: theme.spacing(10),
+        marginBottom: theme.spacing(5),
       },
     },
     subTitle: {

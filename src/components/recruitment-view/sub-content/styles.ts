@@ -23,6 +23,9 @@ const useStyles = makeStyles((theme: Theme) =>
     bottomBg: {
       marginTop: theme.spacing(15),
       backgroundImage: `url('recruitment_bg2.jpg')`,
+      [theme.breakpoints.down('sm')]: {
+        marginTop: theme.spacing(5),
+      },
     },
     bgCover: {
       flex: 1,

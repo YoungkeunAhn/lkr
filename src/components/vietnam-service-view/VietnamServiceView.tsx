@@ -18,6 +18,7 @@ function VietnamServiceView() {
         mainText={vietnamServiceMainText}
         subText={vietnamServiceSubText}
         smDownMainText={vietnamServiceMainText[0]}
+        noBottomPadding={smDown ? true : undefined}
       />
       <VietnamServiceSubContent />
 

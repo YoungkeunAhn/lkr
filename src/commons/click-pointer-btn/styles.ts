@@ -42,7 +42,7 @@ const useStyles = makeStyles((theme: Theme) =>
         width: '40vw',
         height: 35,
         '& .MuiButton-label': {
-          fontSize: '0.9rem',
+          fontSize: '0.8rem',
         },
       },
     },

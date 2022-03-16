@@ -23,7 +23,10 @@ function LocationTextRowBox(props: Props) {
           {title.toUpperCase()}
         </Typography>
       </Box>
-      <Typography className={classes.text} variant={smDown ? 'body2' : 'body1'}>
+      <Typography
+        className={classes.text}
+        variant={smDown ? 'caption' : 'body1'}
+      >
         {text}
       </Typography>
     </Box>

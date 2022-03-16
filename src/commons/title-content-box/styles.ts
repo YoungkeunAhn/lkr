@@ -22,13 +22,18 @@ const useStyles = makeStyles((theme: Theme) =>
         marginTop: theme.spacing(1),
         backgroundColor: '#B9EB0F',
       },
+      [theme.breakpoints.down('sm')]: {
+        '&::after': {
+          padding: theme.spacing(0.2, 3),
+        },
+      },
     },
     title: {
       fontWeight: 600,
       marginTop: theme.spacing(2),
       marginBottom: theme.spacing(10),
       [theme.breakpoints.down('sm')]: {
-        marginBottom: theme.spacing(4),
+        marginBottom: theme.spacing(3),
       },
     },
     mainTextBox: {
@@ -42,6 +47,9 @@ const useStyles = makeStyles((theme: Theme) =>
       },
       '& span': {
         fontWeight: 600,
+      },
+      [theme.breakpoints.down('sm')]: {
+        marginBottom: theme.spacing(2),
       },
     },
 
@@ -68,7 +76,7 @@ const useStyles = makeStyles((theme: Theme) =>
       },
     },
     smDownMainText: {
-      wordBreak: 'keep-all',
+      // wordBreak: 'keep-all',
     },
     smDownSubText: {
       // wordBreak: 'keep-all',

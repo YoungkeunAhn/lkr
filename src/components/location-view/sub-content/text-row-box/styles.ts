@@ -8,6 +8,10 @@ const useStyles = makeStyles((theme: Theme) =>
       '&+&': {
         marginTop: theme.spacing(2),
       },
+      [theme.breakpoints.down('sm')]: {
+        paddingBottom: theme.spacing(1),
+        borderBottom: '1px solid #eee',
+      },
     },
     titleBox: {
       position: 'relative',
@@ -30,7 +34,11 @@ const useStyles = makeStyles((theme: Theme) =>
         width: 100,
       },
     },
-    text: {},
+    text: {
+      [theme.breakpoints.down('sm')]: {
+        fontWeight: 600,
+      },
+    },
   })
 )
 

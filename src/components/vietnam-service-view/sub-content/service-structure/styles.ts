@@ -2,11 +2,21 @@ import { createStyles, makeStyles, Theme } from '@material-ui/core'
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
-    root: {},
+    root: {
+      marginTop: theme.spacing(15),
+      marginBottom: theme.spacing(15),
+      [theme.breakpoints.down('sm')]: {
+        marginTop: theme.spacing(5),
+        marginBottom: theme.spacing(5),
+      },
+    },
     title: {
       marginBottom: theme.spacing(10),
       '& span': {
         fontWeight: 600,
+      },
+      [theme.breakpoints.down('sm')]: {
+        marginBottom: theme.spacing(5),
       },
     },
     contentBox: {

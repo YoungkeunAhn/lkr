@@ -8,7 +8,7 @@ function SmDownSonogramSteps() {
   const classes = useStyles()
 
   return (
-    <Container maxWidth='lg'>
+    <Container maxWidth='lg' className={classes.root}>
       <Typography variant='h5' className={classes.title} align='center'>
         <span>초음파 영상서비스 </span>운영중
       </Typography>

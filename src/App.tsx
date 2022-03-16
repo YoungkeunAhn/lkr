@@ -9,7 +9,6 @@ import NavBar from 'components/nav-bar/NavBar'
 import NewsroomView from 'components/newsroom-view/NewsroomView'
 import ProcessView from 'components/process-view/ProcessView'
 import RecruitmentView from 'components/recruitment-view/RecruitmentView'
-import SmDownScrollTop from 'components/smDown-scroll-top/SmDownScrollTop'
 import SoftwareDevelopmentView from 'components/software-development-view/SoftwareDevelopmentView'
 import VietnamServiceView from 'components/vietnam-service-view/VietnamServiceView'
 import React, { useEffect, useState } from 'react'
@@ -17,7 +16,7 @@ import React, { useEffect, useState } from 'react'
 function App() {
   const [isBgBlack, setIsBgBlack] = useState<boolean>(true)
   const [open, setOpen] = useState<boolean>(false)
-  const [isSmDownTopBtn, setIsSmDownTopBtn] = useState<boolean>(true)
+  // const [isSmDownTopBtn, setIsSmDownTopBtn] = useState<boolean>(true)
   const theme = useTheme()
   const smDown = useMediaQuery(theme.breakpoints.down('sm'))
 
@@ -104,11 +103,11 @@ function App() {
       <section id='main'>
         <MainView openDialog={openDialog} />
       </section>
-      {isSmDownTopBtn && (
+      {/* {isSmDownTopBtn && (
         <Hidden mdUp>
           <SmDownScrollTop />
         </Hidden>
-      )}
+      )} */}
       <section id='aboutUs'>
         <AboutUsView />
       </section>

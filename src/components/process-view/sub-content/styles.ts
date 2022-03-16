@@ -5,6 +5,9 @@ const useStyles = makeStyles((theme: Theme) =>
     root: {
       paddingBottom: theme.spacing(9),
       position: 'relative',
+      [theme.breakpoints.down('sm')]: {
+        paddingBottom: theme.spacing(1),
+      },
     },
     btnPointerImgBox: {
       width: 50,

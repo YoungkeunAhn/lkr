@@ -14,6 +14,9 @@ const useStyles = makeStyles((theme: Theme) =>
       '& .MuiTypography-root': {
         color: '#fff',
       },
+      [theme.breakpoints.down('sm')]: {
+        background: '#3E3E3E',
+      },
     },
     itemCircle: {
       width: 150,
@@ -34,8 +37,8 @@ const useStyles = makeStyles((theme: Theme) =>
         transform: 'translate(-50%, -50%)',
       },
       [theme.breakpoints.down('sm')]: {
-        width: 100,
-        height: 100,
+        width: '70vw',
+        height: '70vw',
       },
     },
   })

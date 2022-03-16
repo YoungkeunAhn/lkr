@@ -24,6 +24,10 @@ const useStyles = makeStyles((theme: Theme) =>
       flexDirection: 'column',
       justifyContent: 'space-between',
       alignItems: 'flex-end',
+      [theme.breakpoints.down('sm')]: {
+        paddingLeft: 0,
+        paddingRight: 0,
+      },
     },
     btnBox: {
       display: 'flex',

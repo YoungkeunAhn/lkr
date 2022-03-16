@@ -17,7 +17,10 @@ function NewsroomItemCard(props: Props) {
 
   return (
     <Box className={classes.root}>
-      <Box className={classes.header} style={{ height: isRight ? 120 : 200 }}>
+      <Box
+        className={classes.header}
+        style={{ height: !isRight ? 120 : undefined }}
+      >
         <Box className={classes.topBox}>
           <Box className={classes.leftBox}>
             <Box className={classes.talkIcon}>
@@ -32,10 +35,7 @@ function NewsroomItemCard(props: Props) {
             </Typography>
           </Box>
         </Box>
-        <Typography
-          variant={isRight ? 'body1' : 'h5'}
-          className={classes.title}
-        >
+        <Typography variant={isRight ? 'h6' : 'h5'} className={classes.title}>
           {title}
         </Typography>
         <Typography variant='caption' className={classes.tag}>
