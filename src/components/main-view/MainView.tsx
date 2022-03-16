@@ -9,6 +9,7 @@ import {
 } from '@material-ui/core'
 import MenuRoundedIcon from '@material-ui/icons/MenuRounded'
 import { mainSubText } from 'assets/sub-text'
+import clsx from 'clsx'
 import BackgroundCover from 'commons/background-cover/BackgroundCover'
 import React from 'react'
 import useStyles from './styles'
@@ -28,20 +29,29 @@ function MainView(props: Props) {
       <Box className={classes.root}>
         <BackgroundCover>
           <Container maxWidth='xl'>
-            <Hidden smDown>
-              <Box className={classes.top}>
-                <Box className={classes.logoBox}>
-                  <img src='logo.png' alt='logo' />
-                  <Typography variant={smDown ? 'body2' : 'body1'}>
-                    LKR corpration
-                  </Typography>
-                </Box>
+            <Box
+              display='flex'
+              justifyContent='space-between'
+              alignItems='center'
+            >
+              <Box className={classes.logoBox}>
+                <img src='logo.png' alt='logo' />
+                <Typography variant='body1'>LKR corpration</Typography>
               </Box>
-            </Hidden>
+              <Hidden mdUp>
+                <IconButton onClick={openDialog}>
+                  <MenuRoundedIcon className={classes.menuIcon} />
+                </IconButton>
+              </Hidden>
+            </Box>
             <Box className={classes.textBox}>
               {mainSubText.map((text, idx) => (
-                <Typography key={idx} variant={smDown ? 'h4' : 'h2'}>
-                  {text}
+                <Typography
+                  key={idx}
+                  variant={smDown ? 'h6' : 'h2'}
+                  className={clsx(idx === 0 && classes.firstLine)}
+                >
+                  {idx === 0 ? text.slice(0, text.length - 6) : text}
                 </Typography>
               ))}
             </Box>

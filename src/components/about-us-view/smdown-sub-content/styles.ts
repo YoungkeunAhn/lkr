@@ -2,7 +2,9 @@ import { createStyles, makeStyles, Theme } from '@material-ui/core'
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
-    root: {},
+    root: {
+      paddingBottom: theme.spacing(5),
+    },
     imgBox: {
       width: '100%',
       display: 'flex',

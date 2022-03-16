@@ -48,7 +48,7 @@ function TitleContentFrame(props: Props) {
           LKR
         </Typography>
         <Typography
-          variant={smDown ? 'h6' : 'h4'}
+          variant={smDown ? 'body1' : 'h4'}
           className={classes.title}
           align='center'
         >

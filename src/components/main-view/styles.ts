@@ -15,15 +15,18 @@ const useStyles = makeStyles((theme: Theme) =>
       '& h2': {
         fontWeight: 500,
       },
-      '& .MuiTypography-root+.MuiTypography-root': {
-        marginTop: theme.spacing(2),
-      },
     },
 
     textBox: {
       marginTop: theme.spacing(45),
+      '& .MuiTypography-root+.MuiTypography-root': {
+        marginTop: theme.spacing(2),
+      },
       [theme.breakpoints.down('sm')]: {
         marginTop: theme.spacing(10),
+        '& .MuiTypography-root+.MuiTypography-root': {
+          marginTop: theme.spacing(0),
+        },
       },
     },
     logoBox: {
@@ -37,20 +40,24 @@ const useStyles = makeStyles((theme: Theme) =>
         '& img': {
           width: '40%',
         },
+        '& p': {
+          marginLeft: theme.spacing(1),
+        },
       },
     },
     menuIcon: {
       color: '#fff',
-      fontSize: '3rem',
+      fontSize: '2rem',
     },
     top: {
       display: 'flex',
       justifyContent: 'space-between',
+    },
+    firstLine: {
       [theme.breakpoints.down('sm')]: {
-        position: 'fixed',
-        top: '3vh',
-        left: '7vw',
-        zIndex: 1000,
+        fontWeight: 600,
+        fontSize: '3rem',
+        marginBottom: theme.spacing(2),
       },
     },
   })

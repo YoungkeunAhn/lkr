@@ -22,7 +22,7 @@ function VietnamServiceStructure() {
           align='center'
           className={classes.title}
         >
-          <span>베트남 병원솔루션</span> 서비스 구조도
+          <span>베트남 병원솔루션</span> {smDown && <br />}서비스 구조도
         </Typography>
         <Box className={classes.contentBox}>
           <Box className={classes.imgBox}>

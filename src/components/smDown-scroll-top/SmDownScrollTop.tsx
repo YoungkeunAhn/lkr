@@ -2,7 +2,7 @@ import { Box, ButtonBase, Typography } from '@material-ui/core'
 import React from 'react'
 import useStyles from './styles'
 
-function StickyMenuBar() {
+function SmDownScrollTop() {
   const classes = useStyles()
 
   const onClick = () => {
@@ -12,11 +12,10 @@ function StickyMenuBar() {
   return (
     <Box className={classes.root}>
       <ButtonBase className={classes.btn} onClick={onClick}>
-        <Typography align='center'>TOP</Typography>
-        <span className={classes.triangle}></span>
+        <Typography align='center'>TOP ↑</Typography>
       </ButtonBase>
     </Box>
   )
 }
 
-export default StickyMenuBar
+export default SmDownScrollTop

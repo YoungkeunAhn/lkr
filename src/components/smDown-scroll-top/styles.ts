@@ -3,13 +3,15 @@ import { createStyles, makeStyles, Theme } from '@material-ui/core'
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     root: {
-      position: 'sticky',
-      top: 0,
+      position: 'fixed',
+      top: '90vh',
+      right: 0,
       display: 'flex',
       justifyContent: 'flex-end',
       paddingRight: theme.spacing(2),
       paddingTop: theme.spacing(2),
       zIndex: 9999,
+      color: '#fff',
     },
     btn: {},
     triangle: {

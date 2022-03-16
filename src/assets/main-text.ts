@@ -28,6 +28,7 @@ export const smDownCoupangServiceMainText =
 export const vietnamServiceMainText = [
   `<span>베트남 병원솔루션</span> 서비스를 제공`,
 ]
+export const smDownVietnamServiceMainText = `<span>베트남 병원솔루션</span><br />서비스를 제공`
 
 export const recruitmentMainText = [
   `LKR과 <span>미래</span>를 함께 할`,

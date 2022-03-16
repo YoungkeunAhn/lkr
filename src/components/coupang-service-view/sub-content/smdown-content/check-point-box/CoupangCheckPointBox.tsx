@@ -19,7 +19,7 @@ function CoupangCheckPointBox(props: Props) {
         check point
       </Typography>
       <Box className={classes.textBox}>
-        <Typography variant='body2' align='center'>
+        <Typography variant='body2' align='left'>
           {text}
         </Typography>
       </Box>

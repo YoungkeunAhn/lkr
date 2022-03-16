@@ -53,13 +53,25 @@ const useStyles = makeStyles((theme: Theme) =>
     },
     naverBtn: {
       background: '#B9EB0F',
+      fontWeight: 600,
+      [theme.breakpoints.down('sm')]: {
+        fontSize: '0.9rem',
+      },
+      '&:active': {
+        background: '#B9EB0F',
+      },
     },
     kakaoBtn: {
       background: '#FFDD00',
       marginLeft: theme.spacing(2),
+      fontWeight: 600,
+      '&:active': {
+        background: '#FFDD00',
+      },
       [theme.breakpoints.down('sm')]: {
         marginLeft: theme.spacing(0),
         marginTop: theme.spacing(2),
+        fontSize: '0.9rem',
       },
     },
   })

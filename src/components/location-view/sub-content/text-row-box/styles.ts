@@ -20,11 +20,15 @@ const useStyles = makeStyles((theme: Theme) =>
     },
     title: {
       fontWeight: 600,
-      width: 100,
+      width: 110,
       whiteSpace: 'nowrap',
       marginRight: theme.spacing(3),
       display: 'flex',
       flexDirection: 'column',
+      background: 'linear-gradient(to top, #b9eb0f 40%, transparent 40%)',
+      [theme.breakpoints.down('sm')]: {
+        width: 100,
+      },
     },
     text: {},
   })

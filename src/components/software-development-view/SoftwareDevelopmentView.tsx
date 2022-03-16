@@ -1,4 +1,4 @@
-import { Box } from '@material-ui/core'
+import { Box, useMediaQuery, useTheme } from '@material-ui/core'
 import {
   smDownSoftwareDevelopmentMainText,
   softwareDevelopmentMainText,
@@ -9,6 +9,9 @@ import React from 'react'
 import SoftwareDevelopmentSubContent from './sub-content/SoftwareDevelopmentSubContent'
 
 function SoftwareDevelopmentView() {
+  const theme = useTheme()
+  const smDown = useMediaQuery(theme.breakpoints.down('sm'))
+
   return (
     <Box>
       <div>
@@ -17,6 +20,7 @@ function SoftwareDevelopmentView() {
           mainText={softwareDevelopmentMainText}
           subText={softwareDevelopmentSubText}
           smDownMainText={smDownSoftwareDevelopmentMainText}
+          background={smDown ? '#f5f5f5' : '#fff'}
         />
       </div>
       <div id='blackBg3'>
