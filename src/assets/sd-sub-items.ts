@@ -17,7 +17,11 @@ export const sdItemList: SdItemType[] = [
   {
     icon: 'sd_sub_icon3.png',
     title: '솔루션 개발',
-    items: ['SEO', 'Publishing Homeostasis', 'Security Check'],
+    items: [
+      'Search Engine Optimization',
+      'Publishing Homeostasis',
+      'Security Check',
+    ],
   },
   {
     icon: 'sd_sub_icon4.png',
