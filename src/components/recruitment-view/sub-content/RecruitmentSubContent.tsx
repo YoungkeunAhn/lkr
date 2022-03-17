@@ -1,4 +1,4 @@
-import { Box, Container } from '@material-ui/core'
+import { Box, Container, useMediaQuery, useTheme } from '@material-ui/core'
 import {
   recruitmentMainText2,
   smDownRecruitmentMainText2,
@@ -12,6 +12,8 @@ import useStyles from './styles'
 
 function RecruitmentSubContent() {
   const classes = useStyles()
+  const theme = useTheme()
+  const mdDown = useMediaQuery(theme.breakpoints.down('md'))
 
   return (
     <Box>
@@ -21,19 +23,19 @@ function RecruitmentSubContent() {
         </Box>
       </div>
 
-      <div>
-        <Container maxWidth='lg'>
-          <TitleContentFrame
-            title='신입 및 경력사원 공개채용'
-            mainText={recruitmentMainText2}
-            smDownMainText={smDownRecruitmentMainText2}
-          />
+      <Container maxWidth='lg'>
+        <TitleContentFrame
+          title='신입 및 경력사원 공개채용'
+          mainText={recruitmentMainText2}
+          smDownMainText={smDownRecruitmentMainText2}
+        />
+        <Box pl={mdDown && 4} pr={mdDown && 4}>
           <Container maxWidth='lg'>
             <RecruitmentSubContentNoticePart />
             <RecruitmentSubContentProcessPart />
           </Container>
-        </Container>
-      </div>
+        </Box>
+      </Container>
       <div id='blackBg6'>
         <Box className={clsx(classes.bgPart, classes.bottomBg)}>
           <div className={classes.bgCover}></div>

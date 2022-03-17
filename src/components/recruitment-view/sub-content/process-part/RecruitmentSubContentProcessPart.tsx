@@ -12,6 +12,7 @@ import useStyles from './styles'
 function RecruitmentSubContentProcessPart() {
   const classes = useStyles()
   const theme = useTheme()
+  const mdDown = useMediaQuery(theme.breakpoints.down('md'))
   const smDown = useMediaQuery(theme.breakpoints.down('sm'))
 
   return (
@@ -45,16 +46,19 @@ function RecruitmentSubContentProcessPart() {
       ) : (
         <Box className={classes.processListBox}>
           {recruitmentProcess.map((item, idx) => (
-            <div key={idx}>
-              <Box display='flex' alignItems='center'>
-                <RecruitmentProcessIconBox {...item} />
-                {idx !== recruitmentProcess.length - 1 && (
-                  <Typography className={classes.gt} variant='h2'>
+            <>
+              <RecruitmentProcessIconBox key={idx} {...item} />
+              {idx !== recruitmentProcess.length - 1 && (
+                <Box display='flex' justifyContent='center' alignItems='center'>
+                  <Typography
+                    className={classes.gt}
+                    variant={mdDown ? 'h4' : 'h2'}
+                  >
                     &gt;
                   </Typography>
-                )}
-              </Box>
-            </div>
+                </Box>
+              )}
+            </>
           ))}
         </Box>
       )}

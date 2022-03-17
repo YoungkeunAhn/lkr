@@ -22,6 +22,7 @@ import RecruitmentSubContent from './sub-content/RecruitmentSubContent'
 function RecruitmentView() {
   const classes = useStyles()
   const theme = useTheme()
+  const mdDown = useMediaQuery(theme.breakpoints.down('md'))
   const smDown = useMediaQuery(theme.breakpoints.down('sm'))
 
   return (
@@ -56,7 +57,7 @@ function RecruitmentView() {
                 </Swiper>
               ) : (
                 recruitmentSubText.map((text, idx) => (
-                  <Typography key={idx} variant='h6'>
+                  <Typography key={idx} variant={mdDown ? 'body1' : 'h6'}>
                     {text}
                   </Typography>
                 ))

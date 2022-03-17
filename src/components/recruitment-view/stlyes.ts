@@ -32,6 +32,12 @@ const useStyles = makeStyles((theme: Theme) =>
       '& .swiper-button-next': {
         color: '#888',
       },
+      [theme.breakpoints.down('md')]: {
+        marginRight: theme.spacing(3),
+        '& .MuiTypography-root+.MuiTypography-root': {
+          marginTop: theme.spacing(2),
+        },
+      },
       [theme.breakpoints.down('sm')]: {
         width: '100%',
         display: 'block',
@@ -52,7 +58,13 @@ const useStyles = makeStyles((theme: Theme) =>
         width: '100%',
         height: '100%',
         objectFit: 'contain',
-        [theme.breakpoints.down('sm')]: {
+      },
+      [theme.breakpoints.down('md')]: {
+        width: '60%',
+        marginTop: theme.spacing(2),
+      },
+      [theme.breakpoints.down('sm')]: {
+        '& img': {
           width: '80%',
           marginTop: theme.spacing(2),
         },

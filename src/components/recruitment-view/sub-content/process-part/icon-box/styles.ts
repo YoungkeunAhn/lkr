@@ -26,9 +26,7 @@ const useStyles = makeStyles((theme: Theme) =>
     title: {
       marginTop: theme.spacing(3),
       whiteSpace: 'nowrap',
-      fontSize: '1.2rem',
       [theme.breakpoints.down('sm')]: {
-        fontSize: '0.75rem',
         marginTop: theme.spacing(1),
       },
     },

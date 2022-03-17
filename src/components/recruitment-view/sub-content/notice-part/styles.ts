@@ -27,13 +27,19 @@ const useStyles = makeStyles((theme: Theme) =>
       fontWeight: 600,
       marginRight: theme.spacing(1),
       marginLeft: theme.spacing(6),
-      [theme.breakpoints.down('sm')]: {
+      [theme.breakpoints.down('md')]: {
         marginLeft: theme.spacing(0),
+        marginBottom: theme.spacing(1),
+      },
+      [theme.breakpoints.down('sm')]: {
         wordBreak: 'keep-all',
       },
     },
     textBox: {
       marginBottom: theme.spacing(2),
+      [theme.breakpoints.down('sm')]: {
+        marginRight: 0,
+      },
     },
     mainImgBox: {
       width: '30%',
@@ -44,9 +50,12 @@ const useStyles = makeStyles((theme: Theme) =>
         height: '100%',
         objectFit: 'contain',
       },
+      [theme.breakpoints.down('md')]: {
+        width: '40%',
+      },
     },
     smDownMainImgBox: {
-      width: '80%',
+      width: '100%',
       height: '100%',
       transform: 'translate(4%, -15%)',
       '& img': {
@@ -56,6 +65,12 @@ const useStyles = makeStyles((theme: Theme) =>
       },
     },
     lineBox: {
+      [theme.breakpoints.down('md')]: {
+        marginLeft: theme.spacing(2),
+        '& > div:first-child': {
+          whiteSpace: 'nowrap',
+        },
+      },
       [theme.breakpoints.down('sm')]: {
         '& .MuiTypography-root + .MuiTypography-root': {
           marginTop: theme.spacing(1),

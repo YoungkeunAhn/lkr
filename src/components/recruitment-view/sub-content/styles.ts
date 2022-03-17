@@ -13,6 +13,9 @@ const useStyles = makeStyles((theme: Theme) =>
       backgroundSize: 'cover',
       height: '60vh',
       boxSizing: 'border-box',
+      [theme.breakpoints.down('md')]: {
+        height: '30vh',
+      },
       [theme.breakpoints.down('sm')]: {
         height: '20vh',
       },

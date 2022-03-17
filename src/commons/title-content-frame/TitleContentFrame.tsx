@@ -69,7 +69,7 @@ function TitleContentFrame(props: Props) {
               mainText.map((text, idx) => (
                 <Typography
                   key={idx}
-                  variant={mdDown ? 'h3' : 'h2'}
+                  variant={mdDown ? 'h4' : 'h2'}
                   align='center'
                 >
                   <div dangerouslySetInnerHTML={{ __html: text }}></div>

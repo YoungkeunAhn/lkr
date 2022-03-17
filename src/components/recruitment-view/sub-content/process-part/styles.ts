@@ -16,15 +16,14 @@ const useStyles = makeStyles((theme: Theme) =>
     processListBox: {
       width: '100%',
       display: 'flex',
-      justifyContent: 'center',
+      justifyContent: 'space-between',
       alignItems: 'center',
     },
     gt: {
       color: '#888',
       fontWeight: 500,
       margin: theme.spacing(0, 1),
-      position: 'relative',
-      top: '-4vh',
+      transform: 'translateY(-60%)',
     },
   })
 )

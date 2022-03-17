@@ -25,6 +25,9 @@ const useStyles = makeStyles((theme: Theme) =>
       flexDirection: 'column',
       justifyContent: 'flex-start',
       position: 'relative',
+      [theme.breakpoints.down('md')]: {
+        height: 140,
+      },
       [theme.breakpoints.down('sm')]: {
         height: 150,
       },

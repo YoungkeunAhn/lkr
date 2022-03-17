@@ -36,9 +36,14 @@ const useStyles = makeStyles((theme: Theme) =>
       alignItems: 'center',
       top: 70,
       '& img': {
-        width: '60%',
+        width: '80%',
         height: '100%',
         objectFit: 'contain',
+      },
+      [theme.breakpoints.down('md')]: {
+        '& img': {
+          width: '50%',
+        },
       },
     },
   })

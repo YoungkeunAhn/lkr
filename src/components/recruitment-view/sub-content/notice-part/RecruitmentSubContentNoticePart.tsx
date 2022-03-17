@@ -13,6 +13,7 @@ function RecruitmentSubContentNoticePart() {
   const classes = useStyles()
   const theme = useTheme()
   const smDown = useMediaQuery(theme.breakpoints.down('sm'))
+  const mdDown = useMediaQuery(theme.breakpoints.down('md'))
 
   return (
     <Box className={classes.root}>
@@ -31,16 +32,24 @@ function RecruitmentSubContentNoticePart() {
         </Typography>
         <Box>
           {recruitmentNoticeText.map((item, idx) => (
-            <Box key={idx} className={classes.textBox} display='flex'>
+            <Box
+              key={idx}
+              className={classes.textBox}
+              display='flex'
+              flexDirection={mdDown ? 'column' : 'row'}
+            >
               <Typography
-                variant={smDown ? 'body2' : 'h6'}
+                variant={smDown ? 'body2' : mdDown ? 'body1' : 'h6'}
                 className={classes.itemTitle}
               >
                 {item.title}
               </Typography>
               <Box className={classes.lineBox}>
                 {item.text.split('/').map((line, idx) => (
-                  <Typography variant={smDown ? 'body2' : 'h6'} key={idx}>
+                  <Typography
+                    variant={smDown ? 'body2' : mdDown ? 'body1' : 'h6'}
+                    key={idx}
+                  >
                     {line}
                   </Typography>
                 ))}
