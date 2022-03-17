@@ -32,7 +32,7 @@ function ProcessSubContent() {
           container
           justifyContent={smDown ? 'center' : 'space-between'}
           alignItems={smDown ? 'stretch' : 'center'}
-          spacing={smDown ? 0 : 4}
+          spacing={smDown ? 2 : 4}
           style={{ zIndex: 200 }}
         >
           {processItemList.map((item, idx) => (

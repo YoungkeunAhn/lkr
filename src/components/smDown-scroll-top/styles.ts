@@ -5,7 +5,7 @@ const useStyles = makeStyles((theme: Theme) =>
     root: {
       position: 'fixed',
       bottom: '5vh',
-      right: '2vw',
+      right: 0,
       display: 'flex',
       justifyContent: 'center',
       alignItems: 'center',
@@ -13,7 +13,8 @@ const useStyles = makeStyles((theme: Theme) =>
       background: '#032030',
       padding: theme.spacing(1, 2),
 
-      borderRadius: 10,
+      borderTopLeftRadius: 20,
+      borderBottomLeftRadius: 20,
 
       color: '#fff',
     },

@@ -15,11 +15,13 @@ const useStyles = makeStyles((theme: Theme) =>
         width: '100%',
         height: '100%',
       },
+      [theme.breakpoints.up('sm')]: {},
       [theme.breakpoints.down('sm')]: {
         width: '17vw',
         top: 45,
-        right: '-45vw',
+        right: '-40vw',
         '& img': {
+          width: '50%',
           objectFit: 'contain',
         },
       },

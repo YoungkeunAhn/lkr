@@ -42,11 +42,11 @@ const useStyles = makeStyles((theme: Theme) =>
       display: 'flex',
       justifyContent: 'center',
       alignItems: 'center',
-      [theme.breakpoints.up('sm')]: {
-        marginLeft: theme.spacing(2),
-      },
+      marginLeft: theme.spacing(2),
       [theme.breakpoints.down('sm')]: {
+        marginLeft: theme.spacing(0),
         marginTop: theme.spacing(2),
+        maxWidth: 1000,
       },
     },
     smallSquare: {
