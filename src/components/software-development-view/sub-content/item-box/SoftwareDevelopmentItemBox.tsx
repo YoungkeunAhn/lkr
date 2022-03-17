@@ -28,7 +28,11 @@ function SoftwareDevelopmentItemBox(props: Props) {
       <Typography variant={mdDown ? 'body2' : 'body1'}>{title}</Typography>
       <Box mt={2} display='flex' flexDirection='column'>
         {items.map((text, idx) => (
-          <Typography variant={mdDown ? 'caption' : 'body2'} key={idx}>
+          <Typography
+            variant={mdDown ? 'caption' : 'body2'}
+            key={idx}
+            className={classes.listLine}
+          >
             - {text}
           </Typography>
         ))}

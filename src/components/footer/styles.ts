@@ -42,7 +42,7 @@ const useStyles = makeStyles((theme: Theme) =>
       color: '#fff',
       transform: 'translateX(300%)',
     },
-    smDownScrollTopBtn: {
+    mdDownScrollTopBtn: {
       position: 'absolute',
       top: 0,
       right: -20,
@@ -50,6 +50,10 @@ const useStyles = makeStyles((theme: Theme) =>
       height: '9vw',
       whiteSpace: 'nowrap',
       fontSize: '0.6rem',
+      [theme.breakpoints.up('sm')]: {
+        width: '4vw',
+        height: '4vw',
+      },
     },
   })
 )

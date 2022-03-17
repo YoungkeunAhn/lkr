@@ -131,7 +131,7 @@ function App() {
       <section id='location'>
         <LocationView />
       </section>
-      {/* <Footer /> */}
+      <Footer />
       <Hidden lgDown>
         <NavBar onClick={onClickMenu} isBgBlack={isBgBlack} />
       </Hidden>

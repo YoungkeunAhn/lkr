@@ -14,10 +14,10 @@ function Footer() {
   return (
     <Box className={classes.root}>
       <Box className={classes.wrapper}>
-        <Hidden mdUp>
+        <Hidden lgUp>
           <ButtonBase onClick={onClickTopBtn}>
             <Typography
-              className={clsx(classes.scrollTopBtn, classes.smDownScrollTopBtn)}
+              className={clsx(classes.scrollTopBtn, classes.mdDownScrollTopBtn)}
               align='center'
             >
               TOP ↑
@@ -50,7 +50,7 @@ function Footer() {
           Copyright© 2021 LKR All Rights Reserved.
         </Typography>
       </Box>
-      <Hidden smDown>
+      <Hidden mdDown>
         <ButtonBase onClick={onClickTopBtn}>
           <Typography
             variant='body1'

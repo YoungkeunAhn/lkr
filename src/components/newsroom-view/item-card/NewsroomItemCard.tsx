@@ -1,4 +1,4 @@
-import { Box, Typography } from '@material-ui/core'
+import { Box, Typography, useMediaQuery, useTheme } from '@material-ui/core'
 import clsx from 'clsx'
 import React from 'react'
 import useStyles from './styles'
@@ -14,6 +14,8 @@ type Props = {
 function NewsroomItemCard(props: Props) {
   const { category, title, tags, image, isRight } = props
   const classes = useStyles()
+  const theme = useTheme()
+  const mdDown = useMediaQuery(theme.breakpoints.down('md'))
 
   return (
     <Box className={classes.root}>
@@ -35,7 +37,10 @@ function NewsroomItemCard(props: Props) {
             </Typography>
           </Box>
         </Box>
-        <Typography variant={isRight ? 'h6' : 'h5'} className={classes.title}>
+        <Typography
+          variant={isRight ? 'h6' : mdDown ? 'h6' : 'h5'}
+          className={classes.title}
+        >
           {title}
         </Typography>
         <Typography variant='caption' className={classes.tag}>

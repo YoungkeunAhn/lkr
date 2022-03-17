@@ -34,7 +34,9 @@ function CoupangSubContent() {
                   <Box className={classes.itemImgBox}>
                     <img src={item.icon} alt='coupang service icon' />
                   </Box>
-                  <Typography variant={smDown ? 'body2' : 'h6'}>
+                  <Typography
+                    variant={smDown ? 'body2' : mdDown ? 'body1' : 'h6'}
+                  >
                     {item.title}
                   </Typography>
                 </Box>
@@ -53,7 +55,9 @@ function CoupangSubContent() {
                   <Box className={classes.itemImgBox}>
                     <img src={item.icon} alt='coupang service icon' />
                   </Box>
-                  <Typography variant={smDown ? 'body2' : 'h6'}>
+                  <Typography
+                    variant={smDown ? 'body2' : mdDown ? 'body1' : 'h6'}
+                  >
                     {item.title}
                   </Typography>
                 </Box>

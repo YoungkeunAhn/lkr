@@ -89,6 +89,11 @@ const useStyles = makeStyles((theme: Theme) =>
         height: 170,
         transform: 'translateY(4px)',
       },
+      [theme.breakpoints.down('md')]: {
+        '& img': {
+          height: '40vw',
+        },
+      },
       [theme.breakpoints.down('sm')]: {
         '& img': {
           height: '70vw',

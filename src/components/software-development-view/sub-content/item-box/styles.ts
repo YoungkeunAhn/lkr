@@ -28,18 +28,23 @@ const useStyles = makeStyles((theme: Theme) =>
       boxSizing: 'border-box',
       position: 'relative',
       '& img': {
-        // width: '100%',
-        // height: '100%',
         objectFit: 'contain',
         position: 'absolute',
         top: '50%',
         left: '50%',
         transform: 'translate(-50%, -50%)',
       },
+      [theme.breakpoints.down('md')]: {
+        width: '15vw',
+        height: '15vw',
+      },
       [theme.breakpoints.down('sm')]: {
         width: 200,
         height: 200,
       },
+    },
+    listLine: {
+      wordBreak: 'break-all',
     },
   })
 )
