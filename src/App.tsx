@@ -41,8 +41,6 @@ function App() {
   const onCreateOffsetValue = () => {
     const offsetValue: OffsetValueType[] = []
 
-    const offset = 500
-
     for (let i = 1; i < 7; i++) {
       const blackBgDom = document.getElementById(`blackBg${i}`)
       if (blackBgDom) {
@@ -63,8 +61,8 @@ function App() {
           })
         } else {
           offsetValue.push({
-            top: blackBgDom.offsetTop - offset,
-            bottom: blackBgDom.offsetHeight + blackBgDom.offsetTop - offset,
+            top: blackBgDom.offsetTop - 500,
+            bottom: blackBgDom.offsetHeight + blackBgDom.offsetTop - 500,
           })
         }
       }
