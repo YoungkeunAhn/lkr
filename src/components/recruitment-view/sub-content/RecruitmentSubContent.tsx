@@ -14,6 +14,7 @@ function RecruitmentSubContent() {
   const classes = useStyles()
   const theme = useTheme()
   const mdDown = useMediaQuery(theme.breakpoints.down('md'))
+  const smDown = useMediaQuery(theme.breakpoints.down('sm'))
 
   return (
     <Box>
@@ -29,7 +30,7 @@ function RecruitmentSubContent() {
           mainText={recruitmentMainText2}
           smDownMainText={smDownRecruitmentMainText2}
         />
-        <Box pl={mdDown && 4} pr={mdDown && 4}>
+        <Box pl={mdDown && !smDown && 4} pr={mdDown && !smDown && 4}>
           <Container maxWidth='lg'>
             <RecruitmentSubContentNoticePart />
             <RecruitmentSubContentProcessPart />

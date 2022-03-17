@@ -21,7 +21,7 @@ function CoupangSubContent() {
   const onClickBtn = () => {}
 
   return (
-    <Box pl={mdDown && 4} pr={mdDown && 4}>
+    <Box pl={mdDown && !smDown && 4} pr={mdDown && !smDown && 4}>
       <Hidden mdUp>
         <CoupangSmDownContent />
       </Hidden>

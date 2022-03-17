@@ -11,7 +11,11 @@ function VietnamServiceGrayBox() {
   const smDown = useMediaQuery(theme.breakpoints.down('sm'))
 
   return (
-    <Box className={classes.root} pr={mdDown && 4} pl={mdDown && 4}>
+    <Box
+      className={classes.root}
+      pr={mdDown && !smDown && 4}
+      pl={mdDown && !smDown && 4}
+    >
       <Box className={classes.left}>
         <Box className={classes.leftInnerBox}>
           <div>

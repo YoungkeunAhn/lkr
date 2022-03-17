@@ -26,7 +26,11 @@ function SoftwareDevelopmentSubContent() {
     <Box className={classes.root}>
       <BackgroundCover noBg={smDown ? true : undefined}>
         <Container maxWidth='lg'>
-          <Box className={classes.wrapper} pl={mdDown && 4} pr={mdDown && 4}>
+          <Box
+            className={classes.wrapper}
+            pl={mdDown && !smDown && 4}
+            pr={mdDown && !smDown && 4}
+          >
             <Hidden mdDown>
               <Box className={classes.bgText}>
                 <Typography variant='h1' align='center'>

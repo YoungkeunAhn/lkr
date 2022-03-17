@@ -14,12 +14,13 @@ function SonogramSteps() {
   const classes = useStyles()
   const theme = useTheme()
   const mdDown = useMediaQuery(theme.breakpoints.down('md'))
+  const smDown = useMediaQuery(theme.breakpoints.down('sm'))
 
   return (
     <Box className={classes.root}>
       <div className={classes.bgCover}>
         <Container maxWidth='lg'>
-          <Box pr={mdDown && 4} pl={mdDown && 4}>
+          <Box pr={mdDown && !smDown && 4} pl={mdDown && !smDown && 4}>
             <Typography className={classes.title} variant='h2' align='center'>
               <div
                 dangerouslySetInnerHTML={{ __html: sonogramServiceText.title }}

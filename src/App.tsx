@@ -104,9 +104,9 @@ function App() {
       <section id='main'>
         <MainView openDialog={openDialog} />
       </section>
-      {/* <Hidden mdUp>
+      <Hidden lgUp>
         <SmDownScrollTop />
-      </Hidden> */}
+      </Hidden>
       <section id='aboutUs'>
         <AboutUsView />
       </section>

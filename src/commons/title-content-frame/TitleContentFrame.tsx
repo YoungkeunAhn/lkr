@@ -41,7 +41,7 @@ function TitleContentFrame(props: Props) {
       style={{ background, paddingBottom: noBottomPadding && 0 }}
     >
       <Container maxWidth='lg'>
-        <Box pl={mdDown && 4} pr={mdDown && 4}>
+        <Box pl={mdDown && !smDown && 4} pr={mdDown && !smDown && 4}>
           <Typography
             variant={mdDown ? 'body2' : 'body1'}
             className={classes.lkrLogo}

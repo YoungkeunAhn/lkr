@@ -19,12 +19,13 @@ function AboutUsSubContent() {
   const classes = useStyles()
   const theme = useTheme()
   const mdDown = useMediaQuery(theme.breakpoints.down('md'))
+  const smDown = useMediaQuery(theme.breakpoints.down('sm'))
 
   return (
     <Box className={classes.root}>
       <BackgroundCover>
         <Container maxWidth='lg'>
-          <Box pr={mdDown && 4} pl={mdDown && 4}>
+          <Box pr={mdDown && !smDown && 4} pl={mdDown && !smDown && 4}>
             <Box className={classes.textBox}>
               <Typography variant='h3' className={classes.title}>
                 우리는,

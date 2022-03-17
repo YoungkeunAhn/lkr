@@ -10,7 +10,7 @@ const useStyles = makeStyles((theme: Theme) =>
         backgroundSize: 'cover',
       },
 
-      [theme.breakpoints.up('md')]: {
+      [theme.breakpoints.up('lg')]: {
         display: 'none',
       },
     },
