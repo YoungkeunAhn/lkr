@@ -14,12 +14,16 @@ import SoftwareDevelopmentView from 'components/software-development-view/Softwa
 import VietnamServiceView from 'components/vietnam-service-view/VietnamServiceView'
 import React, { useEffect, useState } from 'react'
 
+type OffsetValueType = {
+  top: number
+  bottom: number
+}
+
 function App() {
   const [isBgBlack, setIsBgBlack] = useState<boolean>(true)
   const [open, setOpen] = useState<boolean>(false)
-  // const [isSmDownTopBtn, setIsSmDownTopBtn] = useState<boolean>(true)
   const theme = useTheme()
-  const smDown = useMediaQuery(theme.breakpoints.down('sm'))
+  const mdDown = useMediaQuery(theme.breakpoints.down('md'))
 
   const onClickMenu = (sectionId: string) => {
     const currentSection = document.getElementById(sectionId)
@@ -34,70 +38,85 @@ function App() {
     setOpen(false)
   }
 
-  useEffect(() => {
-    const offsetValue: Array<{
-      dom: HTMLElement
-      top: number
-      bottom: number
-    }> = []
+  const onCreateOffsetValue = () => {
+    const offsetValue: OffsetValueType[] = []
+
+    const offset = 500
+
     for (let i = 1; i < 7; i++) {
       const blackBgDom = document.getElementById(`blackBg${i}`)
       if (blackBgDom) {
-        offsetValue.push({
-          dom: blackBgDom,
-          top:
-            i > 4
-              ? blackBgDom.offsetTop - 200
-              : i === 6
-              ? blackBgDom.offsetTop
-              : blackBgDom.offsetTop - 350,
-          bottom:
-            i > 4
-              ? blackBgDom.offsetTop + blackBgDom.offsetHeight - 200
-              : i === 6
-              ? blackBgDom.offsetTop + blackBgDom.offsetHeight
-              : blackBgDom.offsetTop + blackBgDom.offsetHeight - 350,
-        })
+        if (i === 4) {
+          offsetValue.push({
+            top: blackBgDom.offsetTop,
+            bottom: blackBgDom.offsetHeight + blackBgDom.offsetTop,
+          })
+        } else if (i === 5) {
+          offsetValue.push({
+            top: blackBgDom.offsetTop + 450,
+            bottom: blackBgDom.offsetHeight + blackBgDom.offsetTop + 450,
+          })
+        } else if (i === 6) {
+          offsetValue.push({
+            top: blackBgDom.offsetTop + 800,
+            bottom: blackBgDom.offsetHeight + blackBgDom.offsetTop + 800,
+          })
+        } else {
+          offsetValue.push({
+            top: blackBgDom.offsetTop - offset,
+            bottom: blackBgDom.offsetHeight + blackBgDom.offsetTop - offset,
+          })
+        }
       }
     }
 
-    !smDown &&
-      window.addEventListener('scroll', function (e) {
-        if (
-          this.window.scrollY > offsetValue[0].top &&
-          this.window.scrollY < offsetValue[0].bottom
-        ) {
-          setIsBgBlack(true)
-        } else if (
-          this.window.scrollY > offsetValue[1].top &&
-          this.window.scrollY < offsetValue[1].bottom
-        ) {
-          setIsBgBlack(true)
-        } else if (
-          this.window.scrollY > offsetValue[2].top &&
-          this.window.scrollY < offsetValue[2].bottom
-        ) {
-          setIsBgBlack(true)
-        } else if (
-          this.window.scrollY > offsetValue[3].top &&
-          this.window.scrollY < offsetValue[3].bottom
-        ) {
-          setIsBgBlack(true)
-        } else if (
-          this.window.scrollY > offsetValue[4].top &&
-          this.window.scrollY < offsetValue[4].bottom
-        ) {
-          setIsBgBlack(true)
-        } else if (
-          this.window.scrollY > offsetValue[5].top &&
-          this.window.scrollY < offsetValue[5].bottom
-        ) {
-          setIsBgBlack(true)
-        } else {
-          setIsBgBlack(false)
-        }
-      })
-  }, [])
+    return offsetValue
+  }
+
+  const onChangeNavColor = (offsetValue: OffsetValueType[]) => {
+    window.addEventListener('scroll', function (e) {
+      if (
+        this.window.scrollY > offsetValue[0].top &&
+        this.window.scrollY < offsetValue[0].bottom
+      ) {
+        setIsBgBlack(true)
+      } else if (
+        this.window.scrollY > offsetValue[1].top &&
+        this.window.scrollY < offsetValue[1].bottom
+      ) {
+        setIsBgBlack(true)
+      } else if (
+        this.window.scrollY > offsetValue[2].top &&
+        this.window.scrollY < offsetValue[2].bottom
+      ) {
+        setIsBgBlack(true)
+      } else if (
+        this.window.scrollY > offsetValue[3].top &&
+        this.window.scrollY < offsetValue[3].bottom
+      ) {
+        setIsBgBlack(true)
+      } else if (
+        this.window.scrollY > offsetValue[4].top &&
+        this.window.scrollY < offsetValue[4].bottom
+      ) {
+        setIsBgBlack(true)
+      } else if (
+        this.window.scrollY > offsetValue[5].top &&
+        this.window.scrollY < offsetValue[5].bottom
+      ) {
+        setIsBgBlack(true)
+      } else {
+        setIsBgBlack(false)
+      }
+    })
+  }
+
+  useEffect(() => {
+    if (!mdDown) {
+      const offsetValue = onCreateOffsetValue()
+      onChangeNavColor(offsetValue)
+    }
+  }, [mdDown])
 
   return (
     <div>

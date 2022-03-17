@@ -7,7 +7,7 @@ import {
   Typography,
 } from '@material-ui/core'
 import CloseIcon from '@material-ui/icons/Close'
-import { navMenu } from 'assets/nav-menu'
+import { navMenu } from 'data/nav-menu'
 import React from 'react'
 import useStyles from './styles'
 

@@ -6,7 +6,7 @@ import {
   useMediaQuery,
   useTheme,
 } from '@material-ui/core'
-import { locationText } from 'assets/location-text'
+import { locationText } from 'data/location-text'
 import React from 'react'
 import useStyles from './styles'
 import LocationTextRowBox from './text-row-box/LocationTextRowBox'

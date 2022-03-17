@@ -1,5 +1,5 @@
 import { Box, Typography, useMediaQuery, useTheme } from '@material-ui/core'
-import { vietnamHospitalText } from 'assets/vietnam-item'
+import { vietnamHospitalText } from 'data/vietnam-item'
 import clsx from 'clsx'
 import React from 'react'
 import useStyles from './styles'

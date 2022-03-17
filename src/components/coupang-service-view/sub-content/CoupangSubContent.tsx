@@ -6,7 +6,7 @@ import {
   useMediaQuery,
   useTheme,
 } from '@material-ui/core'
-import { leftCoupangItems, rightCoupangItems } from 'assets/coupang-item'
+import { leftCoupangItems, rightCoupangItems } from 'data/coupang-item'
 import ClickPointerBtn from 'commons/click-pointer-btn/ClickPointerBtn'
 import React from 'react'
 import CoupangSmDownContent from './smdown-content/CoupangSmDownContent'

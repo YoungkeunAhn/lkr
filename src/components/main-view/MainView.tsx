@@ -8,7 +8,7 @@ import {
   useTheme,
 } from '@material-ui/core'
 import MenuRoundedIcon from '@material-ui/icons/MenuRounded'
-import { mainSubText } from 'assets/sub-text'
+import { mainSubText } from 'data/sub-text'
 import clsx from 'clsx'
 import BackgroundCover from 'commons/background-cover/BackgroundCover'
 import React from 'react'

@@ -2,7 +2,7 @@ import { Box, Container, useMediaQuery, useTheme } from '@material-ui/core'
 import {
   recruitmentMainText2,
   smDownRecruitmentMainText2,
-} from 'assets/main-text'
+} from 'data/main-text'
 import clsx from 'clsx'
 import TitleContentFrame from 'commons/title-content-frame/TitleContentFrame'
 import React from 'react'

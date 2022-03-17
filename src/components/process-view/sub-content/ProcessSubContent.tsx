@@ -7,7 +7,7 @@ import {
   useMediaQuery,
   useTheme,
 } from '@material-ui/core'
-import { processItemList } from 'assets/process-items'
+import { processItemList } from 'data/process-items'
 import ClickPointerBtn from 'commons/click-pointer-btn/ClickPointerBtn'
 import React from 'react'
 import ProcessItemBox from './item-box/ProcessItemBox'

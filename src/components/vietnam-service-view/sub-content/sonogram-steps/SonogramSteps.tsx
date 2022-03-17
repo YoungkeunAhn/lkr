@@ -5,7 +5,7 @@ import {
   useMediaQuery,
   useTheme,
 } from '@material-ui/core'
-import { sonogramServiceText } from 'assets/vietnam-item'
+import { sonogramServiceText } from 'data/vietnam-item'
 import React from 'react'
 import SonogramStepBox from './step-box/SonogramStepBox'
 import useStyles from './styles'

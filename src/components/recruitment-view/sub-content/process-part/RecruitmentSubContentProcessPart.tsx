@@ -1,5 +1,5 @@
 import { Box, Typography, useMediaQuery, useTheme } from '@material-ui/core'
-import { recruitmentProcess } from 'assets/recruitment-notice-text'
+import { recruitmentProcess } from 'data/recruitment-notice-text'
 import React from 'react'
 import { A11y, Pagination } from 'swiper'
 import 'swiper/css'

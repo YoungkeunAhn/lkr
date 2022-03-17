@@ -7,7 +7,7 @@ import {
   useMediaQuery,
   useTheme,
 } from '@material-ui/core'
-import { sdItemList } from 'assets/sd-sub-items'
+import { sdItemList } from 'data/sd-sub-items'
 import BackgroundCover from 'commons/background-cover/BackgroundCover'
 import React from 'react'
 import SoftwareDevelopmentItemBox from './item-box/SoftwareDevelopmentItemBox'

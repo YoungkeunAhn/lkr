@@ -5,7 +5,7 @@ import {
   useMediaQuery,
   useTheme,
 } from '@material-ui/core'
-import { recruitmentNoticeText } from 'assets/recruitment-notice-text'
+import { recruitmentNoticeText } from 'data/recruitment-notice-text'
 import React from 'react'
 import useStyles from './styles'
 

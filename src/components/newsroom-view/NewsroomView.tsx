@@ -6,8 +6,8 @@ import {
   useMediaQuery,
   useTheme,
 } from '@material-ui/core'
-import { newsItem } from 'assets/news-item'
-import { newsroomSubText } from 'assets/sub-text'
+import { newsItem } from 'data/news-item'
+import { newsroomSubText } from 'data/sub-text'
 import TitleContentFrame from 'commons/title-content-frame/TitleContentFrame'
 import React from 'react'
 import NewsroomItemCard from './item-card/NewsroomItemCard'

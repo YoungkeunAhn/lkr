@@ -1,6 +1,6 @@
 import { useMediaQuery, useTheme } from '@material-ui/core'
-import { aboutUsMainText, smDownAboutUsMainText } from 'assets/main-text'
-import { aboutUsSubText, smDownAboutUsSubText } from 'assets/sub-text'
+import { aboutUsMainText, smDownAboutUsMainText } from 'data/main-text'
+import { aboutUsSubText, smDownAboutUsSubText } from 'data/sub-text'
 import TitleContentFrame from 'commons/title-content-frame/TitleContentFrame'
 import React from 'react'
 import AboutUsSubContent from './sub-content/AboutUsSubContent'

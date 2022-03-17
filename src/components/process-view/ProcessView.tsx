@@ -1,5 +1,5 @@
-import { processMainText, smDownProcessMainText } from 'assets/main-text'
-import { processSubText } from 'assets/sub-text'
+import { processMainText, smDownProcessMainText } from 'data/main-text'
+import { processSubText } from 'data/sub-text'
 import TitleContentFrame from 'commons/title-content-frame/TitleContentFrame'
 import React from 'react'
 import ProcessSubContent from './sub-content/ProcessSubContent'

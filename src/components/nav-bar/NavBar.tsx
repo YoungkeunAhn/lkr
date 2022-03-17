@@ -1,5 +1,5 @@
 import { ButtonBase, Typography } from '@material-ui/core'
-import { navMenu } from 'assets/nav-menu'
+import { navMenu } from 'data/nav-menu'
 import clsx from 'clsx'
 import Scrollspy from 'react-scrollspy'
 import React from 'react'
@@ -35,7 +35,7 @@ function NavBar(props: Props) {
       items={scrollSpyItems}
       currentClassName={classes.currentMenu}
       className={classes.root}
-      offset={-500}
+      offset={-450}
     >
       {navMenu.map((menu, idx) => (
         <li

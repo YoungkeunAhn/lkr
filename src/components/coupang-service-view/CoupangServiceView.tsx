@@ -2,11 +2,11 @@ import { useMediaQuery, useTheme } from '@material-ui/core'
 import {
   coupangServiceMainText,
   smDownCoupangServiceMainText,
-} from 'assets/main-text'
+} from 'data/main-text'
 import {
   coupangServiceSubText,
   smDownCoupangServiceSubText,
-} from 'assets/sub-text'
+} from 'data/sub-text'
 import TitleContentFrame from 'commons/title-content-frame/TitleContentFrame'
 import React from 'react'
 import CoupangSubContent from './sub-content/CoupangSubContent'

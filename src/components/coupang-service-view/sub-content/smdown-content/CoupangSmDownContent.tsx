@@ -1,5 +1,5 @@
 import { Box, Container } from '@material-ui/core'
-import { coupangServiceSubText } from 'assets/sub-text'
+import { coupangServiceSubText } from 'data/sub-text'
 import React from 'react'
 import { Pagination } from 'swiper'
 import 'swiper/css'

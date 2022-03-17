@@ -1,5 +1,5 @@
 import { Box, useMediaQuery, useTheme } from '@material-ui/core'
-import { locationMainText } from 'assets/main-text'
+import { locationMainText } from 'data/main-text'
 import TitleContentFrame from 'commons/title-content-frame/TitleContentFrame'
 import React from 'react'
 import LocationSubContent from './sub-content/LocationSubContent'

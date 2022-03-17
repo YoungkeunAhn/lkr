@@ -5,11 +5,8 @@ import {
   useMediaQuery,
   useTheme,
 } from '@material-ui/core'
-import {
-  recruitmentMainText,
-  smDownRecruitmentMainText,
-} from 'assets/main-text'
-import { recruitmentSubText, recruitmentSubTextSmDown } from 'assets/sub-text'
+import { recruitmentMainText, smDownRecruitmentMainText } from 'data/main-text'
+import { recruitmentSubText, recruitmentSubTextSmDown } from 'data/sub-text'
 import TitleContentFrame from 'commons/title-content-frame/TitleContentFrame'
 import React from 'react'
 import { A11y, Navigation } from 'swiper'

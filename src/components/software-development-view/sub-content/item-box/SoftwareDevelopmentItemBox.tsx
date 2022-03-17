@@ -1,5 +1,5 @@
 import { Box, Typography, useMediaQuery, useTheme } from '@material-ui/core'
-import { SdItemType } from 'assets/sd-sub-items'
+import { SdItemType } from 'data/sd-sub-items'
 import React from 'react'
 import useStyles from './styles'
 

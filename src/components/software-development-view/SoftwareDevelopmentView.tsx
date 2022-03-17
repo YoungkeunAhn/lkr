@@ -2,8 +2,8 @@ import { Box, useMediaQuery, useTheme } from '@material-ui/core'
 import {
   smDownSoftwareDevelopmentMainText,
   softwareDevelopmentMainText,
-} from 'assets/main-text'
-import { softwareDevelopmentSubText } from 'assets/sub-text'
+} from 'data/main-text'
+import { softwareDevelopmentSubText } from 'data/sub-text'
 import TitleContentFrame from 'commons/title-content-frame/TitleContentFrame'
 import React from 'react'
 import SoftwareDevelopmentSubContent from './sub-content/SoftwareDevelopmentSubContent'

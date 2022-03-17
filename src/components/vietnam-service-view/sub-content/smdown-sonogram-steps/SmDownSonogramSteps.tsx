@@ -1,7 +1,7 @@
 import { Box, Container, Typography } from '@material-ui/core'
 import React from 'react'
 import useStyles from './styles'
-import { sonogramServiceText } from 'assets/vietnam-item'
+import { sonogramServiceText } from 'data/vietnam-item'
 import SmDownSonogramStepBox from './step-box/SmDownSonogramStepBox'
 
 function SmDownSonogramSteps() {
