@@ -18,8 +18,8 @@ const useStyles = makeStyles((theme: Theme) =>
       height: 200,
       overflow: 'hidden',
       [theme.breakpoints.down('md')]: {
-        width: 180,
-        height: 180,
+        width: '24vw',
+        height: '24vw',
       },
     },
     circleTop: {
@@ -58,6 +58,9 @@ const useStyles = makeStyles((theme: Theme) =>
       fontSize: '1.5rem',
       textAlign: 'center',
       fontWeight: 600,
+      [theme.breakpoints.down('md')]: {
+        fontSize: '1.3rem',
+      },
     },
   })
 )

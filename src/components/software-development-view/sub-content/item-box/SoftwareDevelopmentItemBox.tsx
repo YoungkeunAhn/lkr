@@ -14,6 +14,7 @@ function SoftwareDevelopmentItemBox(props: Props) {
   const classes = useStyles()
   const theme = useTheme()
   const mdDown = useMediaQuery(theme.breakpoints.down('md'))
+  const smDown = useMediaQuery(theme.breakpoints.down('sm'))
 
   return (
     <Box className={classes.root}>
@@ -29,7 +30,7 @@ function SoftwareDevelopmentItemBox(props: Props) {
       <Box mt={2} display='flex' flexDirection='column'>
         {items.map((text, idx) => (
           <Typography
-            variant={mdDown ? 'caption' : 'body2'}
+            variant={mdDown && !smDown ? 'caption' : 'body2'}
             key={idx}
             className={classes.listLine}
           >

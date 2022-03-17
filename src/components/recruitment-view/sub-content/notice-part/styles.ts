@@ -48,10 +48,11 @@ const useStyles = makeStyles((theme: Theme) =>
       '& img': {
         width: '100%',
         height: '100%',
-        objectFit: 'contain',
+        objectFit: 'cover',
       },
       [theme.breakpoints.down('md')]: {
         width: '40%',
+        height: 440,
       },
     },
     smDownMainImgBox: {

@@ -45,20 +45,20 @@ const useStyles = makeStyles((theme: Theme) =>
       marginLeft: theme.spacing(2),
       [theme.breakpoints.down('sm')]: {
         marginLeft: theme.spacing(0),
-        marginTop: theme.spacing(2),
+        marginTop: theme.spacing(0),
         maxWidth: 1000,
       },
     },
     smallSquare: {
       background: '#3E3E3E',
       borderRadius: 10,
-      position: 'relative',
       padding: theme.spacing(3),
       display: 'flex',
       justifyContent: 'center',
       alignItems: 'center',
       width: 250,
       height: 250,
+      position: 'relative',
       '& > div': {
         display: 'flex',
         flexDirection: 'column',
@@ -74,6 +74,11 @@ const useStyles = makeStyles((theme: Theme) =>
       [theme.breakpoints.down('md')]: {
         width: '15vw',
         height: '15vw',
+      },
+      [theme.breakpoints.down('sm')]: {
+        width: '100%',
+        height: '75%',
+        marginBottom: theme.spacing(4),
       },
     },
     circle: {

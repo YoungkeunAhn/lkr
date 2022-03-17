@@ -21,7 +21,11 @@ function SonogramSteps() {
       <div className={classes.bgCover}>
         <Container maxWidth='lg'>
           <Box pr={mdDown && !smDown && 4} pl={mdDown && !smDown && 4}>
-            <Typography className={classes.title} variant='h2' align='center'>
+            <Typography
+              className={classes.title}
+              variant={mdDown ? 'h4' : 'h2'}
+              align='center'
+            >
               <div
                 dangerouslySetInnerHTML={{ __html: sonogramServiceText.title }}
               ></div>
@@ -29,7 +33,7 @@ function SonogramSteps() {
             <Typography
               className={classes.subTitle}
               align='center'
-              variant='h6'
+              variant={mdDown ? 'body1' : 'h6'}
             >
               {sonogramServiceText.subTitle}
             </Typography>

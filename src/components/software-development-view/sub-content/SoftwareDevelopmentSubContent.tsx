@@ -26,11 +26,7 @@ function SoftwareDevelopmentSubContent() {
     <Box className={classes.root}>
       <BackgroundCover noBg={smDown ? true : undefined}>
         <Container maxWidth='lg'>
-          <Box
-            className={classes.wrapper}
-            pl={mdDown && !smDown && 4}
-            pr={mdDown && !smDown && 4}
-          >
+          <Box className={classes.wrapper}>
             <Hidden mdDown>
               <Box className={classes.bgText}>
                 <Typography variant='h1' align='center'>
@@ -46,7 +42,7 @@ function SoftwareDevelopmentSubContent() {
                 container
                 justifyContent='space-between'
                 alignItems='stretch'
-                spacing={4}
+                spacing={mdDown ? 1 : 4}
               >
                 {sdItemList.map((item, idx) => (
                   <Grid key={idx} item xs={12} sm={6} md={3} lg={3} xl={3}>

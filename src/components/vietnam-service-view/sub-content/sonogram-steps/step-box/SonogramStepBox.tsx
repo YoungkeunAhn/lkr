@@ -1,5 +1,5 @@
-import { Box, Typography } from '@material-ui/core'
-import React from 'react'
+import { Box, Typography, useMediaQuery, useTheme } from '@material-ui/core'
+import React, { useMemo } from 'react'
 import useStyles from './styles'
 
 type Props = {
@@ -11,6 +11,8 @@ type Props = {
 function SonogramStepBox(props: Props) {
   const classes = useStyles()
   const { seq, title, content } = props
+  const theme = useTheme()
+  const mdDown = useMediaQuery(theme.breakpoints.down('md'))
 
   return (
     <Box className={classes.root}>
@@ -27,7 +29,11 @@ function SonogramStepBox(props: Props) {
           />
         </Box>
       </div>
-      <Typography className={classes.text} variant='body1' align='center'>
+      <Typography
+        className={classes.text}
+        variant={mdDown ? 'body2' : 'body1'}
+        align='center'
+      >
         {content}
       </Typography>
     </Box>

@@ -10,7 +10,7 @@ export const softwareDevelopmentMainText = [
   `사이트구축 <span>프로그래밍</span>까지`,
 ]
 export const smDownSoftwareDevelopmentMainText =
-  softwareDevelopmentMainText[0] + ' ' + softwareDevelopmentMainText[1]
+  softwareDevelopmentMainText[0] + '</br>' + softwareDevelopmentMainText[1]
 
 export const processMainText = [
   `smart <span>상담&견적</span> 부터`,
@@ -24,7 +24,7 @@ export const coupangServiceMainText = [
   `<span>통합솔루션</span> 서비스를 제공`,
 ]
 export const smDownCoupangServiceMainText =
-  coupangServiceMainText[0] + ' ' + coupangServiceMainText[1]
+  coupangServiceMainText[0] + '</br>' + coupangServiceMainText[1]
 export const vietnamServiceMainText = [
   `<span>베트남 병원솔루션</span> 서비스를 제공`,
 ]
@@ -35,12 +35,12 @@ export const recruitmentMainText = [
   `<span>인재</span>를 기다리고 있습니다.`,
 ]
 export const smDownRecruitmentMainText =
-  recruitmentMainText[0] + ' ' + recruitmentMainText[1]
+  recruitmentMainText[0] + '<br />' + recruitmentMainText[1]
 export const recruitmentMainText2 = [
   `열린채용을 통해 <span>학력, 연령, 성별</span>`,
   `구분없이 우수한 인재를 채용합니다.`,
 ]
 export const smDownRecruitmentMainText2 =
-  recruitmentMainText2[0] + ' ' + recruitmentMainText2[1]
+  recruitmentMainText2[0] + '<br />' + recruitmentMainText2[1]
 
 export const locationMainText = [`엘케이알 <span>찾아오시는길</span>`]

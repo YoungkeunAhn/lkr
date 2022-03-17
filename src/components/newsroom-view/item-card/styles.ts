@@ -21,7 +21,7 @@ const useStyles = makeStyles((theme: Theme) =>
     header: {
       padding: theme.spacing(2, 2, 0, 2),
       display: 'flex',
-      height: 200,
+      height: 150,
       flexDirection: 'column',
       justifyContent: 'flex-start',
       position: 'relative',
@@ -78,7 +78,7 @@ const useStyles = makeStyles((theme: Theme) =>
       '& img': {
         width: '100%',
         height: '100%',
-        objectFit: 'fill',
+        objectFit: 'cover',
         borderBottom: '1px solid #ddd',
         borderBottomRightRadius: 10,
         borderBottomLeftRadius: 10,
@@ -86,12 +86,12 @@ const useStyles = makeStyles((theme: Theme) =>
     },
     right: {
       '& img': {
-        height: 170,
+        height: 200,
         transform: 'translateY(4px)',
       },
       [theme.breakpoints.down('md')]: {
         '& img': {
-          height: '40vw',
+          height: '30vw',
         },
       },
       [theme.breakpoints.down('sm')]: {

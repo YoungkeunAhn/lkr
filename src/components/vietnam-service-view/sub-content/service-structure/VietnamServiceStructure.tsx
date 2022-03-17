@@ -11,12 +11,13 @@ import useStyles from './styles'
 function VietnamServiceStructure() {
   const classes = useStyles()
   const theme = useTheme()
+  const mdDown = useMediaQuery(theme.breakpoints.down('md'))
   const smDown = useMediaQuery(theme.breakpoints.down('sm'))
 
   return (
     <Box className={classes.root}>
       <Typography
-        variant={smDown ? 'h5' : 'h2'}
+        variant={smDown ? 'h5' : mdDown ? 'h4' : 'h2'}
         align='center'
         className={classes.title}
       >
