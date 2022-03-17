@@ -1,7 +1,7 @@
 import { useMediaQuery, useTheme } from '@material-ui/core'
 import { vietnamServiceMainText } from 'assets/main-text'
 import { vietnamServiceSubText } from 'assets/sub-text'
-import TitleContentFrame from 'commons/title-content-box/TitleContentFrame'
+import TitleContentFrame from 'commons/title-content-frame/TitleContentFrame'
 import React from 'react'
 import SmDownSonogramSteps from './sub-content/smdown-sonogram-steps/SmDownSonogramSteps'
 import SonogramSteps from './sub-content/sonogram-steps/SonogramSteps'

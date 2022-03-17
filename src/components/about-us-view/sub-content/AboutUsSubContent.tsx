@@ -1,4 +1,10 @@
-import { Box, Container, Typography } from '@material-ui/core'
+import {
+  Box,
+  Container,
+  Typography,
+  useMediaQuery,
+  useTheme,
+} from '@material-ui/core'
 import BackgroundCover from 'commons/background-cover/BackgroundCover'
 import React from 'react'
 import useStyles from './styles'
@@ -11,21 +17,25 @@ const textList = [
 
 function AboutUsSubContent() {
   const classes = useStyles()
+  const theme = useTheme()
+  const mdDown = useMediaQuery(theme.breakpoints.down('md'))
 
   return (
     <Box className={classes.root}>
       <BackgroundCover>
         <Container maxWidth='lg'>
-          <Box className={classes.textBox}>
-            <Typography variant='h3' className={classes.title}>
-              우리는,
-            </Typography>
-            <Box className={classes.contentBox}>
-              {textList.map((text, idx) => (
-                <Typography variant='h6' key={idx}>
-                  {text}
-                </Typography>
-              ))}
+          <Box pr={mdDown && 4} pl={mdDown && 4}>
+            <Box className={classes.textBox}>
+              <Typography variant='h3' className={classes.title}>
+                우리는,
+              </Typography>
+              <Box className={classes.contentBox}>
+                {textList.map((text, idx) => (
+                  <Typography variant={mdDown ? 'body1' : 'h6'} key={idx}>
+                    {text}
+                  </Typography>
+                ))}
+              </Box>
             </Box>
           </Box>
         </Container>

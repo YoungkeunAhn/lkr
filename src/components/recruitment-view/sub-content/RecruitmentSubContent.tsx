@@ -4,7 +4,7 @@ import {
   smDownRecruitmentMainText2,
 } from 'assets/main-text'
 import clsx from 'clsx'
-import TitleContentFrame from 'commons/title-content-box/TitleContentFrame'
+import TitleContentFrame from 'commons/title-content-frame/TitleContentFrame'
 import React from 'react'
 import RecruitmentSubContentNoticePart from './notice-part/RecruitmentSubContentNoticePart'
 import RecruitmentSubContentProcessPart from './process-part/RecruitmentSubContentProcessPart'
@@ -22,7 +22,7 @@ function RecruitmentSubContent() {
       </div>
 
       <div>
-        <Container maxWidth='xl'>
+        <Container maxWidth='lg'>
           <TitleContentFrame
             title='신입 및 경력사원 공개채용'
             mainText={recruitmentMainText2}

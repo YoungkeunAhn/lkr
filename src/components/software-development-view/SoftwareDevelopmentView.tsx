@@ -4,7 +4,7 @@ import {
   softwareDevelopmentMainText,
 } from 'assets/main-text'
 import { softwareDevelopmentSubText } from 'assets/sub-text'
-import TitleContentFrame from 'commons/title-content-box/TitleContentFrame'
+import TitleContentFrame from 'commons/title-content-frame/TitleContentFrame'
 import React from 'react'
 import SoftwareDevelopmentSubContent from './sub-content/SoftwareDevelopmentSubContent'
 

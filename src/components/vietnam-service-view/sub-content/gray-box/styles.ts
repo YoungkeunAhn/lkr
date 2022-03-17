@@ -71,9 +71,9 @@ const useStyles = makeStyles((theme: Theme) =>
       '& > img': {
         maxWidth: 130,
       },
-      [theme.breakpoints.down('sm')]: {
-        width: '100%',
-        height: '70%',
+      [theme.breakpoints.down('md')]: {
+        width: '15vw',
+        height: '15vw',
       },
     },
     circle: {
@@ -94,11 +94,11 @@ const useStyles = makeStyles((theme: Theme) =>
       '& img': {
         maxHeight: 150,
       },
-      [theme.breakpoints.down('sm')]: {
+      [theme.breakpoints.down('md')]: {
         width: 100,
         height: 100,
         '& img': {
-          height: '90%',
+          height: '80%',
         },
         '& .MuiTypography-root': {
           fontWeight: 600,
@@ -111,7 +111,7 @@ const useStyles = makeStyles((theme: Theme) =>
       '& img': {
         maxHeight: 120,
       },
-      [theme.breakpoints.down('sm')]: {
+      [theme.breakpoints.down('md')]: {
         '& img': {
           width: '60%',
         },
@@ -122,7 +122,7 @@ const useStyles = makeStyles((theme: Theme) =>
       '& img': {
         maxHeight: 120,
       },
-      [theme.breakpoints.down('sm')]: {
+      [theme.breakpoints.down('md')]: {
         '& img': {
           width: '60%',
         },
@@ -133,7 +133,7 @@ const useStyles = makeStyles((theme: Theme) =>
       '& img': {
         maxHeight: 120,
       },
-      [theme.breakpoints.down('sm')]: {
+      [theme.breakpoints.down('md')]: {
         '& img': {
           width: '60%',
         },
@@ -144,7 +144,7 @@ const useStyles = makeStyles((theme: Theme) =>
       '& img': {
         maxHeight: 120,
       },
-      [theme.breakpoints.down('sm')]: {
+      [theme.breakpoints.down('md')]: {
         '& img': {
           width: '60%',
         },
@@ -191,25 +191,25 @@ const useStyles = makeStyles((theme: Theme) =>
     },
     leftTopArrow: {
       transform: 'rotate(45deg) translate(10%,10%)',
-      [theme.breakpoints.down('sm')]: {
+      [theme.breakpoints.down('md')]: {
         width: '30%',
       },
     },
     rightTopArrow: {
       transform: 'rotate(-220deg) translate(90%, 130%)',
-      [theme.breakpoints.down('sm')]: {
+      [theme.breakpoints.down('md')]: {
         width: '30%',
       },
     },
     leftBottomArrow: {
       transform: 'rotate(-45deg) translate(50%, -100%)',
-      [theme.breakpoints.down('sm')]: {
+      [theme.breakpoints.down('md')]: {
         width: '30%',
       },
     },
     rightBottomArrow: {
       transform: 'rotate(-130deg) translate(110%, -50%)',
-      [theme.breakpoints.down('sm')]: {
+      [theme.breakpoints.down('md')]: {
         width: '30%',
       },
     },

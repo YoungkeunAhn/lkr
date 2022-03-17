@@ -26,15 +26,20 @@ const useStyles = makeStyles((theme: Theme) =>
     },
     contentBox: {
       display: 'flex',
+      justifyContent: 'space-around',
+      alignItems: 'flex-start',
+    },
+    coilImgBox: {
+      position: 'relative',
+      display: 'flex',
       justifyContent: 'center',
       alignItems: 'center',
-    },
-    coilArrow: {
-      width: 100,
-      objectFit: 'contain',
-      position: 'relative',
-      top: '-5vh',
-      margin: theme.spacing(0, 3),
+      top: 70,
+      '& img': {
+        width: '60%',
+        height: '100%',
+        objectFit: 'contain',
+      },
     },
   })
 )

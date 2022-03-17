@@ -7,10 +7,11 @@ import useStyles from './styles'
 function VietnamServiceGrayBox() {
   const classes = useStyles()
   const theme = useTheme()
+  const mdDown = useMediaQuery(theme.breakpoints.down('md'))
   const smDown = useMediaQuery(theme.breakpoints.down('sm'))
 
   return (
-    <Box className={classes.root}>
+    <Box className={classes.root} pr={mdDown && 4} pl={mdDown && 4}>
       <Box className={classes.left}>
         <Box className={classes.leftInnerBox}>
           <div>

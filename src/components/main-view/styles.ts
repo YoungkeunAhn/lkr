@@ -22,7 +22,7 @@ const useStyles = makeStyles((theme: Theme) =>
       '& .MuiTypography-root+.MuiTypography-root': {
         marginTop: theme.spacing(2),
       },
-      [theme.breakpoints.down('sm')]: {
+      [theme.breakpoints.down('md')]: {
         marginTop: theme.spacing(10),
         '& .MuiTypography-root+.MuiTypography-root': {
           marginTop: theme.spacing(0),
@@ -35,7 +35,7 @@ const useStyles = makeStyles((theme: Theme) =>
       '& p': {
         marginLeft: theme.spacing(2),
       },
-      [theme.breakpoints.down('sm')]: {
+      [theme.breakpoints.down('md')]: {
         paddingBottom: theme.spacing(1),
         '& img': {
           width: '40%',
@@ -54,7 +54,7 @@ const useStyles = makeStyles((theme: Theme) =>
       justifyContent: 'space-between',
     },
     firstLine: {
-      [theme.breakpoints.down('sm')]: {
+      [theme.breakpoints.down('md')]: {
         fontWeight: 600,
         fontSize: '3rem',
         marginBottom: theme.spacing(2),

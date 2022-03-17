@@ -64,6 +64,17 @@ const useStyles = makeStyles((theme: Theme) =>
       '& .MuiTypography-root+.MuiTypography-root': {
         marginTop: theme.spacing(1),
       },
+      [theme.breakpoints.down('md')]: {
+        '& .MuiTypography-root': {
+          lineHeight: 1.9,
+        },
+        '& .MuiTypography-root:first-child': {
+          lineHeight: 1.9,
+        },
+        '& .MuiTypography-root+.MuiTypography-root': {
+          marginTop: theme.spacing(0),
+        },
+      },
       [theme.breakpoints.down('sm')]: {
         padding: theme.spacing(1),
         wordBreak: 'keep-all',

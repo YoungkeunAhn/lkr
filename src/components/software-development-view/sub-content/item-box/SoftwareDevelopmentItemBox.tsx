@@ -1,4 +1,4 @@
-import { Box, Typography, useTheme, useMediaQuery } from '@material-ui/core'
+import { Box, Typography, useMediaQuery, useTheme } from '@material-ui/core'
 import { SdItemType } from 'assets/sd-sub-items'
 import React from 'react'
 import useStyles from './styles'
@@ -13,7 +13,7 @@ function SoftwareDevelopmentItemBox(props: Props) {
   const { icon, title, items } = sdItem
   const classes = useStyles()
   const theme = useTheme()
-  const smDown = useMediaQuery(theme.breakpoints.down('sm'))
+  const mdDown = useMediaQuery(theme.breakpoints.down('md'))
 
   return (
     <Box className={classes.root}>
@@ -25,10 +25,10 @@ function SoftwareDevelopmentItemBox(props: Props) {
           height={idx === 0 ? '90%' : '70%'}
         />
       </Box>
-      <Typography>{title}</Typography>
-      <Box mt={2}>
+      <Typography variant={mdDown ? 'body2' : 'body1'}>{title}</Typography>
+      <Box mt={2} display='flex' flexDirection='column'>
         {items.map((text, idx) => (
-          <Typography variant='body2' key={idx}>
+          <Typography variant={mdDown ? 'caption' : 'body2'} key={idx}>
             - {text}
           </Typography>
         ))}

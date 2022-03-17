@@ -21,6 +21,7 @@ type Props = {
 function MainView(props: Props) {
   const classes = useStyles()
   const theme = useTheme()
+  const mdDown = useMediaQuery(theme.breakpoints.down('md'))
   const smDown = useMediaQuery(theme.breakpoints.down('sm'))
   const { openDialog } = props
 
@@ -28,7 +29,7 @@ function MainView(props: Props) {
     <div id='blackBg1'>
       <Box className={classes.root}>
         <BackgroundCover>
-          <Container maxWidth='xl'>
+          <Container maxWidth='lg'>
             <Box
               display='flex'
               justifyContent='space-between'
@@ -38,7 +39,7 @@ function MainView(props: Props) {
                 <img src='logo.png' alt='logo' />
                 <Typography variant='body1'>LKR corpration</Typography>
               </Box>
-              <Hidden mdUp>
+              <Hidden lgUp>
                 <IconButton onClick={openDialog}>
                   <MenuRoundedIcon className={classes.menuIcon} />
                 </IconButton>
@@ -48,7 +49,7 @@ function MainView(props: Props) {
               {mainSubText.map((text, idx) => (
                 <Typography
                   key={idx}
-                  variant={smDown ? 'h6' : 'h2'}
+                  variant={smDown ? 'h6' : mdDown ? 'h5' : 'h2'}
                   className={clsx(idx === 0 && classes.firstLine)}
                 >
                   {idx === 0 ? text.slice(0, text.length - 6) : text}

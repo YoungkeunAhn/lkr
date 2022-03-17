@@ -15,12 +15,13 @@ import useStyles from './styles'
 function CoupangSubContent() {
   const classes = useStyles()
   const theme = useTheme()
+  const mdDown = useMediaQuery(theme.breakpoints.down('md'))
   const smDown = useMediaQuery(theme.breakpoints.down('sm'))
 
   const onClickBtn = () => {}
 
   return (
-    <Box>
+    <Box pl={mdDown && 4} pr={mdDown && 4}>
       <Hidden mdUp>
         <CoupangSmDownContent />
       </Hidden>

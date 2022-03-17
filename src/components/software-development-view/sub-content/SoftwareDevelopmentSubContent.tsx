@@ -19,35 +19,38 @@ const bgText2 = 'AND PASSIONATE'
 function SoftwareDevelopmentSubContent() {
   const classes = useStyles()
   const theme = useTheme()
+  const mdDown = useMediaQuery(theme.breakpoints.down('md'))
   const smDown = useMediaQuery(theme.breakpoints.down('sm'))
 
   return (
     <Box className={classes.root}>
       <BackgroundCover noBg={smDown ? true : undefined}>
-        <Container maxWidth='lg' className={classes.container}>
-          <Hidden smDown>
-            <Box className={classes.bgText}>
-              <Typography variant='h1' align='center'>
-                {bgText1}
-              </Typography>
-              <Typography variant='h1' align='center'>
-                {bgText2}
-              </Typography>
+        <Container maxWidth='lg'>
+          <Box className={classes.wrapper} pl={mdDown && 4} pr={mdDown && 4}>
+            <Hidden mdDown>
+              <Box className={classes.bgText}>
+                <Typography variant='h1' align='center'>
+                  {bgText1}
+                </Typography>
+                <Typography variant='h1' align='center'>
+                  {bgText2}
+                </Typography>
+              </Box>
+            </Hidden>
+            <Box className={classes.itemListBox}>
+              <Grid
+                container
+                justifyContent='space-between'
+                alignItems='stretch'
+                spacing={4}
+              >
+                {sdItemList.map((item, idx) => (
+                  <Grid key={idx} item xs={12} sm={6} md={3} lg={3} xl={3}>
+                    <SoftwareDevelopmentItemBox idx={idx} sdItem={item} />
+                  </Grid>
+                ))}
+              </Grid>
             </Box>
-          </Hidden>
-          <Box className={classes.itemListBox}>
-            <Grid
-              container
-              justifyContent='space-between'
-              alignItems='stretch'
-              spacing={4}
-            >
-              {sdItemList.map((item, idx) => (
-                <Grid key={idx} item xs={12} sm={6} lg={3} xl={3}>
-                  <SoftwareDevelopmentItemBox idx={idx} sdItem={item} />
-                </Grid>
-              ))}
-            </Grid>
           </Box>
         </Container>
       </BackgroundCover>

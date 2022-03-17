@@ -6,7 +6,7 @@ import VietnamServiceStructure from './service-structure/VietnamServiceStructure
 function VietnamServiceSubContent() {
   return (
     <div>
-      <Container maxWidth='xl'>
+      <Container maxWidth='lg'>
         <VietnamServiceGrayBox />
         <VietnamServiceStructure />
       </Container>

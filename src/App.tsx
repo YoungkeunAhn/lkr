@@ -131,8 +131,8 @@ function App() {
       <section id='location'>
         <LocationView />
       </section>
-      <Footer />
-      <Hidden mdDown>
+      {/* <Footer /> */}
+      <Hidden lgDown>
         <NavBar onClick={onClickMenu} isBgBlack={isBgBlack} />
       </Hidden>
       <MenuDialog open={open} onClose={onClose} />

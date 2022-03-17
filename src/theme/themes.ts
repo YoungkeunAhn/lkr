@@ -4,10 +4,10 @@ export const themes = createTheme({
   breakpoints: {
     values: {
       xs: 0,
-      sm: 500,
-      md: 1024,
-      lg: 1920,
-      xl: 2400,
+      sm: 600,
+      md: 600,
+      lg: 1450,
+      xl: 1920,
     },
   },
   typography: {

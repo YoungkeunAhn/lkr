@@ -3,7 +3,8 @@ import { createStyles, makeStyles, Theme } from '@material-ui/core'
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     root: {
-      width: '15vw',
+      width: '16vw',
+      flex: 1,
       display: 'flex',
       flexDirection: 'column',
       alignItems: 'center',
@@ -16,6 +17,10 @@ const useStyles = makeStyles((theme: Theme) =>
       width: 200,
       height: 200,
       overflow: 'hidden',
+      [theme.breakpoints.down('md')]: {
+        width: 180,
+        height: 180,
+      },
     },
     circleTop: {
       background: '#818181',

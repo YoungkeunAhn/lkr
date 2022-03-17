@@ -13,13 +13,15 @@ const useStyles = makeStyles((theme: Theme) =>
       msUserSelect: 'none',
       userSelect: 'none',
       height: '60vh',
-      [theme.breakpoints.down('sm')]: {
+      [theme.breakpoints.down('md')]: {
         height: '100%',
+      },
+      [theme.breakpoints.down('sm')]: {
         paddingBottom: theme.spacing(5),
         background: '#f6f6f6',
       },
     },
-    container: {
+    wrapper: {
       display: 'flex',
       justifyContent: 'center',
       alignItems: 'center',

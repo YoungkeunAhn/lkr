@@ -19,6 +19,7 @@ const useStyles = makeStyles((theme: Theme) =>
     },
     itemBox: {
       // width: 280,
+      width: '100%',
       boxSizing: 'border-box',
       padding: theme.spacing(2, 3),
       borderRadius: 100,

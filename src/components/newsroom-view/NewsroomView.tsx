@@ -7,7 +7,7 @@ import {
 } from '@material-ui/core'
 import { newsItem } from 'assets/news-item'
 import { newsroomSubText } from 'assets/sub-text'
-import TitleContentFrame from 'commons/title-content-box/TitleContentFrame'
+import TitleContentFrame from 'commons/title-content-frame/TitleContentFrame'
 import React from 'react'
 import NewsroomItemCard from './item-card/NewsroomItemCard'
 import useStyles from './styles'

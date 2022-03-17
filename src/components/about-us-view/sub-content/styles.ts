@@ -10,6 +10,9 @@ const useStyles = makeStyles((theme: Theme) =>
       backgroundAttachment: 'fixed',
       boxSizing: 'border-box',
       height: '60vh',
+      [theme.breakpoints.down('md')]: {
+        height: '100%',
+      },
     },
     title: {
       fontWeight: 600,
@@ -26,11 +29,13 @@ const useStyles = makeStyles((theme: Theme) =>
     contentBox: {
       marginTop: theme.spacing(4),
       '& .MuiTypography-root': {
-        fontWeight: 300,
         lineHeight: '35px',
       },
       '& .MuiTypography-root+.MuiTypography-root': {
         marginTop: theme.spacing(4),
+      },
+      [theme.breakpoints.down('md')]: {
+        width: '75%',
       },
     },
   })
