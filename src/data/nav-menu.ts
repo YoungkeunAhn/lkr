@@ -23,7 +23,7 @@ export const navMenu: NavMenuType[] = [
     sectionId: 'vietnam',
     korTitle: '베트남 병원 솔루션 서비스',
   },
-  { title: 'recruiment', sectionId: 'recruitment', korTitle: '인재채용' },
+  { title: 'recruitment', sectionId: 'recruitment', korTitle: '인재채용' },
   { title: 'newsroom', sectionId: 'newsroom', korTitle: '뉴스룸' },
   { title: 'location', sectionId: 'location', korTitle: '찾아오시는길' },
 ]

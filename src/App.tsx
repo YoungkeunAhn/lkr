@@ -1,18 +1,18 @@
 import { Hidden, useMediaQuery, useTheme } from '@material-ui/core'
-import AboutUsView from 'components/about-us-view/AboutUsView'
-import CoupangServiceView from 'components/coupang-service-view/CoupangServiceView'
-import Footer from 'components/footer/Footer'
-import LocationView from 'components/location-view/LocationView'
-import MainView from 'components/main-view/MainView'
-import MenuDialog from 'components/menu-dialog/MenuDialog'
+import MenuDialog from 'components/intro/menu-dialog/MenuDialog'
 import NavBar from 'components/nav-bar/NavBar'
-import NewsroomView from 'components/newsroom-view/NewsroomView'
-import ProcessView from 'components/process-view/ProcessView'
-import RecruitmentView from 'components/recruitment-view/RecruitmentView'
 import SmDownScrollTop from 'components/smDown-scroll-top/SmDownScrollTop'
-import SoftwareDevelopmentView from 'components/software-development-view/SoftwareDevelopmentView'
-import VietnamServiceView from 'components/vietnam-service-view/VietnamServiceView'
+import Vietnam from 'section/vietnam/Vietnam'
 import React, { useEffect, useState } from 'react'
+import AboutUs from 'section/about-us/AboutUs'
+import Coupang from 'section/coupang/Coupang'
+import Footer from 'section/footer/Footer'
+import Intro from 'section/intro/Intro'
+import Location from 'section/location/Location'
+import Newsroom from 'section/newroom/Newsroom'
+import Process from 'section/process/Process'
+import Recruitment from 'section/recruitment/Recruitment'
+import SoftwareDevelopment from 'section/sw/SoftwareDevelopment'
 
 type OffsetValueType = {
   top: number
@@ -119,34 +119,34 @@ function App() {
   return (
     <div>
       <section id='main'>
-        <MainView openDialog={openDialog} />
+        <Intro openDialog={openDialog} />
       </section>
       <Hidden lgUp>
         <SmDownScrollTop />
       </Hidden>
       <section id='aboutUs'>
-        <AboutUsView />
+        <AboutUs />
       </section>
       <section id='software'>
-        <SoftwareDevelopmentView />
+        <SoftwareDevelopment />
       </section>
       <section id='process'>
-        <ProcessView />
+        <Process />
       </section>
       <section id='coupang'>
-        <CoupangServiceView />
+        <Coupang />
       </section>
       <section id='vietnam'>
-        <VietnamServiceView />
+        <Vietnam />
       </section>
       <section id='recruitment'>
-        <RecruitmentView />
+        <Recruitment />
       </section>
       <section id='newsroom'>
-        <NewsroomView />
+        <Newsroom />
       </section>
       <section id='location'>
-        <LocationView />
+        <Location />
       </section>
       <Footer />
       <Hidden lgDown>
