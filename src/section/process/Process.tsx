@@ -1,5 +1,5 @@
 import TitleContentFrame from 'commons/title-content-frame/TitleContentFrame'
-import ProcessContent from 'components/process-view/ProcessContent'
+import ProcessContent from 'components/process/ProcessContent'
 import { processMainText, smDownProcessMainText } from 'data/main-text'
 import { processSubText } from 'data/sub-text'
 import React from 'react'

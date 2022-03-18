@@ -77,7 +77,7 @@ function VietnamServiceGrayBox() {
         <ul className={classes.textList}>
           {vietnamHospitalText.map((text, idx) => (
             <li key={idx}>
-              <Typography variant={smDown ? 'body2' : 'body1'}>
+              <Typography variant={mdDown ? 'caption' : 'body2'}>
                 {text}
               </Typography>
             </li>

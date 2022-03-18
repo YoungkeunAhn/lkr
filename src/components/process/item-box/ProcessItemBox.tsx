@@ -1,4 +1,4 @@
-import { Box, Hidden, Typography, useTheme } from '@material-ui/core'
+import { Box, Hidden, Typography } from '@material-ui/core'
 import clsx from 'clsx'
 import React from 'react'
 import useStyles from './styles'

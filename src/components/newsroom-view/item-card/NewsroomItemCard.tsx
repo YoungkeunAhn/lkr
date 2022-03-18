@@ -21,7 +21,7 @@ function NewsroomItemCard(props: Props) {
     <Box className={classes.root}>
       <Box
         className={classes.header}
-        style={{ height: !isRight ? 120 : undefined }}
+        style={{ height: !isRight ? 220 : undefined }}
       >
         <Box className={classes.topBox}>
           <Box className={classes.leftBox}>
@@ -38,7 +38,7 @@ function NewsroomItemCard(props: Props) {
           </Box>
         </Box>
         <Typography
-          variant={isRight ? 'h6' : mdDown ? 'h6' : 'h5'}
+          variant={isRight ? 'subtitle1' : mdDown ? 'h6' : 'h5'}
           className={classes.title}
         >
           {title}

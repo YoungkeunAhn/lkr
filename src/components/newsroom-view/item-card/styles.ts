@@ -21,7 +21,7 @@ const useStyles = makeStyles((theme: Theme) =>
     header: {
       padding: theme.spacing(2, 2, 0, 2),
       display: 'flex',
-      height: 150,
+      height: 122,
       flexDirection: 'column',
       justifyContent: 'flex-start',
       position: 'relative',
@@ -50,6 +50,7 @@ const useStyles = makeStyles((theme: Theme) =>
       display: '-webkit-box',
       WebkitLineClamp: 2,
       WebkitBoxOrient: 'vertical',
+      lineHeight: 1.4,
     },
     talkIcon: {
       width: 30,
@@ -73,7 +74,7 @@ const useStyles = makeStyles((theme: Theme) =>
     },
     thumbnail: {
       flex: 1,
-      height: '80%',
+      height: '60%',
       padding: 0,
       '& img': {
         width: '100%',
@@ -86,7 +87,7 @@ const useStyles = makeStyles((theme: Theme) =>
     },
     right: {
       '& img': {
-        height: 200,
+        height: 154,
         transform: 'translateY(4px)',
       },
       [theme.breakpoints.down('md')]: {

@@ -18,9 +18,12 @@ const useStyles = makeStyles((theme: Theme) =>
     },
 
     textBox: {
-      marginTop: theme.spacing(45),
+      marginTop: theme.spacing(30),
       '& .MuiTypography-root+.MuiTypography-root': {
         marginTop: theme.spacing(2),
+      },
+      '& .MuiTypography-root:first-child': {
+        fontWeight: 600,
       },
       [theme.breakpoints.down('md')]: {
         marginTop: theme.spacing(10),

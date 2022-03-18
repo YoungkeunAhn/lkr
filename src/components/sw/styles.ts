@@ -32,7 +32,7 @@ const useStyles = makeStyles((theme: Theme) =>
       position: 'absolute',
       top: '-5%',
       '& .MuiTypography-root': {
-        font: 'normal normal bold 8rem/10rem Segoe UI;',
+        font: 'normal normal bold 7rem/10rem Segoe UI;',
       },
       '& .MuiTypography-root+.MuiTypography-root': {
         marginTop: theme.spacing(20),

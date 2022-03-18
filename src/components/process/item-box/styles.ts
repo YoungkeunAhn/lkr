@@ -26,6 +26,7 @@ const useStyles = makeStyles((theme: Theme) =>
     },
     title: {
       marginTop: theme.spacing(2),
+      fontSize: '1.15rem',
     },
     textBox: {
       minHeight: 80,

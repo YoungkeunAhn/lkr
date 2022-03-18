@@ -29,12 +29,8 @@ function SoftwareDevelopmentContent() {
           <Box className={classes.wrapper}>
             <Hidden mdDown>
               <Box className={classes.bgText}>
-                <Typography variant='h1' align='center'>
-                  {bgText1}
-                </Typography>
-                <Typography variant='h1' align='center'>
-                  {bgText2}
-                </Typography>
+                <Typography align='center'>{bgText1}</Typography>
+                <Typography align='center'>{bgText2}</Typography>
               </Box>
             </Hidden>
             <Box className={classes.itemListBox}>

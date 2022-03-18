@@ -37,12 +37,15 @@ const useStyles = makeStyles((theme: Theme) =>
     right: {
       background: '#3E3E3E',
       borderRadius: 10,
-      padding: theme.spacing(2),
-      maxWidth: 500,
+      padding: theme.spacing(6),
+      maxWidth: 700,
       display: 'flex',
       justifyContent: 'center',
       alignItems: 'center',
       marginLeft: theme.spacing(2),
+      [theme.breakpoints.down('md')]: {
+        padding: theme.spacing(2),
+      },
       [theme.breakpoints.down('sm')]: {
         marginLeft: theme.spacing(0),
         marginTop: theme.spacing(0),
@@ -56,8 +59,8 @@ const useStyles = makeStyles((theme: Theme) =>
       display: 'flex',
       justifyContent: 'center',
       alignItems: 'center',
-      width: 250,
-      height: 250,
+      width: 190,
+      height: 190,
       position: 'relative',
       '& > div': {
         display: 'flex',
@@ -72,8 +75,8 @@ const useStyles = makeStyles((theme: Theme) =>
         maxWidth: 130,
       },
       [theme.breakpoints.down('md')]: {
-        width: '15vw',
-        height: '15vw',
+        width: '12vw',
+        height: '12vw',
       },
       [theme.breakpoints.down('sm')]: {
         width: '100%',
@@ -94,8 +97,8 @@ const useStyles = makeStyles((theme: Theme) =>
       left: '50%',
       transform: 'translate(-50%, -50%)',
       background: '#fff',
-      width: 250,
-      height: 250,
+      width: 200,
+      height: 200,
       '& img': {
         maxHeight: 150,
       },
@@ -114,7 +117,7 @@ const useStyles = makeStyles((theme: Theme) =>
     hospital1: {
       transform: 'translate(-30%, -30%)',
       '& img': {
-        maxHeight: 120,
+        maxHeight: 100,
       },
       [theme.breakpoints.down('md')]: {
         '& img': {
@@ -125,7 +128,7 @@ const useStyles = makeStyles((theme: Theme) =>
     hospital2: {
       transform: 'translate(30%, -30%)',
       '& img': {
-        maxHeight: 120,
+        maxHeight: 100,
       },
       [theme.breakpoints.down('md')]: {
         '& img': {
@@ -134,9 +137,9 @@ const useStyles = makeStyles((theme: Theme) =>
       },
     },
     hospital3: {
-      transform: 'translate(-30%,30%)',
+      transform: 'translate(-45%,30%)',
       '& img': {
-        maxHeight: 120,
+        maxHeight: 100,
       },
       [theme.breakpoints.down('md')]: {
         '& img': {
@@ -145,9 +148,9 @@ const useStyles = makeStyles((theme: Theme) =>
       },
     },
     hospital4: {
-      transform: 'translate(30%,30%)',
+      transform: 'translate(40%,30%)',
       '& img': {
-        maxHeight: 120,
+        maxHeight: 100,
       },
       [theme.breakpoints.down('md')]: {
         '& img': {
@@ -191,28 +194,37 @@ const useStyles = makeStyles((theme: Theme) =>
         borderRight: '10px solid transparent',
       },
       '& li+li': {
-        marginTop: theme.spacing(3),
+        marginTop: theme.spacing(5.4),
+      },
+      [theme.breakpoints.down('md')]: {
+        '& li+li': {
+          marginTop: theme.spacing(2),
+        },
       },
     },
     leftTopArrow: {
+      width: '35%',
       transform: 'rotate(45deg) translate(10%,10%)',
       [theme.breakpoints.down('md')]: {
         width: '30%',
       },
     },
     rightTopArrow: {
+      width: '35%',
       transform: 'rotate(-220deg) translate(90%, 130%)',
       [theme.breakpoints.down('md')]: {
         width: '30%',
       },
     },
     leftBottomArrow: {
+      width: '35%',
       transform: 'rotate(-45deg) translate(50%, -100%)',
       [theme.breakpoints.down('md')]: {
         width: '30%',
       },
     },
     rightBottomArrow: {
+      width: '35%',
       transform: 'rotate(-130deg) translate(110%, -50%)',
       [theme.breakpoints.down('md')]: {
         width: '30%',

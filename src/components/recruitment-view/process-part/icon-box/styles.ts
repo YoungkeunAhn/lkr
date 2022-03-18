@@ -13,11 +13,14 @@ const useStyles = makeStyles((theme: Theme) =>
       },
     },
     imgBox: {
-      width: '10vw',
+      width: '7.5vw',
       '& img': {
         width: '100%',
         height: '100%',
         objectFit: 'contain',
+      },
+      [theme.breakpoints.down('md')]: {
+        width: '10vw',
       },
       [theme.breakpoints.down('sm')]: {
         width: '27vw',

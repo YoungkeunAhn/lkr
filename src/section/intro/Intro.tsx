@@ -34,7 +34,7 @@ function Intro() {
     <div id='blackBg1'>
       <Box className={classes.root}>
         <BackgroundCover>
-          <Container maxWidth='lg'>
+          <Box pl={10}>
             <Box
               display='flex'
               justifyContent='space-between'
@@ -54,14 +54,16 @@ function Intro() {
               {mainSubText.map((text, idx) => (
                 <Typography
                   key={idx}
-                  variant={smDown ? 'h6' : mdDown ? 'h5' : 'h2'}
+                  variant={
+                    smDown ? 'h6' : mdDown ? 'h5' : idx === 0 ? 'h2' : 'h3'
+                  }
                   className={clsx(idx === 0 && classes.firstLine)}
                 >
-                  {idx === 0 ? text.slice(0, text.length - 6) : text}
+                  {mdDown && idx === 0 ? text.slice(0, text.length - 6) : text}
                 </Typography>
               ))}
             </Box>
-          </Container>
+          </Box>
         </BackgroundCover>
       </Box>
       <MenuDialog open={open} onClose={onClose} />
