@@ -1,6 +1,5 @@
 import {
   Box,
-  Container,
   Hidden,
   IconButton,
   Typography,
@@ -8,12 +7,12 @@ import {
   useTheme,
 } from '@material-ui/core'
 import MenuRoundedIcon from '@material-ui/icons/MenuRounded'
-import { mainSubText } from 'data/sub-text'
 import clsx from 'clsx'
 import BackgroundCover from 'commons/background-cover/BackgroundCover'
+import MenuDialog from 'components/intro/menu-dialog/MenuDialog'
+import { mainSubText } from 'data/sub-text'
 import React, { useState } from 'react'
 import useStyles from './styles'
-import MenuDialog from 'components/intro/menu-dialog/MenuDialog'
 
 function Intro() {
   const classes = useStyles()
