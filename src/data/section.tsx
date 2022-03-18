@@ -6,7 +6,7 @@ import Location from 'section/location/Location'
 import Newsroom from 'section/newsroom/Newsroom'
 import Process from 'section/process/Process'
 import Recruitment from 'section/recruitment/Recruitment'
-import SoftwareDevelopment from 'section/sw/SoftwareDevelopment'
+import SoftwareDevelopment from 'section/software-development/SoftwareDevelopment'
 import Vietnam from 'section/vietnam/Vietnam'
 
 type SectionType = {
