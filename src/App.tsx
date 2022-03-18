@@ -1,18 +1,7 @@
 import { Hidden, useMediaQuery, useTheme } from '@material-ui/core'
-import MenuDialog from 'components/intro/menu-dialog/MenuDialog'
 import NavBar from 'components/nav-bar/NavBar'
-import SmDownScrollTop from 'components/smDown-scroll-top/SmDownScrollTop'
-import Vietnam from 'section/vietnam/Vietnam'
+import { sectionList } from 'data/section'
 import React, { useEffect, useState } from 'react'
-import AboutUs from 'section/about-us/AboutUs'
-import Coupang from 'section/coupang/Coupang'
-import Footer from 'section/footer/Footer'
-import Intro from 'section/intro/Intro'
-import Location from 'section/location/Location'
-import Newsroom from 'section/newroom/Newsroom'
-import Process from 'section/process/Process'
-import Recruitment from 'section/recruitment/Recruitment'
-import SoftwareDevelopment from 'section/sw/SoftwareDevelopment'
 
 type OffsetValueType = {
   top: number
@@ -21,21 +10,13 @@ type OffsetValueType = {
 
 function App() {
   const [isBgBlack, setIsBgBlack] = useState<boolean>(true)
-  const [open, setOpen] = useState<boolean>(false)
+
   const theme = useTheme()
   const mdDown = useMediaQuery(theme.breakpoints.down('md'))
 
   const onClickMenu = (sectionId: string) => {
     const currentSection = document.getElementById(sectionId)
     window.scrollTo({ behavior: 'smooth', top: currentSection?.offsetTop })
-  }
-
-  const openDialog = () => {
-    setOpen(true)
-  }
-
-  const onClose = () => {
-    setOpen(false)
   }
 
   const onCreateOffsetValue = () => {
@@ -118,41 +99,14 @@ function App() {
 
   return (
     <div>
-      <section id='main'>
-        <Intro openDialog={openDialog} />
-      </section>
-      <Hidden lgUp>
-        <SmDownScrollTop />
-      </Hidden>
-      <section id='aboutUs'>
-        <AboutUs />
-      </section>
-      <section id='software'>
-        <SoftwareDevelopment />
-      </section>
-      <section id='process'>
-        <Process />
-      </section>
-      <section id='coupang'>
-        <Coupang />
-      </section>
-      <section id='vietnam'>
-        <Vietnam />
-      </section>
-      <section id='recruitment'>
-        <Recruitment />
-      </section>
-      <section id='newsroom'>
-        <Newsroom />
-      </section>
-      <section id='location'>
-        <Location />
-      </section>
-      <Footer />
+      {sectionList.map((item, idx) => (
+        <section id={item.id} key={idx}>
+          {item.view}
+        </section>
+      ))}
       <Hidden lgDown>
         <NavBar onClick={onClickMenu} isBgBlack={isBgBlack} />
       </Hidden>
-      <MenuDialog open={open} onClose={onClose} />
     </div>
   )
 }

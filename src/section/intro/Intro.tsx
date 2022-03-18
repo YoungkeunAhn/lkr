@@ -11,19 +11,24 @@ import MenuRoundedIcon from '@material-ui/icons/MenuRounded'
 import { mainSubText } from 'data/sub-text'
 import clsx from 'clsx'
 import BackgroundCover from 'commons/background-cover/BackgroundCover'
-import React from 'react'
+import React, { useState } from 'react'
 import useStyles from './styles'
+import MenuDialog from 'components/intro/menu-dialog/MenuDialog'
 
-type Props = {
-  openDialog: () => void
-}
-
-function Intro(props: Props) {
+function Intro() {
   const classes = useStyles()
   const theme = useTheme()
   const mdDown = useMediaQuery(theme.breakpoints.down('md'))
   const smDown = useMediaQuery(theme.breakpoints.down('sm'))
-  const { openDialog } = props
+  const [open, setOpen] = useState<boolean>(false)
+
+  const openDialog = () => {
+    setOpen(true)
+  }
+
+  const onClose = () => {
+    setOpen(false)
+  }
 
   return (
     <div id='blackBg1'>
@@ -59,6 +64,7 @@ function Intro(props: Props) {
           </Container>
         </BackgroundCover>
       </Box>
+      <MenuDialog open={open} onClose={onClose} />
     </div>
   )
 }

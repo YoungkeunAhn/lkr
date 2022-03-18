@@ -9,7 +9,7 @@ const useStyles = makeStyles((theme: Theme) =>
       position: 'relative',
       top: 60,
       right: -220,
-      zIndex: 100,
+      zIndex: 10,
       transition: '0.3s',
       '& img': {
         width: '100%',

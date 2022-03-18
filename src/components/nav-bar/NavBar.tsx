@@ -6,7 +6,7 @@ import React from 'react'
 import useStyles from './styles'
 
 const scrollSpyItems = [
-  'main',
+  'intro',
   'aboutUs',
   'software',
   'process',

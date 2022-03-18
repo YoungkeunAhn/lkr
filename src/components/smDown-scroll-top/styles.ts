@@ -9,7 +9,7 @@ const useStyles = makeStyles((theme: Theme) =>
       display: 'flex',
       justifyContent: 'center',
       alignItems: 'center',
-      zIndex: 9999,
+      zIndex: 100,
       background: '#032030',
       padding: theme.spacing(1, 2),
 

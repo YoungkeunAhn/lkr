@@ -5,7 +5,7 @@ type NavMenuType = {
 }
 
 export const navMenu: NavMenuType[] = [
-  { title: 'home', sectionId: 'main', korTitle: '메인' },
+  { title: 'home', sectionId: 'intro', korTitle: '메인' },
   { title: 'about us', sectionId: 'aboutUs', korTitle: '엘케이알소개' },
   {
     title: 'software Development',
