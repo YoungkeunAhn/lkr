@@ -1,5 +1,5 @@
 import { Box, Typography, useMediaQuery, useTheme } from '@material-ui/core'
-import React, { useMemo } from 'react'
+import React from 'react'
 import useStyles from './styles'
 
 type Props = {
