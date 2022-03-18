@@ -1,5 +1,6 @@
 import { Hidden, useMediaQuery, useTheme } from '@material-ui/core'
 import NavBar from 'components/nav-bar/NavBar'
+import SmDownScrollTop from 'components/sm-down-scroll-top/SmDownScrollTop'
 import { sectionList } from 'data/section'
 import React, { useEffect, useState } from 'react'
 
@@ -104,6 +105,9 @@ function App() {
           {item.view}
         </section>
       ))}
+      <Hidden lgUp>
+        <SmDownScrollTop />
+      </Hidden>
       <Hidden lgDown>
         <NavBar onClick={onClickMenu} isBgBlack={isBgBlack} />
       </Hidden>
