@@ -32,13 +32,13 @@ function App() {
           })
         } else if (i === 5) {
           offsetValue.push({
-            top: blackBgDom.offsetTop + 450,
-            bottom: blackBgDom.offsetHeight + blackBgDom.offsetTop + 450,
+            top: blackBgDom.offsetTop + 100,
+            bottom: blackBgDom.offsetHeight + blackBgDom.offsetTop + 100,
           })
         } else if (i === 6) {
           offsetValue.push({
-            top: blackBgDom.offsetTop + 800,
-            bottom: blackBgDom.offsetHeight + blackBgDom.offsetTop + 800,
+            top: blackBgDom.offsetTop + 300,
+            bottom: blackBgDom.offsetHeight + blackBgDom.offsetTop + 300,
           })
         } else {
           offsetValue.push({

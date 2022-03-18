@@ -34,7 +34,7 @@ function Intro() {
     <div id='blackBg1'>
       <Box className={classes.root}>
         <BackgroundCover>
-          <Box pl={10}>
+          <Box pl={smDown ? 4 : 10}>
             <Box
               display='flex'
               justifyContent='space-between'
