@@ -32,7 +32,7 @@ function Newsroom() {
         <Box pl={mdDown && !smDown && 4} pr={mdDown && !smDown && 4}>
           <Grid container spacing={2} alignItems='stretch'>
             <Grid item xs={12} sm={12} md={12} lg={6} xl={6}>
-              {!mdDown && <NewsroomItemCard {...newsItem[1]} isRight={false} />}
+              {!mdDown && <NewsroomItemCard {...newsItem[0]} isRight={false} />}
             </Grid>
             <Grid item xs={12} sm={12} md={12} lg={6} xl={6}>
               <Grid

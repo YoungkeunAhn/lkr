@@ -44,7 +44,7 @@ const useStyles = makeStyles((theme: Theme) =>
     title: {
       marginTop: theme.spacing(1),
       fontWeight: 600,
-      maxHeight: 60,
+      maxHeight: 62,
       overflow: 'hidden',
       textOverflow: 'ellipsis',
       display: '-webkit-box',
