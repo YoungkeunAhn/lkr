@@ -8,6 +8,7 @@ import {
 } from '@material-ui/core'
 import TitleContentFrame from 'commons/title-content-frame/TitleContentFrame'
 import NewsroomItemCard from 'components/newsroom-view/item-card/NewsroomItemCard'
+import { newsroomMainText, smDownNewsroomMainText } from 'data/main-text'
 import { newsItem } from 'data/news-item'
 import { newsroomSubText } from 'data/sub-text'
 import React from 'react'
@@ -23,9 +24,9 @@ function Newsroom() {
     <div className={classes.root}>
       <TitleContentFrame
         title='newsroom'
-        mainText={[`<span>2021년 12월</span> 엘케이알 뉴스`]}
+        mainText={newsroomMainText}
         subText={newsroomSubText}
-        smDownMainText={`<span>2021년 12월</span> 엘케이알 뉴스`}
+        smDownMainText={smDownNewsroomMainText}
         noBottomPadding={smDown ? true : undefined}
       />
       <Container maxWidth='lg'>

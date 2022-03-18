@@ -44,3 +44,7 @@ export const smDownRecruitmentMainText2 =
   recruitmentMainText2[0] + '<br />' + recruitmentMainText2[1]
 
 export const locationMainText = [`엘케이알 <span>찾아오시는길</span>`]
+
+export const newsroomMainText = [`<span>2021년 12월</span> 엘케이알 뉴스`]
+
+export const smDownNewsroomMainText = `<span>2021년 12월</span> 엘케이알 뉴스`
