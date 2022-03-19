@@ -43,7 +43,7 @@ function Intro() {
                 <img src='logo.png' alt='logo' />
                 <Typography variant='body1'>LKR corpration</Typography>
               </Box>
-              <Hidden lgUp>
+              <Hidden xlUp>
                 <IconButton onClick={openDialog}>
                   <MenuRoundedIcon className={classes.menuIcon} />
                 </IconButton>

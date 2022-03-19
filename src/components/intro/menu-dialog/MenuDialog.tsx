@@ -17,7 +17,7 @@ type Props = {
 }
 
 function MenuDialog(props: Props) {
-  const { open, onClose } = props
+  const { onClose, open } = props
   const classes = useStyles()
 
   const onClickMenu = (sectionId: string) => {

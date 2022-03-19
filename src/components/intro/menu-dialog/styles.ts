@@ -9,10 +9,6 @@ const useStyles = makeStyles((theme: Theme) =>
         backgroundRepeat: 'no-repeat',
         backgroundSize: 'cover',
       },
-
-      [theme.breakpoints.up('lg')]: {
-        display: 'none',
-      },
     },
     title: {
       background: 'rgba(0,0,0,0.5)',

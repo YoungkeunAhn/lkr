@@ -105,7 +105,7 @@ function App() {
           {item.view}
         </section>
       ))}
-      <Hidden lgUp>
+      <Hidden xlUp>
         <SmDownScrollTop />
       </Hidden>
       <Hidden lgDown>
