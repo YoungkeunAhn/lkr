@@ -20,6 +20,7 @@ const useStyles = makeStyles((theme: Theme) =>
     itemBox: {
       // width: 280,
       width: '100%',
+      height: '80px',
       boxSizing: 'border-box',
       padding: theme.spacing(2, 3),
       borderRadius: 100,
@@ -28,14 +29,20 @@ const useStyles = makeStyles((theme: Theme) =>
       display: 'flex',
       justifyContent: 'center',
       alignItems: 'center',
+      transition: '0.3s',
+      '&:hover': {
+        transform: 'translate(-5px, -5px)',
+        cursor: 'pointer',
+      },
       '& .MuiTypography-root': {
         fontWeight: 600,
       },
       '&+&': {
-        marginTop: theme.spacing(2),
+        marginTop: theme.spacing(1),
       },
       [theme.breakpoints.down('md')]: {
         padding: theme.spacing(1),
+        height: '100%',
       },
       [theme.breakpoints.down('sm')]: {
         padding: theme.spacing(0),

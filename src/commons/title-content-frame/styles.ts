@@ -31,7 +31,7 @@ const useStyles = makeStyles((theme: Theme) =>
     title: {
       fontWeight: 600,
       marginTop: theme.spacing(2),
-      marginBottom: theme.spacing(10),
+      marginBottom: theme.spacing(5),
       [theme.breakpoints.down('sm')]: {
         marginBottom: theme.spacing(3),
       },

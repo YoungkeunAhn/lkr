@@ -40,7 +40,7 @@ function Intro() {
               alignItems='center'
             >
               <Box className={classes.logoBox}>
-                <img src='logo.png' alt='logo' />
+                <img src='logo.png' alt='LKR corpration' />
                 <Typography variant='body1'>LKR corpration</Typography>
               </Box>
               <Hidden xlUp>

@@ -16,7 +16,7 @@ const useStyles = makeStyles((theme: Theme) =>
       },
     },
     subTextBox: {
-      width: '70%',
+      width: '71%',
       display: 'flex',
       flexDirection: 'column',
       justifyContent: 'space-between',

@@ -9,7 +9,7 @@ const useStyles = makeStyles((theme: Theme) =>
         flexDirection: 'column',
         alignItems: 'center',
         width: '100%',
-        marginTop: theme.spacing(2),
+        marginTop: theme.spacing(5),
       },
     },
     left: {

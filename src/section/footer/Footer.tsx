@@ -31,7 +31,7 @@ function Footer() {
           <FooterTextForm title='business license' text='208-86-02402' />
         </Box>
         <Box display='flex'>
-          <FooterTextForm title='tel' text='+82-2-1833-9540(TEL)' />
+          <FooterTextForm title='tel' text='+82-2-1833-9540' />
           <span style={{ marginLeft: 16 }}>
             <FooterTextForm title='fax' text='+82-31-624-2227' />
           </span>
