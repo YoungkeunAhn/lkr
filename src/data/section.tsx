@@ -2,6 +2,7 @@ import AboutUs from 'section/about-us/AboutUs'
 import Coupang from 'section/coupang/Coupang'
 import Footer from 'section/footer/Footer'
 import Intro from 'section/intro/Intro'
+import KeyMembers from 'section/key-members/KeyMembers'
 import Location from 'section/location/Location'
 import Newsroom from 'section/newsroom/Newsroom'
 import Process from 'section/process/Process'
@@ -42,6 +43,10 @@ export const sectionList: SectionType[] = [
   {
     id: 'recruitment',
     view: <Recruitment />,
+  },
+  {
+    id: 'key-members',
+    view: <KeyMembers />,
   },
   {
     id: 'newsroom',
